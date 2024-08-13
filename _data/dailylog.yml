@@ -1,0 +1,96 @@
+semester: Fall 2023
+home: assets/dailylog/
+dailylog:
+- name: Sections 1.1 & 1.2
+  date: Wed Aug 30
+  url: InClassNotes-30-aug.pdf 
+- name: Section 1.3
+  date: Fri Sept 1
+  url: InClassNotes-1-sept.pdf
+- name: Section 1.4
+  date: Wed Sept 6
+  url: InClassNotes-6-sept.pdf
+- name: Section 1.4
+  date: Fri Sept 8
+  url: InClassNotes-8-sept.pdf
+- name: Section 1.5
+  date: Mon 11 Sept
+  url: InClassNotes-11-sept.pdf
+- name: Section 1.6
+  date: Wed 13 Sept
+  url: InClassNotes-13-sept.pdf
+- name: Section 1.7
+  date: Fri 15 Sept
+  url: InClassNotes-15-sept.pdf
+- name: Section 1.8
+  date: Mon 18 Sept
+  url: InClassNotes-18-sept.pdf
+- name: Section 2.1 (day 1)
+  date: Wed 20 Sept
+  url: InClassNotes-200sept.pdf
+- name: Section 2.1 (day 2)
+  date: Fri 22 Sept
+  url: InClassNotes-fri-22-sept.pdf
+- name: G-S Algorithm, S. 2.2
+  date: Mon 25 Sept
+  url: InClassNotes-25-sept-mon.pdf
+- name: Section 2.2
+  date: Wed 27 Sept
+  url: InClassNotes-27-sept-wed.pdf
+- name: Section 3.1
+  date: Fri 29 Sept
+  url: InClassNotes-fri-29-sept.pdf
+- name: Section 3.3
+  date: Mon 2 Oct
+  url: InClassNotes-mon-2-oct.pdf
+- name: Section 4.1, 4.2
+  date: Mon 9 Oct
+  url: InClassNotes-mon-9-oct.pdf
+- name: Section 4.2, 4.4
+  date: Fri 13 Oct
+  url: InClassNotes-fri-13-oct.pdf
+- name: Section 4.4
+  date: Mon 16 Oct
+  url: InClassNotes-m-16-oct.pdf
+- name: Section 4.4
+  date: Wed 18 Oct
+  url: InClassNotes-18-0ct-w.pdf
+- name: Brooks' Theorem
+  date: Fri 20 Oct
+  url: M663f23_Brooks-Thm.pdf
+- name: Sections 5.1 and 5.2
+  date: Fri 20 Oct
+  url: InClassNotes-fri-20-oct.pdf
+- name: Mycielski's Construction
+  date: Mon 23 Oct
+  url: M663f23_Mycielski_Construction
+- name: Section 5.2 class notes
+  date: Mon 23 Oct
+  url: InClassNotes-m-23-Oct.pdf
+- name: Section 5.3
+  date: Wed 25 Oct
+  url: InClassNotes-w-25-oct.pdf
+- name: Vizing's Theorem
+  date: Fri 27 Oct
+  url: InClassNotesfri-10-27.pdf
+- name: Networks
+  date: Mon 30 Oct
+  url: InClassNotes-m-30-oct.pdf
+- name: Networks
+  date: Wed 1 Nov
+  url: InClassNotes-wed-nov-1.pdf
+- name: Extremal Theory
+  date: Fri 3 Nov
+  url: InClassNotes-fri-3-nov.pdf
+- name: Extremal Theory
+  date: Mon 6 Nov
+  url: InClassNotes-mon-nov-6.pdf
+- name: Ramsey's Theorem
+  date: Fri 10 Nov
+  url: InClassNotes-fri-10-nov.pdf
+- name: Ramsey's Theorem
+  date: Mon 13 Nov
+  url: InClassNotes-fri-10-nov.pdf
+- name: Additional Ramsey Theory notes 
+  date: Wed 15 Nov
+  url: InClassNotes-last-Ramsey.pdf

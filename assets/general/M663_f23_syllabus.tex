@@ -1,0 +1,235 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+%Syl adendum
+\usepackage[colorlinks = true,linkcolor = blue, urlcolor  = blue]{hyperref}
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{Graph Theory}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\quad
+
+
+\textbf{\large{Course Description}}
+
+Graph theory is the study of objects consisting of a base set (typically called \emph{vertices} or \emph{nodes}) and subsets of this base set (typically 2-element subsets called \emph{edges}). There are many variations on the definition of a graph. The  edges may have some ordering imposed, creating asymmetry between the vertices (commonly called a \emph{directed} graph or \emph{digraph}). Sometimes weights or colors are added to vertices and/or edges. The generality and flexibility of these objects allows them to model networks of all kinds (social, transportation, communication), flows, molecules, computer chips, machine learning and many more. Graphs provide mechanisms for attacking or solving (partially or completely) questions related to scheduling, similarity of molecules, matching (e.g. people to jobs) and more.
+
+Since this is an \emph{introduction} to Graph Theory at the graduate level, the main goal of the course is to provide a solid foundation of terminology, standard examples, main theorems and typical proof techniques in a broad range of graph theoretic topics.
+
+From the catalog: \begin{quote} A survey of modern techniques in graph theory; topics may include graphs and digraphs, trees, spanning trees, matchings, graph connectivity, graph coloring, planarity, cycles, and extremal problems. \end{quote}
+
+\textbf{\large{Student Learning Outcomes}} 
+
+Students will: 
+	\begin{itemize}
+	\item demonstrate facility with basic graph theoretic terminology (such as connectedness, being bipartite, cycle structure, planarity, coloring).
+	\item demonstrate understanding of and the ability to apply main theorems. 
+	\item prove facts about graphs.
+	\item master proof techniques commonly used in graph theory.
+	\item be prepared to take a master's comprehensive exam in Graph Theory.
+	\end{itemize}
+	
+\textbf{\large{Essential Information}}
+
+\begin{tabular}{p{0.2\textwidth} p{0.7\textwidth}}
+{time \& place}:&MWF 11:45-12:45 Chapman Hall Room 107\\
+{instructor:} &Jill Faudree\\
+{contact details:} &Chapman 306B, jrfaudree@alaska.edu, 474-7385\\
+{office hours:} &(\textbf{tentative})  M 3:30-4:30, W 2:30-3:30, Th 11:30-12:30 and by appointment. Also, you are welcome to drop by.\\
+{textbook:}& \textbf{Graph Theory}, Reinhard Diestel (3rd edition or later)\\
+{webpage:}& \url{https://jrfaudree.github.io/M663f23/}\\
+canvas:&\url{https://canvas.alaska.edu/courses/15814}\\
+{prerequisites:} &Graduate Standing and a grade of C or better in MATH 314 Linear Algebra and MATH 320 Combinatorics or permission of instructor.
+\end{tabular}
+
+\newpage
+
+{\textbf{\large{Course Mechanics}}}
+
+We will meet together for 3 hours each week. Each meeting will begin by summarizing the definitions, examples and theorems from the assigned reading. All students should come to class prepared to participate in the start-of-class review. Following the warm-up discussion of the reading, the instructor will field questions and discuss in more detail the proofs, examples, and ideas from the topic of the day.  I reserve the right to adjust the mechanics described here depending on the needs of the
+class.
+
+\textbf{Grades} will be calculated according to the following rubric:
+
+\begin{tabular}{|l|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  homework & 20\% \\
+  tests & 2 $\times$20\% $=$ 40\%\\
+  project & 15\%\\
+  final exam & 25\% \\
+  \hline
+\end{tabular}
+
+Grade Bands: A, A- (90 - 100\%), B+,B, B- (80 - 89\%), C+, C, C- (70 - 79\%), D+, D, D-
+(60 - 69\%), F (0 - 59\%).  I reserve the right to lower the thresholds. The grade of $A+$ is reserved for outstanding performance in the course overall.\\
+
+
+{\textbf{\large{Homework}}}
+
+Problems sets and due dates will appear on the course github page; solutions will appear on Canvas. Homework problems will be assigned weekly and will be tentatively due on Thursdays. All homework will be turned in and returned online via Canvas. Students should use  \LaTeX \: to format their solutions.  Resources for using \LaTeX \: can be found on the  \href{https://jrfaudree.github.io/M663f23/}{github course site} and I am happy to help students troubleshoot getting it installed and using it.
+
+ \textbf{Collaboration} with your peers is strongly encouraged as is seeking help from your instructor. However, every student must write up their solutions independently. Homework will be graded on correctness and the quality of the writing.
+
+%More detailed homework guidelines can be found on the \href{https://jrfaudree.github.io/M663f23/}{github course site}.
+
+
+{\textbf{\large{Tests and Final Exam}}}
+
+There will be two midterms and a final. All will be 2-hours in length (just like comprehensive exams). The final will be cumulative.\\
+
+{\textbf{\large{Project}}}
+
+All students will pick a graph theoretic topic and present that topic to the class in both written and oral form in the last week of the semester. Details can be found on the \href{https://jrfaudree.github.io/M663f23/}{github course site}. Topics can include those that we will not cover in class, an open problem in Graph Theory, or a research paper in Graph Theory.  Some online sources of open problems are \href{http://www.openproblemgarden.org/category/graph_theory}{here}, \href{https://faculty.math.illinois.edu/~west/openp/}{here}, and \href{http://dimacs.rutgers.edu/~hochberg/undopen/graphtheory/graphtheory.html}{here}. The \href{https://www.combinatorics.org/}{Electronic Journal of Combinatorics} is an easily accessible online journal with many papers in Graph Theory many of which typically also contain open problems. In addition, the easily searchable  \href{https://mathscinet.ams.org/mathscinet}{MathSciNet} database is a great place to track down research papers on mathematical topics that interest you.
+
+
+\heading{Office Hours and Communication}
+My Weekly Schedule including office hours are available and updated \href{https://docs.google.com/spreadsheets/d/e/2PACX-1vSPkx0I1WQikJjmR8qs8wpf2oWcwO8CFS2VwCZYsdusMDkxTIQuOVwcV8LfAtsDtUGoj49xCS1mOIrW/pubhtml}{\texttt{online}}.  Students can also schedule meetings with me outside of regular office hours, or mail me at \href{mailto:jrfaudree@alaska.edu}{\texttt{jrfaudree\@@alaska.edu}}.
+
+I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas.  Please set the email address in Canvas to one that you check regularly!
+
+
+%\begin{table}\caption{(tentative) Schedule of Topics}
+
+\begin{center}
+\textbf{(tentative) Schedule of Topics}\\
+
+\begin{tabular}{c | c || p{0.5\textwidth}}
+week & dates &topics \\
+\hline \hline
+1& 8/28-9/1&intro to graphs, degrees, paths, cycles\\ \hline
+2& 9/4-9/8& connectivity, trees and forests\\ \hline
+3& 9/11-9/15 & bipartite graphs, contraction and minors, Euler tours\\ \hline
+4& 9/18-9/22& matchings, in bipartite graphs and in general graphs\\ \hline
+5& 9/25-9/29& 2- and 3-connected graphs, Menger's Theorem\\ \hline
+6& 10/2-10/6& linking pairs of vertices, Midterm 1\\ \hline
+7& 10/9-10/13& planar graphs (intro, plane graphs, planar graphs, Kuratowski's theorem)\\ \hline
+8& 10/16-10/20& graph coloring (coloring maps, planar graphs, vertices)\\ \hline
+9& 10/23 - 10/27 &more graph coloring (edges), flows\\ \hline
+10& 10/30 - 11/3& extremal graph theory (subgraphs, minors, Hadwiger's conjecture) \\ \hline
+11& 11/6-11/10& infinite graphs (intro, path, trees, ends)\\ \hline
+12& 11/13-11/17& intro to Ramsey Theory, Midterm 2\\ \hline
+13& 11/20-11-24& more Ramsey Theory, Thanksgiving\\ \hline
+14& 11/27-12/1&Hamilton Cycles, project presentations\\ \hline
+15& 12/4-12/8& project presentations, semester review\\ \hline
+16& 12/11-12/15& Final Exam, Friday, 12/15, 10:15am - 12:15pm\\ 
+\end{tabular}
+\end{center}
+
+%\end{table}
+
+
+\textbf{Miscellaneous Other Issues:}
+
+\textbf{Incomplete Grade} 
+Incomplete (I) will only be given in DMS courses in cases where the student has completed the majority (normally all but the last three weeks) of a course with a grade of C or better, but for personal reasons beyond his/her control has been unable to complete the course during the regular term. Negligence or indifference are not acceptable reasons for the granting of an incomplete grade. 
+
+\textbf{Late Withdrawals} 
+A withdrawal after the deadline (currently 9 weeks into the semester) from a DMS course will normally be granted only in cases where the student is performing satisfactorily (i.e., C or better) in a course, but has exceptional reasons, beyond his/her control, for being unable to complete the course. These exceptional reasons should be detailed in writing to the instructor, department head and dean.
+
+%\textbf{No Early Final Examinations}
+%Final examinations for DMS
+%  courses shall not be held earlier than the date and time published
+%  in the official term schedule. Normally, a student will not be
+%  allowed to take a final exam early. Exceptions can be made by
+%  individual instructors, but should only be allowed in exceptional
+%  circumstances and in a manner which doesn't endanger the security of
+%  the exam.
+
+\textbf{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+
+\textbf{\large{Official UAF Syllabus Addendum}}
+ 
+\hfill
+
+\noindent{\bf COVID-19 statement:} Students should keep up-to-date on the university's policies, practices, and mandates related to COVID-19 by regularly checking this website: \url{https://sites.google.com/alaska.edu/coronavirus/uaf?authuser=0}
+
+Further, students are expected to adhere to the university's policies, practices, and mandates and are subject to disciplinary actions if they do not comply.
+
+\noindent{\bf Student protections statement:} UAF embraces and grows a culture of respect, diversity, inclusion, and caring. Students at this university are protected against sexual harassment and discrimination (Title IX). Faculty members are designated as responsible employees which means they are required to report sexual misconduct. Graduate teaching assistants do not share the same reporting obligations. For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site: \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}.
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Speaking Center (907-474-5470,
+        \mailto{uaf-speakingcenter@alaska.edu}, Gruening 507)
+\item Writing Center (907-474-5314, \mailto{uaf-writing-center@alaska.edu}, Gruening 8th floor)
+\item UAF Math Services, \mailto{uafmathstatlab@gmail.com}, Chapman Building (for math fee paying students only)
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ \mailto{https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/lr/SKM_364e19011717281.pdf})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, \mailto{uaf-disability-services@alaska.edu}, Whitaker 208)
+\item Student Health \& Counseling [6 free counseling sessions] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker 203)
+\item Center for Student Rights and Responsibilities (907-474-7317, \mailto{uaf-studentrights@alaska.edu}, Eielson 110)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, \mailto{asuaf.office@alaska.edu}{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+The University of Alaska is an affirmative action/equal opportunity employer and educational institution. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at www.alaska.edu/nondiscrimination. For more information, contact:
+
+\begin{tabular}{l}
+UAF Department of Equity and Compliance\\
+1760 Tanana Loop, 355 Duckering Building, Fairbanks, AK  99775\\
+907-474-7300\\
+\mailto{uaf-deo@alaska.edu}
+\end{tabular}
+
+ \scriptsize syllabus version: \today \normalsize
+
+\end{document}

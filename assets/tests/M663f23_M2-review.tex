@@ -1,0 +1,111 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{Midterm 2 - Review }}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+\newcommand{\ora}[1]{\overrightarrow{#1}}
+\newcommand{\ola}[1]{\overleftarrow{#1}}
+\newcommand{\ovl}[1]{\overline{#1}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+
+Disclaimers: If a definition, term, or notation was discussed in class and/or appeared on the homework, you are expected to know it. There is no claim that this review is perfect.\\
+
+\noindent \textbf{Chapter 4: Planar Graphs}
+\begin{itemize}
+	\item terms: plane graph, face, outer face, outer planar, maximally planar, plane triangulation, maximal plane graph.
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Thm 4.4.1 Jordan Curve theorem
+		\item Prop 4.2.4: A plane forest has exactly one face.
+		\item Prop 4.2.6: In a 2-connected plane graph, every face is bounded by a cycle.
+		\item Prop 4.2.8 A plane graph on at least three vertices is maximally plane if and only if it is a plane triangulation. 
+		\item Cor 4.2.10 A plane graph has at most $3n-6$ edges (provided $n \geq 3$). Every plane triangulation with $n$ vertices has exactly $3n-6$ edges.
+		\item Cor 4.2.11 A plane graph contains neither a $K^5$ nor a $K_{3,3}$ as a subgraph.
+		\item Prop 4.4.1 Every maximal plane graph is maximally planar. For a planar graph, maximally planar is equivalent to having $3n-6$ edges (provided $n \geq 2$).
+	\end{itemize}  
+	\item theorems to know by name: Thm 4.2.9 Euler's Formula, Thm 4.4.6 Kuratowski's Theorem A graph is planar if and only if it has no $K^5$ or $K_{3,3}$ minor.
+\end{itemize}
+
+\noindent \textbf{Chapter 5: Coloring}
+\begin{itemize}
+	\item terms: coloring, vertex coloring, edge coloring, $k$-coloring, $k$-edge-coloring, $k$ colorable, $k$-edge colorable, $k$-chromatic, $k$-edge-chromatic, chromatic number, edge chromatic number, $\chi(G)$, $\chi'(g),$ greedy coloring, Mycielski's construction
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Lemma 5.2.3 Every $k$-chromatic graph contains a subgraph of minimum degree at least $k-1.$
+		\item Prop 5.3.1 If $G$ is bipartite, then $\chi'(G)=\Delta(G).$
+	\end{itemize}  
+	\item theorems to know by name: 
+	\begin{itemize}
+		\item Them 5.2.4 Brook's Theorem Let $G$ be a connected graph. Then $\chi(G) \leq \Delta(G)$ or $G$ is a complete graph or $G$ is an odd cycle.
+		\item Thm 5.3.2 Vizing's Theorem For every (simple) graph $G$, $\Delta(G) \leq \chi'(G) \leq \Delta(G)+1.$
+	\end{itemize}
+\end{itemize}
+
+\noindent \textbf{Chapter 6: Flows}
+\begin{itemize}
+	\item terms: network, capacity, flow, integral flow $\ora{E}(G)$, cut, $\ora{E}(X,Y)$ $\ora{e}$, $\ola{e}$, $c(X,Y)$, $f(X,Y)$, value of a flow, $|f|$, capacity of a cut.
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Prop 6.2.1: In a network $N$ with cut $S,$ $f(S,\ovl{S})=f(s,V).$
+	\end{itemize}  
+	\item theorems to know by name: Thm 6.2.2 Ford Fulkerson In every network, the maximum value of a flow is equal to the minimum capacity of a cut.
+\end{itemize}
+
+\noindent \textbf{Chapter 7: Extremal Graph Theory}
+\begin{itemize}
+	\item terms: Tur\'{a}n graph, extremal graph, extremal number, $ex(n,H)$
+	\item theorems to know by name: Thm 7.1.1 Tur\'{a}n For all integers $r$ and $n$ with $r >1,$ if $G$ is $K^r$-free and $|E(G)|=ex(n,K^r)$, then $G \cong T^{r-1}(n).$
+\end{itemize}
+
+\end{document}

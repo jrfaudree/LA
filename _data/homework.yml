@@ -1,0 +1,33 @@
+semester: Fall 2023
+home: assets/homework/
+homework:
+- name: Homework 1
+  due: 11:59pm Fri 9/8
+  url: M663f23_hw1.pdf
+- name: Homework 2
+  due: 11:59pm Fri 9/15
+  url: M663f23_hw2.pdf
+- name: Homework 3
+  due: 11:59pm Fri 9/22
+  url: M663f23_hw3.pdf
+- name: Homework 4
+  due: 11:59pm Fri 9/29
+  url: M663f23_hw4.pdf
+- name: Homework 5
+  due: 11:59pm Fri 10/6
+  url: M663f23_hw5tex.pdf
+- name: Homework 6
+  due: 11:59 Fri 10/20
+  url: M663f23_hw6.pdf
+- name: Homework 7
+  due: 11:59 Fri 10/27
+  url: M663f23_hw7.pdf
+- name: Homework 8
+  due: 11:59 Fri 11/03
+  url: M663f23_hw8.pdf
+- name: Homework 9
+  due: 11:59 Fri 11/10
+  url: M663f23_hw9.pdf
+- name: Homework 10
+  due: 11:59 Mon 12/11
+  url: M663f23_hw10.pdf

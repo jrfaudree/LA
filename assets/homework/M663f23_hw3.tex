@@ -1,0 +1,74 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 3}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+\item Show that every automorphism of a tree fixes a vertex or an edge.
+
+\item Show that a graph is bipartite if and only if every \emph{induced} cycle has even length.
+
+\item Prove or disprove that a graph is bipartite if and only if no two adjacent vertices have the same distance from any other vertex.
+
+\item Prove or disprove that every connected graph contains a walk that traverses each of its edges exactly one in each direction.
+
+\item Prove that if $X$ is a topological minor of $Y$ and $Y$ is a topological minor of $Z$, then $X$ is a topological minor of $Z.$
+
+\item Prove that if $G$ contains a walk from vertex $u$ to vertex $v$, then it must contain a $uv$-path.
+
+
+
+ \end{enumerate}
+\end{document}
+
+

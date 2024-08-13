@@ -1,0 +1,70 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 6 }}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+	\item Use Euler's Formula to prove that $K_{3,3}$ is not planar.
+	\item Show that every \textcolor{red}{connected} planar graph \textcolor{red}{with minimum degree at most 3} is the union of three forests. 
+	\item Show that every planar graph contains a vertex of degree at most 5. Give an example of a planar graph $G$ such that $\delta(G) \geq 5.$
+	\item A graph is called \emph{outerplanar} if it has a drawing in which every vertex lies on the boundary of the outer (or infinite) face. Show that a graph is outerplanar if and only if it does not contain a $K^4$ minor or a $K_{2,3}$ minor.
+	\item Let $G$ be a 2-connected plane graph. Show $G$ is bipartite if and only if every face is bounded by an even cycle.
+	\item Given a plane graph $G$, the \emph{dual graph, $G^*$,} of $G$ is a plane graph whose vertices correspond to the faces of $G$. The edges of $G^*$ are defined as follows: for every edge $e \in E(G)$ on the boundary of faces $X$ and $Y$ in $G$, edge $\{X,Y\} \in E(G^*).$ Note that the dual graph of a simple plane graph may not be simple.
+	\begin{enumerate}
+	\item Describe the dual graphs of $P^m$, $C^k$, and $K^4.$
+	\item Prove that if the $n$-vertex plane graph $G$ is isomorphic to its dual, $G^*$, then $\parallel G \parallel = 2n-2.$
+	\end{enumerate}
+\end{enumerate}
+\end{document}

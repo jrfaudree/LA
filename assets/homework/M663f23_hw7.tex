@@ -1,0 +1,87 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 7 }}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+	\item Prove that for every graph $G$, there exists an order of the vertex set of $G$ such that a greedy algorithm using this ordering will use $\chi(G)$ colors.
+	\item For every $n \geq 3,$ construct a bipartite graph on $2n$ vertices and an ordering of the vertex set such that the greedy algorithm will use $n$ colors (as opposed to the optimal 2 colors). Give a justification.
+	\item A $k$-chromatic graph $G$ is called \emph{critical} if $\chi(G-v) < k$ for every vertex $v \in G.$
+	\begin{enumerate}
+	\item Characterize critical $2$-chromatic graphs.
+	\item Find an example of a critical $3$-chromatic graph.
+	\item Prove that for $k\geq 3$ every critical $k$-chromatic graph is $(k-1)$-edge-connected.
+	\item Characterize the set of critical $3$-chromatic graphs.
+	\end{enumerate}
+	\item The \emph{clique number} of a graph, denoted by $\omega(G),$ is the largest $r$ such that $K^r \subseteq G.$ The \emph{independence number} of a graph, denoted by $\alpha(G),$ is the largest $r$ such that $G$ contains an independent set of vertices of cardinality $r.$
+	\begin{enumerate}
+	\item Determine $\omega(G)$ and $\alpha(G)$ for the graphs below. Answers are sufficient. No justification required.
+		\begin{enumerate}
+		\item $P^m$ for $m\geq 1$
+		\item $C^k$
+		\item $K_{m,n}$ where $m \leq n$
+		\item $K^n$
+		\end{enumerate}
+	\item Prove that $\chi(G) \geq \max\{ \omega(G), |G|/\alpha(G)\}.$
+	\end{enumerate}
+	\item Prove or Disprove: Every $k$-chromatic graph $G$ has a $k$-coloring in which some color class has at least $\alpha(G)$ vertices.
+	\item Assume that $H$ is a $k$-chromatic triangle-free graph and the $G$ is obtained from $H$ by Mycielski's Construction.
+	\begin{enumerate}
+	\item Prove that $G$ is also triangle-free.
+	\item Prove that $G$ is $(k+1)$-colorable.
+	\end{enumerate}
+	\item Describe the topic of your project and what source(s) you have found.
+\end{enumerate}
+\end{document}

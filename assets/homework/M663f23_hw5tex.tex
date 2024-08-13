@@ -1,0 +1,99 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 5}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+\item 
+\begin{enumerate}
+	\item Find a bipartite graph with a set of preferences such that no matching of maximum size is stable and no stable matching has maximum size. 
+	\item Find a non-bipartite graph with a set of preferences that has no stable matching.
+\end{enumerate}
+\item Give an infinite family of examples that demonstrates that the \emph{bridgeless} hypothesis in Corollary 2.2.2 is necessary.
+\item A graph $G$ is called \emph{critically 2-connected} if $G$ is 2-connected but for every edge $e \in E,$ $G-e$ is no longer 2-connected.
+	\begin{enumerate}
+	\item Find an infinite family of critically 2-connected graphs that are not cycles.
+	\item Prove that if $G$ is 2-connected, then the statements below are equivalent:
+		\begin{itemize}
+		\item $G$ is critically 2-connected.
+		\item No cycle in $G$ has a chord.
+		\end{itemize}
+	\end{enumerate}
+\item Prove that the block graph of any connected graph is a tree.
+\item Use Menger's Theorem to prove that the statements below are equivalent:
+	\begin{itemize}
+	\item $G$ is 2-connected.
+	\item Every pair of vertices of $G$ lie on a common cycle.
+	\item Every pair of edges of $G$ lie on a common cycle. 
+	\end{itemize}
+\item Given a graph $G=(V,E),$ the \emph{line graph of $G$}, denoted $L(G)$ has vertex set $E$ and two vertice $e,f \in E$ are adjacent in $L(G)$ if and only if $e$ and $f$ are incident in $G$.
+	\begin{enumerate}
+	\item Determine $L(G)$ for $P^m,$ $G=C^k$ and $H$ (graphed below).\\
+	
+	%%%BEGIN Graph G
+\begin{tikzpicture}[scale=1,every node/.style={draw,circle, inner sep=.05 cm}]
+\foreach \i in {0,1,2,3,4}{
+	\node (\i) at (\i*72+18:2){};
+	}
+\node (5) at (27:3){};
+\node (6) at (9:3){};
+\draw (6)--(0)--(1)--(2)--(3)--(4)--(0)--(5);
+\end{tikzpicture}
+\item Show that a cut set of vertices in $L(G)$ must correspond to a cut set of edges of $G$, but that the reverse does not necessarily hold.
+\end{enumerate}
+%%%END Graph G
+	
+\end{enumerate}
+\end{document}

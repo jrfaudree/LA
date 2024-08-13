@@ -1,0 +1,81 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\chead{\large\sf\textbf{Proof Writing Guidelines}}
+
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+\item You need to prove your assertions. If you are asked to count the. number of edges in a graph, you must give the count \emph{and} justify the count. If you are asked to construct an example, you must describe its construction and demonstrate that it satisfies the necessary requirements.\\
+
+\item Use precise technical language.\\
+
+For example, instead of referring to vertices as having ``connections" say that the vertices are ``adjacent". Be wary of making up your own secret lingo.\\
+
+\item Be wary of ``it", ``that", ``this"  as mechanisms to refer to previous parts of your argument.\\
+
+\item Leave lots of space between problems for my comments.\\
+
+\item Always include the problem statement.\\
+
+\item Always begin a sentence with a word in English, never with a symbol. \\
+
+For example, the sentence  ``$d(x) >k$ by definition." is bad. Change it to: ``By definition, $d(x) >k.$"\\
+
+\item Do not replace words with symbolic logic. \\
+
+For example, do not write ``$x > y$ and $y >0 \Longrightarrow x^2>y^2.$" Instead write, "Since $x>y>0,$ it follows that $x^2>y^2.$"
+
+Another example, do not write ``We know that $|S| >$ the  number of vertices in the largest component of $G.$" Instead, write "...$|S|$ is greater than ..."
+
+\end{enumerate}
+\end{document}
+
+

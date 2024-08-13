@@ -1,0 +1,75 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 2}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+\begin{enumerate}
+\item Show that every 2-connected graph contains a cycle.
+\item Determine $\kappa(G)$ and $\lambda(G)$ for $G= P^m, \: C^n, \: K^n, \: K_{m,n}$ and the $n$-dimensional cube.
+\item Is there a function $f: \mathbb{N} \to \mathbb{N}$ such that, for all $k \in \mathbb{N}$, every graph of minimum degree at least $f(k)$ is $k$-connected?
+\item Prove that for every graph non-complete, connected graph $G$, if $F \subseteq E(G)$ is a separating set of edges of minimum order (i.e. $|F| = \lambda (G)$), then $G-F$ has exactly two components.
+\item Prove Theorem 1.5.1.\\
+\begin{quote}
+The following are equivalent for a graph $T.$
+\begin{enumerate}	
+\item $T$ is a tree.
+\item Any two vertices of $T$ are linked by a unique path.
+\item $T$ is minimally connected. (That is, $T$ is connected but $T-e$ is disconnected for every $e \in E.$)
+\item $T$ is maximally acyclic. (That is, $T$ is acyclic but for every nonadjacent pair of vertices $x,y \in V,$ $T+xy$ contains a cycle.)
+\end{enumerate}
+\end{quote}
+\item Let $F$ and $F'$ be forests on the same vertex set such that $\parallel F \parallel < \parallel F' \parallel.$ Show that $F'$ has an edge $e$ such that $F+e$ is still a forest.
+ \end{enumerate}
+\end{document}
+
+

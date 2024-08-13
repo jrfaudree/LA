@@ -1,0 +1,199 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{Final Exam - Review }}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+\newcommand{\ora}[1]{\overrightarrow{#1}}
+\newcommand{\ola}[1]{\overleftarrow{#1}}
+\newcommand{\ovl}[1]{\overline{#1}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+
+Disclaimers: If a definition, term, or notation was discussed in class and/or appeared on the homework, you are expected to know it. There is no claim that this review is perfect.\\
+
+The Final Exam for Fairbanks students will be Friday December 15, 10:15-12:15.\\
+
+In length and style, the Final Exam will be just like the midterms. Unlike the Midterms, the problems will be ordered by difficulty from straightforward to more challenging. \\
+
+\noindent \textbf{Section 1.2 Degree of a Vertex}
+	\begin{itemize}
+	\item terminology/notation: degree, average degree, degree per vertex, 
+	\item results to know: Prop 1.2.1 (Sum of degrees is even.) 
+	\item results to know how to prove: Prop 1.2.1 (Sum of degrees is even.) 
+	\end{itemize}
+\noindent \textbf{Section 1.3 Paths and Cycles}
+	\begin{itemize}
+	\item terminology/notation: path, cycle, independent path, AB-path, distance, girth, central vertex, radius, diameter.
+	\item results to know: Prop 1.3.1 ($\delta(G) geq 2$ implies $G$ contains a cycle of length at least $\delta$ or path of length at least $\delta +1.$
+	\item results to know how to prove: Prop 1.3.2 (If $G$ has a cycle, then $g(G) \leq 2\text{diam}(G)+1$, Prop 1.3.3 ($\text{rad}(G) \leq k$ and $d=\Delta(G)$ implies $\parallel G \parallel \leq \frac{d}{d-2}(d-1)^k.$)
+	\end{itemize}
+\noindent \textbf{Section 1.4 Connectivity}
+	\begin{itemize}
+	\item terminology/notation: connected, component, separator, separating set of vertices, separating set of edges, cut vertex, bridge, $k$-connected, connectivity k, $k$-edge-connected, edge-connectivity $k$
+	\item results to know: Prop 1.4.1 (In a connected graph, vertices can be ordered such that induced graphs are connected.) , Prop 1.4.2. ($\kappa(G) \leq \lambda(G) \leq \delta(G).$)
+	\end{itemize}
+\noindent \textbf{Section 1.5 Trees and Forests}
+	\begin{itemize}
+	\item terminology/notation: tree, forest, acyclic, leaf,
+	\item results to know: Thm 1.5.1 (equivalent formulation of a tree), Cor 1.5.3 (\# edges in a tree)
+	\item results to know how to prove: Thm 1.5.1, Cor 1.5.3
+	\end{itemize}
+\noindent \textbf{Section 1.6 Bipartite Graphs}
+	\begin{itemize}
+	\item terminology/notation: $r$-partite graph, bipartite graph, vertex class, complete $r$-partite graph
+	\item results to know: Proposition 1.6.1 (characterization of bipartite graphs)
+	\end{itemize}
+\noindent \textbf{Section 1.7 Contraction and Minors}
+	\begin{itemize}
+	\item terminology/notation: subdivision, topological minor, (regular) minor
+	\end{itemize}
+\noindent \textbf{Section 1.8 Euler Tours}
+	\begin{itemize}
+	\item terminology/notation: Euler tour, Eulerian
+	\item results to know by name: Thm 1.8.1 Euler's Theorem
+	\item results to know how to prove: Thm 1.8.1 Euler's Theorem
+	\end{itemize}
+\noindent \textbf{Section 2.1 Matching in Bipartite Graphs}
+	\begin{itemize}
+	\item terminology/notation: matching, factor, vertex cover, alternating path, augmenting path, stable matching, Hall's condition
+	\item results to know by name: Thm 2.1.1 K\"{o}nig's Theorem, Thm 2.1.2 Hall's Theorem,
+	\item results to know: Cor 2.1.3 ($k$-regular and bipartite implies the existence of a 1-factor.)
+	\item results to know how to prove: Thm 2.1.2 Hall's Theorem, Cor 2.1.3 
+	\end{itemize}
+\noindent \textbf{Section 2.2 Matching in General Graphs}
+	\begin{itemize}
+	\item terminology/notation: Tutte's condition
+	\item results to know by name: Thm 2.2.1 Tutte's Theorem
+	\item results to know: Cor 2.2.2 (Every bridgeless cubic graph contains a 1-factor)
+	\item results to know how to prove: Cor 2.2.2
+	\end{itemize}
+\noindent \textbf{Section 3.1 2-Connected Graphs and Subgraphs}
+	\begin{itemize}
+	\item terminology/notation: $H$-path, block, block graph
+	\item results to know: Prop 3.1.1 ($H$-path construction of 2-connected graphs.) , Lemma 3.1.2, Lemma 3.1.3 (These are descriptions of the block structure of graphs), Lemma 3.1.4 (The block graph of a graph is a tree.)
+	\item results to know how to prove: Lemma 3.1.4
+	\end{itemize}
+\noindent \textbf{Section 3.3}
+	\begin{itemize}
+	\item terminology/notation: disjoint $A$-$B$ paths, independent $ab$-paths
+	\item results to know by name: Thm 3.3.1 Menger's Theorem, Thm 3.3.6 Global Menger's Theorem
+	\item results to know and to know how to prove: Cor 3.3.4, Cor 3.3.5, Thm 3.3.6 Global Menger's Theorem
+	\end{itemize}
+
+
+\noindent \textbf{Chapter 4: Planar Graphs}
+\begin{itemize}
+	\item terms: plane graph, face, outer face, outer planar, maximally planar, plane triangulation, maximal plane graph.
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Thm 4.4.1 Jordan Curve theorem
+		\item Prop 4.2.4: A plane forest has exactly one face.
+		\item Prop 4.2.6: In a 2-connected plane graph, every face is bounded by a cycle.
+		\item Prop 4.2.8 A plane graph on at least three vertices is maximally plane if and only if it is a plane triangulation. 
+		\item Cor 4.2.10 A plane graph has at most $3n-6$ edges (provided $n \geq 3$). Every plane triangulation with $n$ vertices has exactly $3n-6$ edges.
+		\item Cor 4.2.11 A plane graph contains neither a $K^5$ nor a $K_{3,3}$ as a subgraph.
+		\item Prop 4.4.1 Every maximal plane graph is maximally planar. For a planar graph, maximally planar is equivalent to having $3n-6$ edges (provided $n \geq 2$).
+	\end{itemize}  
+	\item theorems to know by name: Thm 4.2.9 Euler's Formula, Thm 4.4.6 Kuratowski's Theorem A graph is planar if and only if it has no $K^5$ or $K_{3,3}$ minor.
+\end{itemize}
+
+\noindent \textbf{Chapter 5: Coloring}
+\begin{itemize}
+	\item terms: coloring, vertex coloring, edge coloring, $k$-coloring, $k$-edge-coloring, $k$ colorable, $k$-edge colorable, $k$-chromatic, $k$-edge-chromatic, chromatic number, edge chromatic number, $\chi(G)$, $\chi'(g),$ greedy coloring, Mycielski's construction
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Lemma 5.2.3 Every $k$-chromatic graph contains a subgraph of minimum degree at least $k-1.$
+		\item Prop 5.3.1 If $G$ is bipartite, then $\chi'(G)=\Delta(G).$
+	\end{itemize}  
+	\item theorems to know by name: 
+	\begin{itemize}
+		\item Them 5.2.4 Brook's Theorem Let $G$ be a connected graph. Then $\chi(G) \leq \Delta(G)$ or $G$ is a complete graph or $G$ is an odd cycle.
+		\item Thm 5.3.2 Vizing's Theorem For every (simple) graph $G$, $\Delta(G) \leq \chi'(G) \leq \Delta(G)+1.$
+	\end{itemize}
+\end{itemize}
+
+\noindent \textbf{Chapter 6: Flows}
+\begin{itemize}
+	\item terms: network, capacity, flow, integral flow $\ora{E}(G)$, cut, $\ora{E}(X,Y)$ $\ora{e}$, $\ola{e}$, $c(X,Y)$, $f(X,Y)$, value of a flow, $|f|$, capacity of a cut.
+	\item theorems to remember: 
+	\begin{itemize}
+		\item Prop 6.2.1: In a network $N$ with cut $S,$ $f(S,\ovl{S})=f(s,V).$
+	\end{itemize}  
+	\item theorems to know by name: Thm 6.2.2 Ford Fulkerson In every network, the maximum value of a flow is equal to the minimum capacity of a cut.
+\end{itemize}
+
+\noindent \textbf{Chapter 7: Extremal Graph Theory}
+\begin{itemize}
+	\item terms: Tur\'{a}n graph, extremal graph, extremal number, $ex(n,H)$
+	\item theorems to know by name: Thm 7.1.1 Tur\'{a}n For all integers $r$ and $n$ with $r >1,$ if $G$ is $K^r$-free and $|E(G)|=ex(n,K^r)$, then $G \cong T^{r-1}(n).$
+\end{itemize}
+
+\noindent \textbf{Chapter 8: Infinite Graphs} No questions here.
+
+\noindent \textbf{Chapter 9: Ramsey Theory} 
+	\begin{itemize}
+	\item Know Theorem 9.1.1 For every $r \in \mathbb{N}$  there exists an $n \in \mathbb{N}$ such that every graph on at least $n$ vertices either contains a $K^r$ or its complement contains a $K^r.$
+	\item Know the meaning of $R(G,H)$ and how to make arguments that $R(G,H)=n.$
+	\end{itemize}
+
+\noindent \textbf{Chapter 10: Hamilton Cycles}
+	\begin{itemize}
+	\item terminology: hamilton cycles and path, hamiltonian graphs
+	\item Be able to prove Dirac's Theorem (Thm 10.1.1) If $G$ is an $n$-vertex graph (where $n \geq 3$) and $\delta(G) \geq n/2,$ then $G$ is hamiltonian.
+	\item Know Prop 10.1.2: If $G$ is an $n$-vertex graph (where $n \geq 3$) and $\alpha(G) \leq \kappa(G)$, then $G$ is hamiltonian. 
+	\item Know how to makes sense of and use Chvatal's degree criteria for hamiltonicity (Theoerem 10.2.1) The sequence $(a_1,a_2,\cdots,a_n)$ is hamiltonian iff for every $i < n/2,$ $a_i\leq i \Longrightarrow a_{n-i} \geq n-i.$
+	\end{itemize}
+
+
+
+\end{document}

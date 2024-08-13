@@ -1,0 +1,75 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{HW 10 }}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+\usetikzlibrary{arrows}
+\newcommand{\marrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+
+\begin{document}
+\begin{enumerate}
+	\item Let $m,n \in \mathbb{N},$ and assume that $m-1$ divides $n-1.$ Show that every tree of order $m$ satisfies $R(T,K_{1,n})=m+n-1.$
+	\item Prove that $R(3,4)=R(K^3,K^4)=9.$ 
+	\item An oriented complete graph is called a tournament. A Hamilton path is a path through every vertex of the graph. Show that every tournament contains a directed Hamilton path. 
+	\item Show that every uniquely 3-edge-colorable cubic graph is hamiltonian. By \emph{uniquely} 3-edge-colorable, we mean that every 3-edge coloring induces the same edge partition.
+	\item 
+	\begin{enumerate}
+	\item Prove Ore's Lemma stated below:
+	\begin{quote} Let $G$ be a graph on $n$ vertices. If $u$ and $v$ are distinct nonadjacent vertices in $G$ such that $d(u)+d(v)\geq n,$ then $G$ is hamiltonian if and only if $G+uv$ is hamiltonian.\end{quote}
+	\item Use Ore's Lemma to prove that if $G$ is a graph on $n$ vertices such that $d(u)+d(v) \geq n$ for all nonadjacent vertices, then $G$ is hamiltonian.
+	\item Show that the hypothesis in part (b) is weaker than the hypothesis in Dirac's Theorem.
+	\end{enumerate}
+	\item Show that a connected graph $G$ is countable if all its vertices have countable degrees.
+	\item Let $G$ be an infinite graph and $A,B \subseteq V(G).$ Show that if no finite set of vertices separates $A$ from $B$ in $G$, then $G$ contains an infinite set of disjoint $A$-$B$ paths.
+\end{enumerate}
+\end{document}

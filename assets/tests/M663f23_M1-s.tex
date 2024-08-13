@@ -1,0 +1,107 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,tikz}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 663 }}
+\rhead{\large\sf\textbf{Fall 2023}}
+\chead{\large\sf\textbf{Midterm 1 - Solutions}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+%% Special Math Symbol shortcuts
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\rad}{\text{rad}}
+\newcommand{\diam}{\text{diam}}
+
+%\newenvironment{clist}%
+%{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+%{\end{list}\egroup}%
+
+\usetikzlibrary{calc,arrows.meta}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+\begin{document}
+
+\begin{enumerate}
+\item Prove that a graph is bipartite if and only if every \emph{induced} cycle has even length.\\
+
+\textbf{Proof:}\\
+
+($\Longrightarrow$:) Suppose that $G$ is bipartite. Thus, all cycles in $G$ are even. Thus, all induced cycles are even.\\
+
+($\Longleftarrow$:) Suppose that every induced cycle in $G$ is even. It is sufficient to show that $G$ contains no odd cycle. Proceed by contradiction and suppose that $G$ contains an odd cycle. Among all odd cycles in $G$, choose $C$ to be a smallest odd cycle. By assumption, $C$ cannot be induced. Thus, $C$ must have a chord. But any chord in a cycle of odd length can be used to form two smaller cycles on $V(C)$, one of even length and one of odd length. This contradicts the choice of $C$ as a cycle of smallest possible odd order. Thus, $G$ can contain no odd cycles. Thus, $G$ is bipartite.\\
+
+\item 
+	\begin{enumerate}
+	\item State Tutte's Theorem.\\
+	
+	A graph $G=(V,E)$ contains a 1-factor if and only if for every $S \subseteq V,$ $q(G-S) \leq |S|,$ where $q(G-S)$ is the number of components of $G-S$ of odd cardinality.\\
+	
+	
+	\item Use Tutte's Theorem to prove that every 3-regular graph with no bridges must have a 1-factor.\\
+	
+\textbf{Proof:} Suppose $G$ is a cubic, bridgeless graph. We will show that $G$ satisfies Tutte's condition. \\
+
+Let $S \subseteq V$ and let $C$ be a component of $G-S$ of odd cardinality. Observe that $\displaystyle \sum_{v \in V(C)} d_G(v)=3\cdot |C|,$ which must be odd since 3 and $|C|$ are both odd. But $\displaystyle \sum_{v \in V(C)} d_C(v)$ is even because the degree sum of the vertices in any graph is even. Thus, the number of edges from $C$ to $S$ is odd. Since $G$ is bridgeless, the number of edges must be at least 3. \\
+
+Thus, the number of edges from odd components of $G-S$ to $S$ is at least $3\cdot q(G-S).$  Since $G$ is cubic, the number of edges between all components of $G-S$ and $S$ can be at most $3 \cdot |S|$. Thus, $3 \cdot |S| \geq 3 \cdot q(G-S),$ and Tutte's condition applies.\\
+
+	\end{enumerate}
+\item Let $G$ be a graph on $n$ vertices. Recall that $\delta(G)$ denotes the minimum degree of $G.$ Prove that if  $\delta(G) \geq (n-1)/2,$ then $G$ must be connected. \\
+
+\textbf{Proof:} Let $G$ be a graph on $n$ vertices. Let $x$ and $y$ be arbitrary vertices of $G.$ We need to find an $xy$-path. If $x$ and $y$ are adjacent, the edge $xy$ is the path. If $x$ and $y$ are nonadjacent, then observe that $N(x) \cup N(y) \subseteq G-\{x,y\}.$ But, $$|N(x)| + |N(y)| \geq 2\left(\frac{n-1}{2}\right)=n-1> n-2 = |G-\{x,y\}|.$$ So by the Pigeonhole Principle, $x$ and $y$ have a common neighbor which forms $xy$-path of length 2.\\
+
+\newpage
+\item Recall that a graph $G$ is critically 2-connected if $G$ is 2-connected by for every $e \in E(G),$ $G-e$ is no longer 2-connected. Prove that every critically 2-connected graph must contain a vertex of degree 2.\\
+
+\textbf{Proof:} Suppose that $G$ is critically 2-connected. Since $G$ is 2-connected, we know that $G$ can be constructed by starting with a cycle and iteratively adding paths with disjoint end-vertices. If $G$ is just a cycle, then all vertices are of degree 2. Otherwise, constructing $G$ must require adding a last $H$-path. Recall from our homework that none of the added paths can be simply an edge because $G$ wouldn't be critically 2-connected. Thus, the last added path has at least three vertices and, therefore, a vertex of degree 2. \\
+
+\item Suppose $G$ is a connected graph on $n$ vertices. Prove that $G$ has exactly one cycle if and only if $G$ has exactly $n$ edges.\\
+
+\textbf{Proof:} \\
+
+($\Longrightarrow$:) Suppose $G$ is a connected graph with exactly one cycle. Let $e$ be any edge on the unique cycle of $C.$ Then $G-e$ must be connected and acyclic. Thus, $G-e$ is a tree on $n$ vertices and thus has $n-1$ edges. Thus, $G$ has $n$ edges.\\
+
+($\Longleftarrow$:) Suppose $G$ is a connected graph with exactly $n$ edges. Since $G$ is connected, it contains a spanning tree, $T.$ So, $T$ has $n-1$ edges. Thus, $G$ has exactly one edge that is not in $T.$ Since, as a tree, $T$ is minimally acyclic, $G=T+e$ would have exactly one cycle.\\
+
+
+\item Let $G=(V,E)$ be a 2-connected graph. Prove that for every $a \in V$ there exists some $b \in N(a)$ such that $G-a-b$ is still connected. (To be clear, the graph $G-a-b$ is the graph obtained from $G$ by deleting both the vertex $a$ and its neighboring vertex $b.$)\\
+
+\textbf{Proof:} Let $G=(V,E)$ be a 2-connected graph and $a \in V,$ arbitrary. If $G-a$ is 2-connected, then any vertex in $b \in N(a)$ will satisfy the condition that $G-a-b$ is connected. \\
+
+If $G-a$ is not 2-connected, then $\kappa(G-a)=1.$ Thus, we know that its block graph is a tree. Let $B$ be one of the end-blocks of the block graph of $G-a$ and let $v$ be the unique cut-vertex in $B.$ Observe that $a$ must have a neighbor in $B-v$ since otherwise $v$ is a cut-vertex of $G.$ Let $c$ be a neighbor of $a$ in $B-v.$ Then, $G-a-c$ must be connected since $B-c$ must be connected.  \end{enumerate}
+
+\end{document}
