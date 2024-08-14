@@ -3,16 +3,13 @@ sidenavtitle: 'Math 314'
 docs:
 
 - title: Syllabus
-  url: assets/general/M314f2024_syllabus.pdf  # rebuild by "make syllabus.pdf" in assets/general/
+  url: assets/general/M314f2024_syllabus.pdf 
 
 - title: Schedule
   exturl: https://docs.google.com/spreadsheets/d/e/2PACX-1vRWbn6Gebs9tzDxE4ln3Gy21Adw470oM2QO0rgM8hTkG0CdnCsbz2_rS_oF1H4I2zDSEMHSe50lgIbA/pubhtml?gid=0&single=true
   
 - title: Homework
   url: homework.html
-
-- title: Daily Log
-  url: dailylog.html
 
 - title: Exams
   url: exam-page.html
@@ -21,7 +18,7 @@ docs:
   url: resources.html
   
 - title: Textbook
-  url: https://web.stanford.edu/~boyd/vmls/
+  exturl: https://web.stanford.edu/~boyd/vmls/
 
 - title: Julia
   url: julia.html
