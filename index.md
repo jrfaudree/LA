@@ -11,7 +11,7 @@ Email me at [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu).  I hold [office
 
 ### Canvas course page
 
-Log in to [Canvas at UAF](https://canvas.alaska.edu/courses) for:
+Log in to [Canvas at UAF](https://canvas.alaska.edu/courses/21607) for:
 
   * announcements
   * grades
