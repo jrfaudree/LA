@@ -18,7 +18,7 @@ docs:
   url: resources.html
   
 - title: Textbook
-  exturl: https://web.stanford.edu/~boyd/vmls/
+  exturl: https://web.stanford.edu/~boyd/vmls/vmls.pdf
 
 - title: Julia
   url: julia.html
