@@ -1,0 +1,59 @@
+- title: "HW 0"
+  assignment: "1.1, 1.2, **S1.3**, and this [Julia problem](julia/HW0.ipynb)"
+  due: "1/21"
+
+- title: "HW 1"
+  assignment: "1.5, 1.8, 1.9, 1.10
+  1.11, 1.13, 1.15, **S1.7**
+  and these [Julia Problems](julia/HW1.ipynb)"
+  due: "1/26"
+
+- title: "HW 2"
+  assignment: "2.1, 2.2, 2.4, 2.5, 2.6, 2.8, 2.9, 2.10
+  and these [Julia Problems](julia/HW2.ipynb)"
+  due: "2/1"
+
+- title: "HW 3"
+  assignment: "3.4, **S3.5**, **S3.11**, 3.9, 3.12, 3.20 3.22, **S3.4**
+**S3.17** and these [Julia Problems](julia/HW3.ipynb)"
+  due: "2/8"
+
+- title: "HW 4"
+  assignment: "These [problems](HW4.pdf) and this [Julia problem](julia/HW4.ipynb)"
+  due: "2/15"
+
+- title: "HW 5"
+  assignment: "5.6, 5.8, this [problem](HW5b.pdf), **S5.2**, 6.2, 6.4, 6.6, 6.7, **S6.4**"
+  due: "2/22"
+
+- title: "HW 6"
+  assignment: "6.13, 7.2, 7.3, 7.4, 7.12 **S7.5** and these [problems](HW6b.pdf) and these [Julia problems](julia/HW6.ipynb). For one of the Julia problems you will need this [audio snippet](julia/U2-WOWU.wav)."
+  due: "2/29"
+
+- title: "HW 7"
+  assignment: "8.3, 8.4, 8.6, 8.7, 8.11, **S8.1**, **S8.3**, and this [Julia problem](julia/HW7.ipynb)"
+  due: "3/7"
+
+- title: "HW 8"
+  assignment: "10.2, 10.4, 10.6, 10.9, 10.17, 10.21, 10.26, 10.35 and these [problems](HW8b.pdf)  and this [Julia problem](julia/HW8.ipynb)"
+  due: "3/21"
+
+- title: "HW 9"
+  assignment: "11.1, 11.2, 11.4, 11.12, 11.17 and these [problems](HW9b.pdf)  and these [Julia problems](julia/HW9.ipynb)"
+  due: "3/28"
+
+- title: "HW 10"
+  assignment: "11.6, 11.7, 11.13, 11.18, **S11.7** and these [Julia problems](julia/HW10.ipynb)"
+  due: "4/4"
+
+- title: "HW 11"
+  assignment: "These [problems](HW11b.pdf)  and these [Julia problems](julia/HW11.ipynb)"
+  due: "4/11"
+
+- title: "HW 12"
+  assignment: "These [problems](HW12b.pdf)"
+  due: "4/18"
+
+- title: "HW 13"
+  assignment: "These [problems](HW13b.pdf)"
+  due: "4/25"
