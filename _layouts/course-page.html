@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+       <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site2.css">
+
+    <!-- The following allow KaTeX to be used on the page and autorender.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                // customized options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '$.', right: '.$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError : false
+              });
+          });
+      </script>
+
+<!-- The following is for `highlight.js` code highlighting -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="page-header" id="page-top">
+  <div class="burger-outer hide-large">
+    <div class="burger-button" onclick="toggleNav()">
+      <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+        <rect y="13" width="100" height="15" rx="7.5"></rect>
+        <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+        <rect y="72" width="100" height="15" rx="7.5"></rect>
+      </svg>
+    </div>
+  </div>
+  <div class="page-header-title" onclick="closeNav()">
+    {%if page.is_root %}{%else%}<a href="index.html#page-top" color="black">{%endif%}
+      <span class="hide-large">{{ site.data.toc.small-screen-title }}</span>
+      <span class="hide-small">{{ site.data.toc.large-screen-title }}</span>
+    {%if page.is_root %}{%else%}</a>{%endif%}
+  </div>
+</div>
+
+<div id="main" class="main-body">
+
+    <div id="nav" class="sidenav" >
+      <nav role="navigation">
+        <!-- <div class="sidenav-header">
+          <a href="index.html#page-top" color="black">
+          {{ site.data.toc.sidenav_title }}
+          </a>
+        </div> -->
+            {% for item in site.data.toc.docs %}
+          {%if item.children%}
+          <div class="accordion">{{item.title}}</div>
+          <div class="accordion-panel">
+            {% for child in item.children %}
+              <div class="entry"><a  onclick="closeNav()" {% if child.url %}href="{{ child.url }}"{% else %}href="#{{ child.anchor }}"{% endif %} alt="{{ child.title }}">{{ child.title }}</a></div>
+            {% endfor %}
+          </div>
+          {%else%}
+          <div class="entry"><a  onclick="closeNav()" {% if item.url %}href="{{ item.url }}"{% else %}href="#{{ item.anchor }}"{% endif %} alt="{{ item.title }}">{{ item.title }}</a></div>
+          {%endif%}
+        {% endfor %}
+      
+      </nav>
+    </div>
+    
+
+  <div class="page-content" onclick="closeNav()">{{ content }}</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+// Set nav class to "sidenav showing"
+function toggleNav() {
+    console.log("open nav")
+    nav = document.getElementById("nav")
+    if( nav.className == "sidenav" ) {
+      nav.className = "sidenav showing"
+    } else {
+      nav.className = "sidenav"
+    }
+}
+
+// Set nav class to "sidenav" instead of "sidenav showing"
+function closeNav() {
+  console.log("close nav")
+    document.getElementById("nav").className = "sidenav"
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</html>
