@@ -8,10 +8,10 @@
   and these [Julia Problems](julia/HW1.ipynb)"
   due: "1/26"
 
-- title: "HW 2"
-  assignment: "2.1, 2.2, 2.4, 2.5, 2.6, 2.8, 2.9, 2.10
+#- title: "HW 2"
+#  assignment: "2.1, 2.2, 2.4, 2.5, 2.6, 2.8, 2.9, 2.10
   and these [Julia Problems](julia/HW2.ipynb)"
-  due: "2/1"
+# due: "2/1"
 
 - title: "HW 3"
   assignment: "3.4, **S3.5**, **S3.11**, 3.9, 3.12, 3.20 3.22, **S3.4**
