@@ -21,7 +21,7 @@ Log in to [Canvas at UAF](https://canvas.alaska.edu/courses/21607) for:
 
 * Attend class: MWF 9:15am-10:15am in Chapman 104 
 
-* Read the [Syllabus](assets/general/M314f2024_syllabus.pdf).
+* Read the [Syllabus](assets/general/M314f2024_syl.pdf).
 
 * See the [Schedule](https://docs.google.com/spreadsheets/d/1qqB14JeoykBQjJZun5sqWzKMh30r3YieghTlAxpul3E/pubhtml?gid=0&single=true).  Check it often to find out what happens next.
 
