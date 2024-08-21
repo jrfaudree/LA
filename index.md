@@ -25,7 +25,9 @@ Log in to [Canvas at UAF](https://canvas.alaska.edu/courses/21607) for:
 
 * See the [Schedule](https://docs.google.com/spreadsheets/d/1qqB14JeoykBQjJZun5sqWzKMh30r3YieghTlAxpul3E/pubhtml?gid=0&single=true).  Check it often to find out what happens next.
 
-* The textbook is **Introduction to Applied Linear Algebra - Vectors, Matrices, and Least Squares** by Stephen Boyd and Lieven Vandenberghe. A webpage for the text can be found [here](https://web.stanford.edu/~boyd/vmls/)
+* The textbook is **Introduction to Applied Linear Algebra - Vectors, Matrices, and Least Squares** by Stephen Boyd and Lieven Vandenberghe.
+
+* A webpage for the text can be found [here](https://web.stanford.edu/~boyd/vmls/)
 
 ---
 _Site design derived from the [coordinated Calc I website](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
