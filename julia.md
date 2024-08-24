@@ -15,7 +15,7 @@ I've written a tutorial notebook with common Julia operations to help you get up
 
 You can view (but not edit) notebooks, even without installing software, 
 using the [nbviewer](https://nbviewer.org)
-website.  Just copy the URL of the notebook you are interested in and paste it into their form.  For example, here's our [tutorial at nbviewer](https://nbviewer.org/urls/damaxwell.github.io/math314/julia/JuliaBasics.ipynb){:target="_blank"}.
+website.  Just copy the URL of the notebook you are interested in and paste it into their form.  For example, here's our [tutorial at nbviewer](https://nbviewer.org/urls/jrfaudree.github.io/LinearAlgebra2024/julia/JuliaBasics.ipynb){:target="_blank"}.
 
 You'll want to be able to write Julia code and edit notebooks on your own computer,
 and to do this you'll need to install some software.
