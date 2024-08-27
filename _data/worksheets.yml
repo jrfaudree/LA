@@ -1,0 +1,6 @@
+semester: Fall 2024
+home: assets/worksheets
+worksheets:
+- name: Vectors
+  blank: M314_ch1.pdf
+  solutions: M314_ch1-s.pdf
