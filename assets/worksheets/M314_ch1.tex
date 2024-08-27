@@ -1,0 +1,96 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch1}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Worksheet: Vector Operations}
+\end{center}
+
+Let $\d v=\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix},$ $w=\bbm 4\\1\\-1 \ebm,$  $u=\bbm 1\\4 \ebm,$ $z=(2,1).$
+\begin{enumerate}
+\item On the same set of axes, draw $u,$ $z$ and $u+z$.
+\vfill
+\item On the same set of axes, dray $u$, $z$ and $u-z$.
+\vfill
+\item Make the calculations below or explain why it is not defined.\\
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $v+u$\\
+	
+	\vspace{.5in}
+	
+	\item $2v+w$\\
+		
+\vspace{.5in}
+	
+	\item $5 \, \textbf{1}_4 - (u,u)$\\
+		\vspace{.5in}	
+	\item $vw$\\ \vspace{.5in}
+
+	
+	\item $v^Tw$\\
+		\vspace{.5in}
+
+	
+	\item $w^Tv$\\
+		\vspace{.5in}
+
+	
+	\item $(w^Tv)u$\\
+		\vspace{.5in}
+
+	
+	\item $(w^Tv)+u$\\
+\vspace{.5in}
+	
+	\item $((w^Tv),1)+u$\\
+		\vspace{.5in}
+
+	\end{enumerate}
+	\end{multicols}
+\vspace{.5in}
+
+
+
+\newpage
+\item Find $y_3$ and $y_{2:4}$ for $y=(2v,u).$ Recall $\d v=\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}$ and  $u=\bbm 1\\4 \ebm.$ 
+\vfill
+
+\item Suppose $x$ is a vector of dimension 100 and $\textbf{1}=\textbf{1}_{100}$. Use words and symbols (such as $x_i$) to describe what each calculation below will do.
+	\begin{enumerate}
+	\item $\textbf{1}^Tx$\\
+	\vfill
+	\item $\left(\frac{\textbf{1}^T}{100}\right) x$
+	\vfill
+	\item $\sqrt{x^Tx}$
+	\vfill
+	\item $\left(e_1+e_2 \right)^Tx$
+	\vfill
+	\item Construct a vector $a$ such that $a^Tx$ gives the average of the last 10 entries in $x$.
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
