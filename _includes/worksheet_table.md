@@ -2,6 +2,7 @@
 <table class="asst-table">
 {% for ws in data.worksheets %}
 <tr>
+	<td>{{ ws.date }}</td>
 	<td>{{ ws.name }}</td>
 	<td>
 		<table class="inner">
