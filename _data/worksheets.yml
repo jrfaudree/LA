@@ -4,3 +4,6 @@ worksheets:
 - name: Vectors
   blank: M314_ch1.pdf
   solutions: M314_ch1-s.pdf
+- name: Vector Functions (part 1)
+  blank: M314_ch2a.pdf
+  solutions: M314_ch2a-s.pdf
