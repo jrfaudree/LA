@@ -1,0 +1,231 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 2}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Worksheet: Vector Functions}
+\end{center}
+\begin{enumerate}
+\begin{multicols}{2}
+\item Define $f(x)=a^Tx$ for $x=(x_1,x_2)$ and \\$a=(2,4).$
+	\begin{enumerate}
+	\item Find $f(5,-3)$\\
+	
+	\vspace{.5in}
+		
+	
+	\item For $u=(5,-3)$, $v=(4,1)$, $\alpha=10$, \\
+	and $\beta=2,$ find:	
+		\begin{enumerate}
+		\item $\alpha u$\\
+		\vspace{.7in}
+		\item $\beta v$\\
+		\vspace{.7in}
+		\item $\alpha u + \beta v$\\
+		
+		\vspace{.7in}
+		
+		
+		\item $f(\alpha u + \beta v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u)$\\
+		
+		\vspace{.7in}
+		
+		\item $\beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u) + \beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\end{enumerate}
+		
+	\end{enumerate}	
+\columnbreak
+
+\item Define $f(x)=x_1^2+x_2^2$ for $x=(x_1,x_2).$ 
+	\begin{enumerate}
+	\item Find $f(5,-3)$\\
+	
+	\vspace{.5in}
+		
+	
+	\item For $u=(5,-3)$, $v=(4,1)$, $\alpha=10$, \\
+	and $\beta=2,$ find:	
+		
+		\begin{enumerate}
+		\item $\alpha u$\\
+		
+		\vspace{.7in}
+		\item $\beta v$\\
+		
+		\vspace{.7in}
+		\item $\alpha u + \beta v$\\
+		
+		\vspace{.7in}
+		
+		\item $f(\alpha u + \beta v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u)$\\
+		
+		\vspace{.7in}
+		
+		\item $\beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u) + \beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\end{enumerate}
+		
+	\end{enumerate}	
+	
+	\vfill
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\item Define $f(x)=4x_1-x_2+2$ for $x=(x_1,x_2).$ 
+	\begin{enumerate}
+	\item Find $f(5,-3)$\\
+	
+	\vspace{.5in}
+		
+	
+	\item For $u=(5,-3)$, $v=(4,1)$, $\alpha=10$,\\ and $\beta=2,$ find:	
+		
+		\begin{enumerate}
+		\item $\alpha u$\\
+		\vspace{.7in}
+		\item $\beta v$\\
+		\vspace{.7in}
+		\item $\alpha u + \beta v$\\
+		
+		\vspace{.7in}
+		
+		\item $f(\alpha u + \beta v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u)$\\
+		
+		\vspace{.7in}
+		
+		\item $\beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u) + \beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\end{enumerate}
+		
+		\vfill
+		\columnbreak
+		\item For $u=(5,-3)$, $v=(4,1)$,\\
+		
+		{\Large{ $\alpha=0.9$, and $\beta=0.1,$}} \: find:	
+		\begin{enumerate}
+		\item $\alpha u$\\
+		\vspace{.7in}
+		\item $\beta v$\\
+		\vspace{.7in}
+		\item $\alpha u + \beta v$\\
+		
+		\vspace{.7in}
+		
+		\item $f(\alpha u + \beta v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u)$\\
+		
+		\vspace{.7in}
+		
+		\item $\beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u) + \beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\end{enumerate}
+	\end{enumerate}
+\end{multicols}
+	
+\vfill
+\newpage
+\item Define $f(x)=7x_1-x_2$ for $x=(x_1,x_2).$ 
+	\begin{enumerate}
+	\item Find $f(5,-3)$\\
+	
+	\vspace{.5in}
+		
+	
+	\item For $u=(5,-3)$, $v=(4,1)$, $\alpha=10$, and $\beta=2,$ find:	
+		%\begin{multicols}{2}
+		\begin{enumerate}
+		\item $\alpha u$\\
+		\vspace{.7in}
+		\item $\beta v$\\
+		\vspace{.7in}
+		\item $\alpha u + \beta v$\\
+		
+		\vspace{.7in}
+		
+		\item $f(\alpha u + \beta v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u)$\\
+		
+		\vspace{.7in}
+		
+		\item $\beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\item $\alpha f(u) + \beta f(v)$\\
+		
+		\vspace{.7in}
+		
+		\end{enumerate}
+		
+	\end{enumerate}	
+	
+	\vfill
+
+\end{enumerate}
+\end{document}
