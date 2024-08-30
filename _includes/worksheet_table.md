@@ -5,6 +5,11 @@
 	<td>{{ ws.name }}</td>
 	<td>
 		<table class="inner">
+			{% if ws.notes %}
+		  <tr>
+			    <td><a href="{{ data.home }}/{{ ws.notes }}">notes</a></td>
+			</tr>
+			{% endif %}
 			{% if ws.blank %}
 		  <tr>
 			    <td><a href="{{ data.home }}/{{ ws.blank }}">blank</a></td>
