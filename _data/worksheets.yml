@@ -1,9 +1,12 @@
 semester: Fall 2024
 home: assets/worksheets
 worksheets:
-- name: Vectors
+- date: W 28 Aug
+  name: Vectors
   blank: M314_ch1.pdf
   solutions: M314_ch1-s.pdf
-- name: Vector Functions (part 1)
+- date: F 30 Aug
+  name: Vector Functions (part 1)
+  notes: Fri-30-aug.pdf
   blank: M314_ch2a.pdf
   solutions: M314_ch2a-s.pdf
