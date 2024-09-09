@@ -1,0 +1,91 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 3}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Worksheet: Norm, Distance and Angle}
+\end{center}
+\begin{enumerate}
+\item  The \textbf{norm} of $x$ is
+
+\vfill
+
+\item For $n$-vectors $v$ and $w$ and constant $\beta=-2$, find
+	\begin{enumerate}
+	\item $\Vert v \Vert$
+	\vfill
+	\item $\Vert \beta v \Vert$
+	\vfill
+	\item $\Vert w \Vert$
+	\vfill
+	\item $\Vert v+w \Vert$
+	\vfill
+	\item $ \Vert v-w \Vert$
+	\vfill
+	\end{enumerate}
+\item Properties of a norm
+\vspace{2in}
+\newpage
+\item (Algebra:) For vectors $x$ and $y$, and scalar $\alpha$, show that $\Vert \alpha x + y \Vert^2= \alpha^2 \Vert x \Vert^2 + 2 \alpha x^Ty + \Vert y \Vert^2.$
+\vspace{1.8in}
+
+\item The distance between $n$-vectors (points in $\mathbb{R}^n$) $x$ and $y$ is
+\vfill
+
+\item The \textbf{root-mean-square value} of the vector $v$ is
+
+\vfill
+
+\item $\textbf{std}(v)$
+
+\vfill
+
+
+\item Fill in the table below
+
+
+\begin{tabularx}{\textwidth}{X|X|X|X|X}
+vector, $v$&$\Vert v \Vert$&  $\textbf{rms}(v)$&$(\textbf{1}^Tv)/n$&$\textbf{std}(v)$\\
+\hline
+&&&&\\
+$(1,1,1,1)$&&&&\\
+&&&&\\
+\hline
+&&&&\\
+$(-1,1,-1,1)$&&&&\\
+&&&&\\
+\hline
+&&&&\\
+$(\sqrt{2},\sqrt{2})$&&&&\\
+&&&&\\
+\hline
+&&&&\\
+$(\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2},1,1,1)$&&&&\\
+&&&&\\
+\hline
+\end{tabularx}
+\end{enumerate}
+\end{document}
