@@ -19,3 +19,7 @@ worksheets:
   name: Vector Functions + Norm
   blank: M314_ch2b.pdf
   solutions: M314_ch2c-s
+- date: M 9 Sept
+  name: Norm, Distance, Angle (part 1)
+  blank: M314_ch3a.pdf
+  solutions: M314_ch3a-s.pdf
