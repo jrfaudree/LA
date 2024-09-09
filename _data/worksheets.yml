@@ -17,9 +17,11 @@ worksheets:
   solutions: M314_ch2b-s.pdf
 - date: F 6 Sept
   name: Vector Functions + Norm
+  notes: M314_ch2b-notes.pdf
   blank: M314_ch2b.pdf
-  solutions: M314_ch2c-s
+  solutions: M314_ch2c-s.pdf
 - date: M 9 Sept
   name: Norm, Distance, Angle (part 1)
+  notes: Mon-9-Sept.pdf
   blank: M314_ch3a.pdf
   solutions: M314_ch3a-s.pdf
