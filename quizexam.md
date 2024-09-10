@@ -1,6 +1,6 @@
 ---
 layout: course-page
-title: Exam Info
+title: Quiz and Exam Info
 ---
 
 ## Quizzes and Exams
