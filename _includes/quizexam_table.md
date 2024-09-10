@@ -30,3 +30,8 @@
 			    <td><a href="{{ data.home }}/{{ ws.image }}">output image</a></td>
 			</tr>
 			{% endif %}
+		</table>
+    </td>
+</tr>
+{% endfor %}
+</table>

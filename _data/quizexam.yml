@@ -1,6 +1,6 @@
 semester: Fall 2024
 home: assets/quizexam
-worksheets:
+quizexam:
 - name: Quiz 1
   blank: M314f24_q1.pdf
   solutions: M314f24_q1-s.pdf
