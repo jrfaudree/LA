@@ -19,7 +19,7 @@
   due: "Sept 18"
 
 - title: "HW 4"
-  assignment: "These [problems](HW4.pdf) and this [Julia problem](julia/HW4.ipynb)"
+  assignment: "These [problems](homework/HW4.pdf) and this [Julia problem](julia/HW4.ipynb)"
   due: " "
 
 - title: "HW 5"
