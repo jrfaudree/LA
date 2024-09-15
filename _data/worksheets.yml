@@ -32,5 +32,8 @@ worksheets:
   name: Last of Chapter 3
   blank: M314_ch3b-summary.pdf
   solutions: M314_ch3b-summary-s.pdf
-
+- date: M 16 Sept
+  name: Ch 5: linear Independence
+  blank: M314_ch5_linear_independence.pdf
+  solutions: M314_ch5_linear_independence-s.pdf
   
