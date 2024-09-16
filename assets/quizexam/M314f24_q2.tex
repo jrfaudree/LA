@@ -1,0 +1,40 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 2}
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+%\vspace*{-0.7in}
+This quiz is worth 10 points.
+\begin{enumerate}
+\item (8 points) Determine whether each of the following scalar-valued functions of $n$-vectors is linear. If it is a linear function, give its inner product representation (i.e. an $n$ vector $a$ for which $f(x)=a^Tx$ for all $x$). If it is not linear, give specific $x$, $y$, $\alpha$, and $\beta$ for which superposition fails: $$( i.e. \; f(\alpha x + \beta y) \not = \alpha f(x) + \beta f(y)).$$
+\begin{enumerate}
+\item $f(x)$ is the average of the first 3 entries of vector $x.$ You an assume $n\geq 3.$
+
+\vfill
+
+\item $f(x)$ is minimum entry of $x$. That is $f(x)= \min \{x_1,x_2,x_3, \cdots x_n\}.$
+
+\vfill
+\end{enumerate}
+
+\item (2 points) Suppose $f: \mathbb{R}^3 \to \mathbb{R}$ is a \textbf{linear function}. Further, suppose, $f(2,-4,3)=10$ and $f(2,1,0)=8.$ Determine the value of $f(2,-9,6)$ if possible. If this is not possible, explain why.
+\vspace{3in}
+\end{enumerate}
+\end{document}
