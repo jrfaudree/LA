@@ -4,3 +4,6 @@ quizexam:
 - name: Quiz 1
   blank: M314f24_q1.pdf
   solutions: M314f24_q1-s.pdf
+- name: Quiz 2
+  blank: M314f24_q2.pdf
+  solutions: M314f24_q2-s.pdf
