@@ -36,4 +36,11 @@ worksheets:
   name: Ch 5 linear Independence
   blank: M314_ch5_linear_independence.pdf
   solutions: M314_ch5_linear_independence-s.pdf
+- date: W 18 Sept
+  name: Finish Monday's sheet
+- date: F 20 Sept
+  name: Basis, Orthonormal vectors, Fact A
+  blank: M314_ch5_basis_orthonormal_FactA.pdf
+  solutions: M314_ch5_basis_orthonormal_FactA-s.pdf
+
   
