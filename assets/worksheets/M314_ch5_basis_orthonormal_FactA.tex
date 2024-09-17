@@ -1,0 +1,73 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 5}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Worksheet: Fact A, Basis, and Orthonormal Vectors}
+\end{center}
+
+\begin{enumerate}
+\item Fact A: \\
+\vspace{1in}
+\item Definition: A \emph{basis} is\\
+\vspace{1.5in}
+\item Give three distinct examples of bases when
+	\begin{enumerate}
+	\item $n=2$\\
+	\vfill
+	\item $n=3$\\
+	\vfill
+	\end{enumerate}
+\item Fact B: 
+\vfill
+\newpage
+\item A set of $n$-vectors $a_1,a_2,\cdots,a_k$ is called \emph{orthogonal} if
+\vspace{1in}
+\item Examples\\
+\vfill
+\item A vector $a$ is called \emph{normal} if 
+\vspace{.5in}
+\item Examples\\
+\vfill
+\item A set of $n$-vectors $a_1,a_2,\cdots,a_k$ is called \emph{orthonormal} if
+\vspace{1.5in}
+\item Examples\\
+\vfill
+\newpage
+\item Suppose $a_1,a_2,a_3,$ and $a_4$ is a set of orthonormal $32$-vectors. Further, suppose that $\beta_1, \beta_2, \beta_3$ and $\beta_4$ have the property that 
+$$\beta_1a_1+\beta_2 a_2 +\beta_3 a_3 + \beta_4 a_4=0_{32}.$$
+	\begin{enumerate}
+	\item Find $a_3^T(\beta_1a_1+\beta_2 a_2 +\beta_3 a_3 + \beta_4 a_4)$.
+	\vfill
+	\item Find $a_3^T0_{32}.$
+	\vfill
+	\item What can you conclude about $\beta_3$? About $\beta_i$ for $i=1,2,4$?
+	\vfill
+	\item What can you conclude about the set $a_1,a_2,a_3,$ and $a_4$? About \emph{any} set of orthonormal vectors?
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
