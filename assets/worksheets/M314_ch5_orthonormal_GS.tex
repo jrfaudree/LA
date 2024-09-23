@@ -1,0 +1,76 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 5}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Worksheet: Orthonormal Vectors and Gram-Schmidt Orthogonalization}
+\end{center}
+
+\begin{enumerate}
+\item Definition: A \emph{basis} is\\
+\vspace{.5in}
+\item A set of $n$-vectors $a_1,a_2,\cdots,a_k$ is called \emph{orthogonal} if
+\vspace{1in}
+\item Example: $S=\{v_1=(1,1,1),\: v_2=(1/2,1/2,-1),\: v_3=(1,-1,0)\}$\\
+\vspace{1in}
+\item A vector $a$ is called \emph{normal} if 
+\vspace{.5in}
+\item Example:
+\vspace{1in}
+\item A set of $n$-vectors $a_1,a_2,\cdots,a_k$ is called \emph{orthonormal} if
+\vspace{1.5in}
+\item Example:\\
+\vspace{2in}
+\item Suppose $a_1,a_2,a_3,$ and $a_4$ is a set of orthonormal $n$-vectors. Further, suppose that $\beta_1, \beta_2, \beta_3$ and $\beta_4$ have the property that 
+$$\beta_1a_1+\beta_2 a_2 +\beta_3 a_3 + \beta_4 a_4=0_{n}.$$
+	\begin{enumerate}
+	\item Take the inner product of $a_3$ with both sides of the equation above to get a new equation. What can you conclude?
+	\vfill
+	\item What can you conclude about $\beta_i$ for $i=1,2,4$?
+	\vspace{.5in}
+	\item What can you conclude about the set $a_1,a_2,a_3,$ and $a_4$? About \emph{any} set of orthonormal vectors?
+	\vspace{1in}
+	\end{enumerate}
+\item Example: Write the vector $x=(1,2,3)$ as a linear combination of $T=\left\{ \begin{bmatrix}\frac{1}{\sqrt{3}} \\  \frac{1}{\sqrt{3}} \\\frac{1}{\sqrt{3}} \end{bmatrix}, 
+\begin{bmatrix}\frac{1}{\sqrt{6}} \\  \frac{1}{\sqrt{6}} \\\frac{-\sqrt{2}}{\sqrt{3}} \end{bmatrix},
+\begin{bmatrix}\frac{1}{\sqrt{2}} \\  \frac{-1}{\sqrt{2}} \\0 \end{bmatrix}
+\right\}$
+\vspace{3.5in}
+\newpage
+\item Gram-Schmidt Orthogonalization Algorithm\\
+Strategy: (1) Orthogonalize vectors one-by-one (2) normalize.\\
+
+\textbf{given:} n-vectors $a_1,a_2,\cdots,a_k$\\
+
+(1) for $i=1,2, \cdots, k,$ \quad\quad $\overline{q}_i = a_i - \left(\frac{a_i^T\overline{q}_{i-1}}{\Vert \overline{q}_{i-1}\Vert^2}\right)\overline{q}_{i-1}-  \left(\frac{a_i^T\overline{q}_{i-2}}{\Vert \overline{q}_{i-2}\Vert^2}\right)\overline{q}_{i-2} -\cdots -  \left(\frac{a_i^T\overline{q}_{1}}{\Vert \overline{q}_{1}\Vert^2}\right)\overline{q}_{1}$\\
+
+(2) for $1=1,2, \cdots, k,$\quad \quad If $\overline{q}_i\not = 0_n,$ then $q_i=\left(\frac{1}{\Vert \overline{q}_i \Vert}\right) \overline{q}_i.$\\
+
+\textbf{output:} $\left\{ q_i \: | \: \overline{q}_i \not = 0_n \right \}$
+
+\item Example: $a_1=(1,-1,1),\: a_2=(1,0,1), \: a_3=(1,1,2)$
+\end{enumerate}
+\end{document}
