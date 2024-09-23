@@ -42,5 +42,8 @@ worksheets:
   name: Basis, Orthonormal vectors, Fact A
   blank: M314_ch5_basis_orthonormal_FactA.pdf
   solutions: M314_ch5_basis_orthonormal_FactA-s.pdf
-
+- date: M 23 Sept
+  name: Orthonormal, Gram Schmidt
+  blank: M314_ch5_orthonormal_GS.pdf
+  solutions: M314_ch5_orthonormal_GS-s.pdf
   
