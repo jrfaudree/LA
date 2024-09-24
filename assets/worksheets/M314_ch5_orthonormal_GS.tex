@@ -69,8 +69,45 @@ Strategy: (1) Orthogonalize vectors one-by-one (2) normalize.\\
 
 (2) for $1=1,2, \cdots, k,$\quad \quad If $\overline{q}_i\not = 0_n,$ then $q_i=\left(\frac{1}{\Vert \overline{q}_i \Vert}\right) \overline{q}_i.$\\
 
-\textbf{output:} $\left\{ q_i \: | \: \overline{q}_i \not = 0_n \right \}$
+\textbf{output:} $\left\{ q_i \: | \: \overline{q}_i \not = 0_n \right \}$ where $q_i$'s are
+	\begin{itemize}
+	\item orthonormal
+	\item linearly independent and 
+	\item produce the same collection of linear combinations.\\
+	\end{itemize}
+
+\textbf{Crucial Point:} If the $a_i$'s form a \emph{basis}, then the $q_i$'s form an orthonormal basis.
 
 \item Example: $a_1=(1,-1,1),\: a_2=(1,0,1), \: a_3=(1,1,2)$
+\newpage
+Here are the steps again in different form:\\
+
+\textbf{given:} n-vectors $a_1,a_2,\cdots,a_k$\\
+
+\textbf{orthogonalize}\\
+
+$\overline{q_1}=a_1$\\
+
+$\overline{q_2}=a_2- \left(\frac{a_2^T\overline{q}_{1}}{\Vert \overline{q}_{1}\Vert^2}\right)\overline{q}_{1}$\\
+
+$\overline{q_3}=a_3- \left(\frac{a_3^T\overline{q}_{1}}{\Vert \overline{q}_{1}\Vert^2}\right)\overline{q}_{1}- \left(\frac{a_3^T\overline{q}_{2}}{\Vert \overline{q}_{2}\Vert^2}\right)\overline{q}_{2}$\\
+
+$\overline{q_4}=a_4- \left(\frac{a_4^T\overline{q}_{1}}{\Vert \overline{q}_{1}\Vert^2}\right)\overline{q}_{1}- \left(\frac{a_4^T\overline{q}_{2}}{\Vert \overline{q}_{2}\Vert^2}\right)\overline{q}_{2}- \left(\frac{a_4^T\overline{q}_{3}}{\Vert \overline{q}_{3}\Vert^2}\right)\overline{q}_{3}$\\
+
+
+
+\textbf{normalize}\\
+
+$q_1=\frac{\overline{q}_1}{\Vert \overline{q}_1\Vert}$
+
+$q_2=\frac{\overline{q}_2}{\Vert \overline{q}_2\Vert}$
+
+$q_3=\frac{\overline{q}_3}{\Vert \overline{q}_3\Vert}$
+
+$q_4=\frac{\overline{q}_4}{\Vert \overline{q}_4\Vert}$\\
+
+
+Note: {If a $\overline{q}_i=0_n,$ then toss it out (or) terminate.}
+
 \end{enumerate}
 \end{document}
