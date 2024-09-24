@@ -46,4 +46,9 @@ worksheets:
   name: Orthonormal, Gram Schmidt
   blank: M314_ch5_orthonormal_GS.pdf
   solutions: M314_ch5_orthonormal_GS-s.pdf
+- date: W 25 Sept
+  name: Ch 6: Matrices
+  blank: M314_ch6_matrices.pdf
+  solutions: M314_ch6_matrices-s.pdf
+
   
