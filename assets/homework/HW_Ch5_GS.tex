@@ -1,0 +1,43 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework Chapter 5 Additional Problem}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{problems}
+    \problem Let
+    \[
+        a= \vecfour1{-1}00,\qquad b=\vecfour0{1}{-1}0
+        \qquad c = \vecfour001{-1},
+    \]
+    \begin{subproblems}
+    \item 
+        Perform the Gram-Schmidt algorithm on these vectors (in this order) 
+        to determine orthonormal 
+    vectors $q_1$, $q_2$ and $q_3$.
+    \item Write the vector $d = (1,1,1,-3)$ as a linear combination of $q_1$, $q_2$
+    and $q_3$.  Recall that because the $q_i$'s are orthonormal, the coefficients
+    of the linear combination are given by $q_i^T d$.
+    \item From part (b) you know that $d$ is also a linear combination of 
+    the vectors $a$, $b$ and $c$.  In fact, this is easy to spot.  Using
+    whatever technique you would like, write $d$ as such a linear combination.
+    \item If we performed Gram-Schmidt on the collection of vectors $a$, $b$, $c$ and $d$,
+    what would have happened? Be specific in your answer.
+    \end{subproblems}
+\end{problems}
+
+\end{document}

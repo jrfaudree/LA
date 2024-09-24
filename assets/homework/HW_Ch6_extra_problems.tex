@@ -1,0 +1,48 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework Chapter 6 Additional Problem}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{enumerate}
+\item Evaluate each expression below or explain why they do not exist.\\
+
+$A=\bbm 1&-1&2\\2&0&5 \ebm, \hfill B=\bbm -1&2&3\\ 1&-1&1\\
+0&1&1\\ 3&2&1 \ebm,  \hfill C= \bbm 2&-1&2 \\5&-2&1 \ebm, \\ \quad \\ \hfill x=\vecthree2 1 {-1}, \hfill y=\vecfour3 2 0 2, \hfill z= \bbm 5 & 0& 1 \ebm$
+	\begin{enumerate}
+	\item $3A-2B$
+	\item $3A-2C$
+	\item $Ax$
+	\item $By$
+	\item $Cz$
+	\item $Ax+Cz^T$
+	\item $B^Ty+z^T$
+	\end{enumerate}
+\item Suppose $x=\vecthree 1 2 3$. Find a matrix $A$ such that
+	\begin{enumerate}
+	\item $Ax= \vecthree 0 0 3$
+	\item $Ax= \vectwo 2 1$
+	\item $Ax = \vecfour 3 2 3 4$
+	\end{enumerate}
+\item Write the question below into a question with the form $Ax=y.$
+\begin{quote} Are the vectors $\vecfour 1 1 2 0, \vecfour 0 1 1 {-2}, \vecfour 1 0 {-1} {-1}, \vecfour 2 {-1} {-1} 3 $  linearly independent? \end{quote}
+
+NOTE: You are not asked to answer the question. You are asked to rephrase it using matrix-vector multiplication.
+\end{enumerate}
+\end{document}
