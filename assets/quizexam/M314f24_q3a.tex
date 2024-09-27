@@ -1,0 +1,43 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 3}
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+%\vspace*{-0.7in}
+This quiz is worth 10 points.
+\begin{enumerate}
+\item (2 points) Suppose $a$ and $b$ are $n$-vectors. Show that if $a \perp b$, then $\Vert a+b \Vert=\sqrt{\Vert a \Vert^2+\Vert b \Vert^2}.$
+\vfill
+\item (8 points) Suppose $a=(1,1,0)$ and $b=(0,1,1).$ 
+ 
+	\begin{enumerate}
+	\item Is the angle between $a$ and $b$ acute, obtuse or a right angle?
+	\vspace{.5in}
+	\item Write an equation for the line $L$ between $a$ and $b$. (Recall that the line determined by two points $a$ and $b$ is given by $L(t)=(1-t)a+tb.$)
+	\vfill
+	\item Show that the point $P=(3,1,-2)$ lies on the line $L$ determined by $a$ and $b.$
+	\vfill 
+	\item \textbf{Let $Y$ be the point $(7,1,4).$ Show that $P$ is the point on $L$ that is closest to the point $Y.$}
+	\vfill
+	\item Determine the distance between $X=(4,0,6)$ and $P.$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
