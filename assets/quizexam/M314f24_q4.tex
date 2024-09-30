@@ -1,0 +1,54 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 4}
+\rhead{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+%\vspace*{-0.7in}
+This quiz is worth 10 points. \hfill {\Large{Name: \underline{\hspace{2in}}}}
+\begin{enumerate}
+\item (2 points) Very briefly, explain how you can conclude \emph{without any computation} that the vectors below are linearly \textbf{dependent}. \\
+
+
+ $v_1=\vecfour 1 2 3 4, v_2=\vecfour 2 1 4 3, v_3=\vecfour1 {-1} 1 0,  v_4=\vecfour 1 0 1 0, v_5=\vecfour {\pi} {\sqrt{2}} 0 1$
+ 
+\vspace{.8in}
+
+\item (5 points) Show the vectors $a_1=\vecfour 1 0 0 1, a_2=\vecfour 1 1 1 0, a_3=\vecfour 0 {-1} 1 1$ are linearly \textbf{independent.}
+
+ 
+\newpage
+\item (3 points) Show that the vectors $x_1=\vecthree 1 1 0, x_2=\vecthree 1 0 1, x_3= \vecthree 0 1 {-1}$ are linearly \textbf{dependent}. \\
+
+(Note: You don't need to look too hard.)
+
+\vfill
+\item (1 point bonus) Answer Question 3 above in a different way. 
+\vfill
+\end{enumerate}
+\end{document}
