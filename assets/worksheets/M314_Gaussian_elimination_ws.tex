@@ -1,0 +1,45 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 6}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ \textbf{ \large \sc{Worksheet: Gaussian Elimination (a first look)} }
+\end{center}
+
+\begin{enumerate}
+\item Use Gaussian elimination to solve the system $S_1=\systeme{x+y=1, 2y-z=-4,x+y+z=4}$
+\vfill
+\item Use Gaussian elimination to solve the system $S_2=\systeme{x-5y+z=2, x-4y+z=2,2x+z=5}$
+\vfill
+\newpage
+\item Use Gaussian elimination to solve the system $S_3=\systeme{x_1+x_2+3x_3=5,x_1+2x_2+4x_3=6}$
+\end{enumerate}
+\end{document}
