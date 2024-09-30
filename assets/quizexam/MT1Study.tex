@@ -1,0 +1,83 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{M1 study}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+
+\begin{document}
+
+\vspace*{-0.5in}
+\begin{center}
+ \textbf{ \large \sc{Midterm I Study Ideas} }
+\end{center}
+
+\textbf{Basic Info} You will have 1 hour to complete the midterm. It will cover chapters 1-3,5-6 with an emphasis on chapters 1-5. Everything from the homework and the quizzes is fair game. You can bring in a single page of notes with writing on the front and a calculator. Note that you will not need the calculator and are expected to show your work.
+
+\textbf{Review by Topic} Here is a more specific list of things to know and more study ideas.
+
+	\begin{itemize}
+	\item Ch 1 
+		\begin{itemize} 
+		\item Know the language and notation of vectors and how to perform basic vector operations including rules of vector algebra.
+		\item Know the terminology of \emph{linear combinations of vectors}, \emph{inner product of vectors}, and \emph{unit vectors}.
+		\item Recall familiar applications.
+		\end{itemize}
+	\item Ch 2 
+		\begin{itemize}
+		\item Know the definition of a linear function and the basic strategies for determining if a function is or is not linear. Specifically, be able to show that a function is linear by exhibiting it in the form of
+ab inner product: $f(x) = a^T x$ and be able to show that a function is not linear by finding a counter-example.
+		\item Know the definition of an affine function and the basic strategy for determining if a function is or is not affine.
+		\item Review familiar applications and interpretations of linear/affine functions.
+		\end{itemize}
+	\item Ch 3
+		\begin{itemize}
+		\item Know how to compute the norm of a vector, the distance between two vectors, and the angle between two vectors.
+		\item Know how to tell if two vectors are orthogonal (perpendicular) or at an acute (or obtuse) angle.
+		\item Know the triangle inequality and the Cauchy-Schwartz inequality.
+		\item Be able to do algebraic manipulations involving norms and inner products
+		\end{itemize}
+	\item Ch 5
+		\begin{itemize}
+		\item Know the definition of linear independence and linear dependence and how to use them to \emph{show} that a set of vectors is or is not linearly independent (dependent).
+		\item Know the \textbf{independence-dimension inequality} or \textbf{Fact A}.
+		\item Know the definition of a basis and an orthonormal basis. Understand how to determine if a set of vectors is a basis and how to write one vector as a linear combination of others. What are the advantages of an orthonormal set of vectors?
+		\item Know the Gram-Schmidt algorithm.  Be able to implement it in a simple case
+(turn $a_1$, $a_2$, $a_3$ into $q_1$, $q_2$, $q_3$ with intermediate vectors
+$\tilde q_k$.)  What properties do the $q$'s have? How are those properties related to the $a$'s?
+		\item If $q_1$, $q_2$ and $q_3$ are orthonormal in $\Reals^3$, explain how you know they form a basis.  Since they do, given
+$x\in\Reals^3$ we can write $x = \alpha_1 q_1+\alpha_2 q_2+ \alpha_3 q_3$
+for some numbers $\alpha_1$, $\alpha_2$ and $\alpha_3$.  What are the numbers
+$\alpha_k$?  Hint: they can be expressed using inner products: equation (5.5) in the text.
+		\end{itemize}
+	\item Ch 6
+		\begin{itemize}
+		\item Know how to reference matrices and to do basic calculations including matrix-vector multiplication.
+		\end{itemize}
+
+
+\end{itemize}
+
+\end{document}
