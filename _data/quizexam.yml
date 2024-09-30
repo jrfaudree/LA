@@ -13,3 +13,6 @@ quizexam:
 - name: Quiz 4
   blank: M314f24_q4.pdf
   solutions: M314f24_q4-s.pdf
+- name: Midterm 1 Study Sheet
+  blank: MT1Study.pdf
+  
