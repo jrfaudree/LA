@@ -50,5 +50,9 @@ worksheets:
   name: Ch 6 Matrices
   blank: M314_ch6_matrices.pdf
   solutions: M314_ch6_matrices-s.pdf
-
+- date: M 30 Sept
+  name: Gaussian Elimination I
+  notes: M314_Gaussian_elimination_notes.pdf
+  blank: M314_Gaussian_elimination_ws.pdf
+  solutions: M314_Gaussian_elimination_ws-s.pdf
   
