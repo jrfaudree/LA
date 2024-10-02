@@ -55,4 +55,6 @@ worksheets:
   notes: M314_Gaussian_elimination_notes.pdf
   blank: M314_Gaussian_elimination_ws.pdf
   solutions: M314_Gaussian_elimination_ws-s.pdf
-  
+- date: W 2 Oct
+  name: Gaussian Elimination II
+  notes: M314_Gaussian_w_pivot.pdf
