@@ -1,0 +1,59 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework Ch 7 Additional Problems/Modifications}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+
+Problem 1.12.b modification: \\
+
+Suppose $x=(0,0,0,1,0,0)$ which is $e_4$ in the context of 6-vectors and suppose $a=(a_1,a_2, \cdots, a_{10})$, a $10$-vector. Find $c=x*a.$
+
+
+\begin{problems}
+
+\problem Determine a matrix $A$ such that for any $v\in \Reals^2$, 
+$Av$ is the reflection of $v$ around the line $y=-x$.
+
+\problem This is a modification of problem 7.14 in the text, which
+you should read first.
+
+The vector is given as $g=(0.1, 0.4, 0.5, 0.2)$.  
+
+The vector $r$ gives rainfall amounts per day in inches.  \\
+
+(So, if you were given 
+$r=(1,0,0,1),$ it would indicate that there was one inch of rain on day 1, no rain for the next two days,
+and one inch of rain on day 4.  )\\
+
+The vector $h= g*r$ indicates river height above normal in inches
+per day, starting with the same day as $r$.
+
+\begin{subproblems}
+    \item Suppose $r=(1,0,0,0,0,0)$.  Compute $h=g*r$.
+    \item Suppose $r=(0,1,0,0,0,0)$.  Compute $h=g*r$.
+    \item Suppose $r=(0,2,0,0,0,0)$.  Compute $h=g*r$.
+    \item Suppose $r=(1,1,0,0,0,0)$.  Compute $h=g*r$.
+    \item Suppose $r=(1,2,0,0,0,0)$.  Compute $h=g*r$.
+    \item Suppose $r=(0,0,0,0,0,1)$.  Compute $h=g*r$.
+    \item Suppose $r=(1,0,0,0,0,1)$.  Compute $h=g*r$.
+    \item Now finish problem 7.14.
+\end{subproblems}
+
+\end{problems}
+
+\end{document}
