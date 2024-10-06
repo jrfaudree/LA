@@ -1,0 +1,39 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework RREF Additional Problems}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{enumerate}
+\item Consider the system of linear equations\: $S=\systeme{4x+3y+12z=-7,2x+3y+6z=-1,3x-9z=6}$ 
+	\begin{enumerate}
+	\item Write the augmented matrix of the system $S_1$ and perform row operation, \textbf{by hand}, to transform it into reduced row echelon form.
+	\item Use the reduced row echelon form of matrix to solve the system of equations.
+	\item Demonstrate that your solution is correct by showing it is a solution to $S_1$ by direct calculation.\\
+	\end{enumerate}
+\item For each system of linear equations below, the reduced row echelon form of the augmented matrix is provided for you. Use it to find the solution set to the system.
+	\begin{enumerate}
+	\item $S_2=\systeme{w-x-3y=1,x+2y=3,2w-x-4y+2z=7,w-y+z=5},$ \hspace{.3in} $\begin{bmatrix} 1&0&-1&0&4\\ 0&1&2&0&3 \\ 0&0&0&1&1\\0&0&0&0&0\end{bmatrix}$\\
+
+\vspace{.2in}
+	
+	\item $s_3=\systeme{w-x-3y=1,x+2y+z=4,-w+2x+5y+2z=7,-w+x+3y-z=1},$ \hspace{.3in} $\begin{bmatrix} 1&0&-1&0&0\\0&1&2&0&0&\\0&0&0&1&0\\0&0&0&0&1 \end{bmatrix}$
+	\end{enumerate}
+\end{enumerate}
+\end{document}
