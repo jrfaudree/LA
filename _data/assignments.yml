@@ -27,7 +27,7 @@
   due: "Oct 2"
 
 - title: "HW 6"
-  assignment: "[RREF problems](assets/homework/HW_RREF_problems), 6.13, 7.2, 7.3, 7.4, **S7.5**, 7.12 (with modification, see link)  and these [problems](assets/homework/Ch7_extras_modifications.pdf) and these [Julia problems](julia/HW6.ipynb). For one of the Julia problems you will need this [audio snippet](julia/U2-WOWU.wav)."
+  assignment: "[RREF problems](assets/homework/HW_RREF_problems.pdf), 6.13, 7.2, 7.3, 7.4, **S7.5**, 7.12 (with modification, see link)  and these [problems](assets/homework/Ch7_extras_modifications.pdf) and these [Julia problems](julia/HW6.ipynb). For one of the Julia problems you will need this [audio snippet](julia/U2-WOWU.wav)."
   due: "Oct 16"
 
 - title: "HW 7"
