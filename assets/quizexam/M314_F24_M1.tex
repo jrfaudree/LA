@@ -1,0 +1,146 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Ch 6}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+{\emph{\fontsize{26}{28}\selectfont Fall 2024 \hfill
+%{\fontsize{32}{36}\selectfont Calculus 1: Midterm 1}
+\hfill Math F314X}}
+
+\begin{center}
+{\emph{%\fontsize{26}{28}\selectfont Spring 2024 
+%%\hfill
+{\fontsize{32}{36}\selectfont Linear Algebra: Midterm 1}
+%%\hfill Math F251X}
+}}
+\end{center}
+
+\vfill
+
+\quad \hfill {\Large{Name: \underline{\hspace{2in}}}}
+
+\vfill
+
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Show your work.
+
+\item You may have a single handwritten sheet of paper with writing on one side.
+
+\item You may use a calculatior 
+
+\end{itemize}
+
+
+\vfill
+
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&10&&\emptybox&\cr\tline
+&2&&20&&\emptybox&\cr\tline
+&3&&15&&\emptybox&\cr\tline
+&4&&25&&\emptybox&\cr\tline
+&5&&30&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\vfill
+
+\newpage
+
+\quad
+
+\newpage
+\begin{enumerate}
+
+\item (10 points) Let $a$ and $b$ be $n$-vectors. Show by direct computation that $\Vert a+b \Vert^2 - \Vert a-b \Vert^2 = 4a^Tb.$
+\vfill
+
+
+\item (20 points) Let $a_1=( \frac{1}{2}, \frac{\sqrt{3}}{2})$ and $a_2=(\frac{-\sqrt{3}}{2}, \frac{1}{2})$.
+	\begin{enumerate}
+	\item Show that $a_1$ and $a_2$ are an \textbf{orthonormal} set of vectors.
+	\vfill
+	\item Write the vector $v=\vectwo{4}{-8}$ as a linear combination of $a_1$ and $a_2.$ Show your work.
+	\vfill
+	\end{enumerate}
+\newpage
+
+\item (15 points) Given the vectors $x_1=\vecthree 1 3 0, x_2=\vecthree 2 2 0, x_3=\vecthree 1 0 0, x_4=\vecthree 0 0 1.$
+	\begin{enumerate}
+	\item Carefully explain why no computation is necessary to determine that the vectors $x_1,x_2,x_3,$ and $x_4$ are linearly dependent.
+	\vspace{2 in}
+	\item Use the definition to show the vectors $x_1,x_2,x_3, x_4$  are linearly {dependent}.
+	\vfill
+%	\item Show that the vector $y=\vecthree 1 3 1$ can be written as a linear combination of the $x_i$'s in two different ways.
+%	\vfill
+	\end{enumerate}
+\newpage
+\item (25 points) Let $T= \left\{ v_1=\vecthree 1 2 2, v_2=\vecthree {-1} 0 0, v_3= \vecthree 0 3 4 \right\}.$
+	\begin{enumerate}
+	\item Show that $T$ is linearly independent.
+	\vfill
+\newpage
+	\item Begin the Gram-Schmidt algorithm on the vectors $v_1,v_2,v_3,$ in the given order.\\
+Recall $T= \left\{ v_1=\vecthree 1 2 2, v_2=\vecthree {-1} 0 0, v_3= \vecthree 0 3 4 \right\}.$
+		\begin{enumerate}
+		\item Find $\overline{q_1}$ and $q_1.$
+		\vspace{2in}\
+		\item Find $\overline{q_2}$ and $q_2.$
+		\vfill
+		\end{enumerate}
+	\end{enumerate}
+\newpage
+\item (30 points) Short Answer
+	\begin{enumerate}
+	\item  Let $a_1=\vecfour 1 2 {-3} 4$ and $a_2=\vecfour 5 4 3 c$ where $c$ is some real number. Determine the values of $c$ such that the angle between $a_1$ and $a_2$ be obtuse. (An angle is obtuse if it is larger than 90 degrees.)
+	\vfill
+	\item If $\Vert x \Vert=10$ and $\Vert y \Vert =5,$ what are possible values for $\Vert x+y \Vert$?
+	\vfill
+	\item The vectors $v_1,v_2,\cdots,v_k$ are $k$- vectors and they form an orthonormal set of vectors. Can you conclude that they are a \textbf{basis}? \textbf{Justify} your conclusion using complete sentences.
+	\vfill
+	\newpage
+	\item Suppose $f(x)$ is a scalar-valued function of a $50$-vector that outputs the sum the first 30 values in the input vector $x.$ Determine whether $f(x)$ is a linear function and demonstrate your answer is correct.
+	\vfill
+	\item Determine a matrix $A$ such that \; $A\bbm x_1\\x_2\\x_3\\x_4\\x_5\\ \ebm = \bbm x_5 \\x_4\\x_3 \ebm$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+%%%%ENDDOCUMENT
+
+
