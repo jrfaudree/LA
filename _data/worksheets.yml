@@ -64,8 +64,15 @@ worksheets:
 - date: W 9 Oct
   name: Ch 7 day 2
   notes: Ch7-2.pdf
-- date: W 11 Oct
+- date: F 11 Oct
   name: Ch 8
   blank: M314_Ch8a.pdf
   notes: Chia.pdf
-  notes: M314_Gaussian_w_pivot.pdf
+- date: M 14 Oct
+  name: Last of Ch 8, Start Ch 10
+  notes: Ch8-last.pdf
+- date: M 16 Oct
+  name: Ch 10 Matrix Multiplication
+  worksheet: M314_Ch10-mult-practice.pdf
+  solutions: M314_Ch10-mult-practice-s.pdf
+  notes: Ch10-intro-mult.pdf
