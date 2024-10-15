@@ -73,6 +73,6 @@ worksheets:
   notes: Ch8-last.pdf
 - date: W 16 Oct
   name: Ch 10 Matrix Multiplication
-  worksheet: M314_Ch10-mult-practice.pdf
+  blank: M314_Ch10-mult-practice.pdf
   solutions: M314_Ch10-mult-practice-s.pdf
   notes: Ch10-intro-mult.pdf
