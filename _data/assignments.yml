@@ -35,8 +35,8 @@
   due:  "Oct 23"
 
 - title: "HW 8"
-  assignment: "10.2, 10.4, 10.6, 10.9, 10.17, 10.21, 10.26, 10.35 and these [problems](HW8b.pdf)  and this [Julia problem](julia/HW8.ipynb)"
-  due: " "
+  assignment: "10.2, 10.4, 10.6, 10.9, 10.17, 10.21, 10.26, 10.35 and these [problems](assets/homework/HW8b.pdf)  and this [Julia problem](julia/HW8.ipynb)"
+  due: "30 Oct "
 
 - title: "HW 9"
   assignment: "11.1, 11.2, 11.4, 11.12, 11.17 and these [problems](HW9b.pdf)  and these [Julia problems](julia/HW9.ipynb)"
