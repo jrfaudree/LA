@@ -1,0 +1,54 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 8 Additional Problem}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{problems}
+
+    \problem Text: 11.16. You can assume that $A$ is $5\times 5$. And don't bother with the ``Does this make sense'' part of the question.
+
+    \problem Supplemental problem: 11.11. \\
+    You can solve this by inspection. Your first step is to determine the dimensions of the matrix right inverse matrix. As you know, there are many solutions.
+   % \textbf{Hint:} Consider block multiplication
+%    \[
+%        \begin{bmatrix} A & a\end{bmatrix} \begin{bmatrix}B \cr 0\end{bmatrix} = \begin{bmatrix}AB + a0\end{bmatrix}
+%    \]
+%    where $A$ and $B$ are $2\times 2$, $a$ is $2\times 1$ and the $0$ is a $1\times 2$ zero row.
+
+
+    \problem The matrix 
+    \[
+    A  =\frac{1}{\sqrt{2}}\begin{bmatrix} 3 & -2 \\ -3 & -4 \end{bmatrix}
+    \]
+    admits the $QR$ factorization
+    \[
+    A =   \left(\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\right)
+    \begin{bmatrix} 3 & 1 \cr 0 & -3\end{bmatrix}
+    \]
+    You don't need to show this.  Instead, use the $QR$ factorization
+    to solve $Ax=b$ with $b=(3,-5)$.  
+
+    Note: For a matrix as small as a $2\times 2$, we wouldn't bother with
+    $QR$ factorization. We would simply write down
+    the inverse matrix and use it to solve the system.  
+    The point of this problem is for you to get a little practice with
+    what the the steps of solving the system with $QR$ factorization actually are,
+    without having to do an enormous amount of arithmetic.
+\end{problems}
+
+\end{document}
