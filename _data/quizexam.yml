@@ -18,3 +18,9 @@ quizexam:
 - name: Midterm 1 
   blank: M314_F24_M1.pdf
   solutions: M314_F24_M1-s.pdf
+- name: Quiz 5 
+  blank: M314f24_q5.pdf
+  solutions: M314f24_q5-s.pdf
+- name: Quiz 6 
+  blank: M314f24_q6.pdf
+  solutions: M314f24_q6-s.pdf
