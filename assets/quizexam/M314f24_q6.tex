@@ -1,0 +1,56 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,systeme}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 6}
+\rhead{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+%\vspace*{-0.7in}
+This quiz is worth 10 points. \hfill {\Large{Name: \underline{\hspace{2in}}}}
+\begin{enumerate}
+\item (4 points) The 4-vector $c=(c_1,c_2,c_3,c_4)$ represents the coefficients of a cubic polynomial $p(x)=c_1+c_2x+c_3x^2+c_4x^3.$ Express the conditions 
+$$p(0)=1, \: p'(0)=0, \: p(2)=1, \; p'(2)=0$$
+as a set of linear equations of the form $Ac=b.$
+
+\vfill
+Bonus: \textbf{Use your knowledge of Calculus} to solve the system of equations above or determine that no solution is possible.\\
+
+\vspace{1in}
+
+\newpage
+\item (6 points) Which of the following are linear or affine functions $f: \mathbb{R^2} \to \mathbb{R}^3$? For ones which are linear, express them in the form $f(x)=Ax$ for some specific matrix $A.$ For ones which are affine but not linear, express them in the form $f(x) = Ax+b$ for some specific matrix $A$ and vector $b$. For ones which are not affine, demonstrate your conclusion is correct but selecting an appropriate example.\\
+
+	\begin{enumerate}
+	\item $f(x_1,x_2)=(x_2,x_2-x_1,x_2x_1)$
+	\vfill
+	\item  $f(x_1,x_2)=(0,x_1,\frac{x_1+x_2}{3})$
+	\vfill
+	\item  $f(x_1,x_2)=(\frac{x_1+1}{2},\frac{x_2+1}{2}, x_1)$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
