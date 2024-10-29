@@ -84,4 +84,11 @@ worksheets:
   notes: Zoom-day2.pdf
 - date: F 25 Oct 
   name: Ch 11 Inverses (day 1)
-  notes: M314_Ch11-inverses-intro.pdf
+  blank: M314_Ch11-inverses-intro.pdf
+  solutions: M314_Ch11-inverses-intro-s.pdf
+- date: M 27 Oct
+  name: Finish Worksheet from Friday
+- date: W 29 Oct
+  name: More on Inverses
+  notes: Ch11-inverses.pdf
+  
