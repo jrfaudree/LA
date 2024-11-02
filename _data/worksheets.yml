@@ -81,7 +81,7 @@ worksheets:
   notes: Zoom-day.pdf
 - date: W 23 Oct 
   name: QR-Factorization (day 2)
-  notes: Zoom-day2.pdf
+  notes: Wed-23Oct-Notes.pdf
 - date: F 25 Oct 
   name: Ch 11 Inverses (day 1)
   blank: M314_Ch11-inverses-intro.pdf
@@ -91,4 +91,10 @@ worksheets:
 - date: W 29 Oct
   name: More on Inverses
   notes: Ch11-inverses.pdf
+- date: F 1 Nov
+  name: Last on Inverses
+  notes: Last-of-invertibility.pdf
+- date: W 29 Oct
+  name: Start Ch 12
+  notes: Mon-4-Nov.pdf
   
