@@ -24,3 +24,9 @@ quizexam:
 - name: Quiz 6 
   blank: M314f24_q6.pdf
   solutions: M314f24_q6-s.pdf
+- name: Quiz 7 
+  blank: M314f24_q7.pdf
+  solutions: M314f24_q7-s.pdf
+- name: Midterm 2 Study Sheet
+  blank: MT2Study.pdf
+  
