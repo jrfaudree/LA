@@ -1,0 +1,131 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{M2 study}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+
+\begin{document}
+\begin{center}{\Large{Midterm 2 Review}}\end{center}
+
+
+\noindent\textbf{The Basics}\\
+
+The midterm will cover Chapters 7,8,10,11. You will have 1 hour to take the midterm. You can bring in 1 page of notes with writing on one side. You can bring a calculator. You cannot use your cell phone or a computer. You will need to show your work.\\
+
+Also, keep in mind that you can't forget things from earlier in the semester. Topics from the homework and the quizzes starting from the beginning of the semester are fair game even though the emphasis will be on later chapters.\\
+
+\noindent\textbf{Chapter-by-Chapter Review of Topics}\\
+
+\noindent\textbf{Ch 7} Matrix Examples\\
+
+This chapter introduced a variety of applications of matrices and of the matrix-vector product. These include transformations of the plane or 3-space (like rotation by $\theta$ or reflection about a line), selector matrices, incidence matrix of a graph, and convolution. Recall that it also included a strategy: build the matrix of a linear transformation/operation by finding the image of the $e_i$'s under the transformation.\\
+
+\begin{itemize}
+	\item Can you interpret the matrix-vector product in context?
+	\item Can you find the matrix $A$ such that $Ax$  is the transformation of the plane that rotates $x$ by 60 degrees and then reflects it about the $y$ axis?
+	\item We've seen a lot of connections between linear algebra and calculus questions.
+For example, how do you represent derivatives of cubic polynomials in terms 
+of matrix multiplication?  How do you represent
+antiderivatives of cubic polynomials in terms of matrix multiplication?
+	\item Given a vector $a$ and a vector $b$, how do you compute the convolution $a*b$?
+What is the matrix $T$ such that $a*b = Tb$?
+\end{itemize}
+
+\noindent\textbf{Ch 8} Linear Equations\\
+
+This chapter introduces the notion of functions from $\mathbb{R}^n$ to $\mathbb{R}^m$ with a focus on linear and affine functions. \\
+
+\begin{itemize}
+\item Know how to represent a linear function in terms of a matrix.\\  
+For example, suppose $f$ is the function that takes $(x_1, x_2, x_3)$ to $(x_2,-x_3, x_1)$.
+What is its representation in terms of a matrix?  
+\item Similarly, suppose 
+$f$ is a linear map from $R^2$ to $R^4$ and $f(e_1) = (-1, 3, 4, 3)$ and $f(e_2) = (2 , 3, 4, 9)$.
+What is the representation of $f$ in terms of a matrix?
+\item How can you show that a function is linear? affine? Not affine?
+\item If asked for the coefficients of a quadratic polynomial $p$ with $p(x_i)=y_i$ for $i=1,\ldots, 5$,
+can you set up a system of linear equations to solve for the coefficients?
+\item How do you solve $Ax=b$ if $A$ is lower triangular?  What if $A$ is upper triangular?
+\end{itemize}
+
+\noindent\textbf{Ch 10} Matrix Multiplication\\
+
+This chapter introduced matrix-matrix multiplication and finished with QR factorization. It included the algebra of matrix-matrix multiplication (see page 179) and orthogonal matrices.
+
+	\begin{itemize}
+	\item How do you check that a matrix $A$ is orthogonal? Restate your answer to the question using the language of Chapter 11.
+	\item What is the column perspective of matrix-matrix multiplication?  What is the row perspective?
+	\item Express the following task as a matrix algebra task: "Find a linear combination of vectors $a_1$, $a_2$ and $a_3$
+that equals $b$".  This gets at the column interpretation of matrix-vector multiplication (page 119).
+	\item What is the transpose of a matrix product?
+	\item If you multiply a $3\times 3$ matrix $A$ on the left by $\mathrm{diag}(1,2,3)$ what
+is the result?  How about if you multiply $A$ on the right 
+by $\mathrm{diag}(1,2,3)$?
+	\item Find a $4\times 5$ matrix $L$ such that when you multiply any $5\times k$ matrix
+$A$ on the left by $L$, the result is the matrix $A$ with its bottom row removed.
+	\item Given a matrix $A$ with linearly independent columns,
+how do you compute its QR factorization?  This is related to the Gram-Schmidt algorithm,
+and you should review how you convert the steps of the Gram-Schmidt algorithm into
+the entries of the matrices of the QR factorization. \textbf{You will be asked to show 
+that you know how to do this.}  See also homework 8,
+additional problem 2.
+	\item Now, given the QR factorization of a square matrix $A$, how do you solve $Ax=b$?
+This is a two step procedure.  If I give you $Q$ and $R$, can you carry out the steps?
+	\end{itemize}
+
+\noindent\textbf{Ch 11} Matrix Inverses\\
+
+This chapter introduces the idea of left/right/both-sided inverses and encourages a multifaceted view - including row-focused and column-focused views. We discussed invertibility conditions, applications of inverses to solutions to systems of equations, and how multiplicative inverses interact with other matrix operations such as multiplication and transposes.
+
+
+	\begin{itemize}
+	\item Suppose $A$ has a left inverse.  Show that the columns of $A$ have to be linearly independent.
+	\item Once you know that a square matrix has linearly independent columns you know a whole bunch 
+of other things are true.  Name as many as you can.  How many solutions of $Ax=0$ are there?  Why?
+	\item Similarly, once you know that a square matrix in \textbf{not} invertible (or is singular), you know a whole bunch of things. Name as many as you can. How many solutions to $Ax=0$ are there?
+	\item What is the inverse of a matrix product of invertible matrices? What is the inverse of the transpose of an invertible matrix?	
+	\item Suppose $A$ is an $3\times 3$ matrix.  What matrix equation do you solve to determine
+the first column of $A^{-1}$? What equation to you solve to find the third column of $A^{-1}$?
+If you have a QR factorization of $A$, can you determine these columns?
+	\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
