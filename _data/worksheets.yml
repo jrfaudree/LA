@@ -94,7 +94,9 @@ worksheets:
 - date: F 1 Nov
   name: Last on Inverses
   notes: Last-of-invertibility.pdf
-- date: W 29 Oct
+- date: M 4 Nov
   name: Start Ch 12
   notes: Mon-4-Nov.pdf
-  
+- date: W 6 Nov
+  name: Least Squares
+  notes: Wed-5-Nov.pdf  
