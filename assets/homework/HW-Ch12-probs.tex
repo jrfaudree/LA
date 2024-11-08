@@ -1,0 +1,54 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 10 Problems (From Ch 12)}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{problems}
+
+    \problem Text 12.2 Modified.  Suppose that the $m\times n$ matrix $Q$
+    has orthonormal columns, say $q_1,q_2, \cdots, q_n.$
+    \begin{subproblems}
+        \item Why do you immediately know that $m\ge n$ and hence $Q$ is tall or square?
+        \item Suppose that $b$ is an $m$-vector. Show that $\hat x = Q^T b$ is the vector that minimizes $J(x)=||Qx-b||^2$. \textbf{Do this by setting up the normal equations directly.}
+        \item Rewrite your solution for $\hat x$ in part $b$ \textbf{in terms of the columns of $Q$}. It will be helpful to write $b=(b_1,b_2,\cdots,b_m).$ You should now be able to complete the sentence below using the words ``inner product...".\\
+        \begin{quote} If the columns of $Q$ are orthonormal, then the least squares approximation $\hat x$ for the system $Qx=b$ is ... \end{quote}
+    \end{subproblems}
+
+    \problem Supplemental \textbf{12.6}  Hint: Your matrix $A$ will be $6 \times 4$ and will have a lot of 0's and 1's. 
+
+    \problem Suppose we want to compute the coefficients of 
+    the quadratic $p(t) = c_1 + c_2 t + c_3 t^2$ that is
+    the least squares fit to the following $(t,y)$ data points:
+    $(0,0)$, $(1, 8)$, $(3,8)$, $(4,20)$.
+
+    \begin{enumerate}
+        \item Formulate the problem in the form of $Ac = b$.
+        That is, find the matrix $A$ and the vector $b$.  You don't need
+        to solve this system.
+        \item Now formulate the normal equation $A^T A c = A^T b$
+        that you would use to find these best-fit coefficients. Again,
+        do not solve the system. (But don't worry, there is a Julia problem that tackles this!)
+    \end{enumerate}
+     
+    \problem Text: problem 12.4.  Hint: you will find that the square roots of the weights
+    are important and note that the weights are \emph{positive}. For part (b), remember that the columns of $C$ are linearly independent
+    if and only if the only solution of $Cx=0$ is $x=0$.  
+
+\end{problems}
+
+\end{document}
