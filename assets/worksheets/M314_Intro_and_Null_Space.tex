@@ -1,0 +1,79 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{Intro + Null Spaces}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ \textbf{ \large \sc{Motivation for Eigenvalues and Eigenvectors} }
+\end{center}
+\begin{enumerate}
+\item An example of a system of linear, first-order differential equations.\\
+
+\begin{tabular}{lll}
+$\frac{dv}{dt}=v(t)-w(t)$&\quad&$v(0)=40$\\
+&&\\
+$\frac{dw}{dt}=2v(t)-4w(t)$&\quad&$w(0)=10$
+\end{tabular}
+
+\item A solution: $v(t)=90e^{2t}-50e^{3t}, \quad w(t)=-90e^{2t}+100e^{3t}.$
+\newpage
+
+\begin{center} Null Spaces \end{center}
+\item Let $A$ be an $m \times n$ matrix, then the \textbf{null space of $A$} is
+\vspace{1in}
+\item Example 1: $A=\bbm 1&2\\10&20 \ebm$\\
+
+\vfill
+
+\item Example 2: $B=\bbm 1&0&1 \\ 5&4&9\\ 2&4&6 \ebm$\\
+\vfill
+\newpage
+\item Show/prove/give an argument for each of the statements below.\\
+	\begin{enumerate}
+	\item For every matrix $A$, $N(A) \not = \emptyset.$
+	\vspace{.5in}
+	\item If $A$ is invertible, then $N(A)$ contains only the zero vector.\\
+	\vspace{.5in}
+	\item If the vector $x$ is in $N(A),$ then for any number $c$, $cx$ is in $N(A)$.\\
+	\vfill
+	\item If both of the vectors $x$ and $y$ are in $N(A),$ then the vector $x+y$ is also in $N(A).$\\
+	\vfill
+	\item If $x$ is in $N(A)$ and the vector $z$ is \emph{not} in $N(A)$, then $x$ and $z$ are linearly independent.
+	\vfill
+	\item If the vector $a$ is in $N(A)$ and $c$ is a solution to $Ax=b,$ then $c+a$ is also a solution to $Ax=b.$
+	\vfill
+	\item If both of the vectors $c_1$ and $c_2$ are solutions to $Ax=b,$ then there is a vector $a$ in $N(A)$ such that $c_2=c_1+a.$
+	\vfill
+	\end{enumerate}
+\newpage
+\item Main Principles
+\end{enumerate}
+\end{document}
+	
