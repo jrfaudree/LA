@@ -103,3 +103,8 @@ worksheets:
 - date: F 8 Nov
   name: Least Squares
   notes: Ch12-last.pdf
+- date: W 12 Nov
+  name: Null Space Intro
+  blank: M314_Intro_and_Null_Space.pdf
+  solutions: M314_Intro_and_Null_Space-s.pdf
+  notes: NullSpace.pdf
