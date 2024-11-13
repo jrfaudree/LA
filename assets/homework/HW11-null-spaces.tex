@@ -1,0 +1,142 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 11 Problems}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{problems}
+
+\problem Below is a system of first-order, linear, differential equations. Rewrite this system in the form $Au=\frac{du}{dt}, \: u=u(0)$ for $t=0.$ (That is, you need to define $u$, $A$, and $u(0).$ You are \emph{not} being asked to solve the system.)
+
+\begin{tabular}{lll}
+$\frac{dv}{dt}=4v-5w$&\quad& $v=8$ when $t=0$\\
+&&\\
+$\frac{dw}{dt}=2v-3w$&\quad& $w=5$ when $t=0$\\
+\end{tabular}
+
+    \problem Consider the matrix 
+    \[
+A = \begin{bmatrix}
+    1 &2 &2 &4 & 6\cr
+    1 &2 &3 &6 &9\cr
+    2 &4 &5 &10 &16   
+\end{bmatrix}
+\]
+Find the null space of $A$ by using elementary row operations to produce the reduced row echelon form of $A.$ (You will need to record these for problem 4 later. If you are efficient, you will use a total of 5 row operations.)
+ 
+ \problem For the same matrix $A$ as in the previous problem,
+    one solution of $Ax=(1,3,6)$ is $x=(5,-4,3,-2,1)$.  Find
+    all solutions to $Ax=(1,3,6).$
+
+ \problem We now return to the matrix $A$ of problem 2. 
+	\begin{subproblems}
+	\item Demonstrate that if $E_1=\bbm 1&0&0\\-1&1&0\\0&0&1\ebm$, then $E_1A$ is the result of doing an elementary row operation on $A$ that involves leaving rows 1 and 3 unchanged, but replacing the second row of $A$ with $row_2(A)-row_1(A)$. Indeed $E_1$ stands for ``first elementary row operation."
+	\item Find $E^{-1}$ (which is easy!). 
+	\item Find the matrices $E_1,E_2,E_3,E_4,$ and $E_5$ for each of \textbf{your} row operations from problem 2.
+	\item Use a computational tool to find the product $B=E_5E_4E_3E_2E_1$ and verify that $BA$ is $A$ in reduced row echelon form.
+	\item Explain why you know that $B$ is invertible.
+	\item Let $C=rref(A)$, the reduced row echelon form of $A.$ Write $A$ in terms of $B$ and $C.$ 
+	\item Part (f) above is another way of factoring a matrix $A$ (called $LU$-factorization) and it can also be used to solve equations. You don't have to do anything for this part. I put it in so you would know why you were asked to do this.
+	\end{subproblems}
+
+%    \problem Find a $3\times 3$ matrix $F$ such that
+%    $Fx = (x_1, x_2 - 2 x_1, x_3 + 4 x_1)$.  Also,
+%    compute $F^{-1}$ using any technique that seems convenient,
+%    including the method of making an educated guess!
+%
+%    \problem Suppose $A$ is a $3\times 5$ matrix.  Find
+%    a $3\times 3$ matrix $E_1$ such that the rows of $E_1A$ 
+%    are as follows:
+%    \begin{enumerate}
+%        \item Row 1 is row 1 of $A$
+%        \item Row 2 is row 2 of $A$ minus twice row 1 of $A$.
+%        \item Row 3 is row 3 of $A$ plus four times row 1 of $A$
+%    \end{enumerate}
+%    The matrix $E_1$ is called an elimination matrix.  You should find
+%    that $E_1$ is lower-triangular, and that most of the interesting things
+%    happen in the first column. Also, compute $E_1^{-1}$.
+
+%    \problem As in the problem above, find a different elimination
+%    matrix $E_2$ such that the first two rows of $E_2A$ are those of $A$,
+%    but the third row is row three of $A$ minus 6 times row 2 of $A$.
+%
+%    \problem Ok, let's go back to the matrix $A$ of the first problem:
+%    \[
+%        A = \begin{bmatrix}
+%            1 &2 &2 &4 & 6\cr
+%            1 &2 &3 &6 &9\cr
+%            2 &4 &5 &10 &17   
+%        \end{bmatrix}
+%            \]
+%    Find an elimination matrix $E_1$ such that $E_1 A$ is the 
+%    first step of elimination so that the first column of $A$
+%    is cleared below the pivot. Your matrix $E_1$ will have ones on 
+%    the diagonal and the only other non-zero entries will be in the 
+%    first column.
+%
+%    \problem Continuing with the previous problem, at this point you will
+%    have found that column 2 is already cleared. Yay! Find an elimination
+%    matrix $E_2$ that does the work of clearing column three from here,
+%    at which point elimination will be done.  That is, $E_2 E_1 A = B$,
+%    where $B$ is the echelon form matrix you computed in question 1.
+%    
+%    \problem From the previous problem, we know that $E_2 E_1 A = B$,
+%    where $B$ is in echelon form.  That means that $A = E_2^{-1} E_1^{-1} B$.
+%    Compute each of $E_1^{-1}$, $E_2^{-1}$ and the product $E_2^{-1} E_1^{-1}$.
+%    The result will be a lower triangular matrix $L$.  There will be ones 
+%    on the diagonal, and the entries below the diagonal will be closely 
+%    tied to numbers you saw in the process of doing elimination.
+%
+%    \problem Suppose you want to find a solution of $Ax=(1,3,6)$.
+%    One can do this with $QR$ factorization and the pseudo inverse.
+%    But here's another way using the factorization $A=L B$ we just formed.
+%    \begin{itemize}
+%        \item First, solve $Lw = (1,3,6)$ by using forward substitution. Do this!
+%        \item Now find a solution of $Bx = w$, for then $Ax = LBx = Lw = (1,3,6)$.
+%        To find this solution, extract the three pivot columns of $B$, 
+%        and the result will be an upper-triangular matrix $U$.  Great.  Now 
+%        use back substitution to solve $U\tilde x = w$.  This will determine
+%        the pivot variables in $\tilde x$, and the solution $x$ has its
+%        pivot variables from $\tilde x$ and its free variables all zero.
+%        Write down the solution $x$ you just found.
+%    \end{itemize}        
+%
+%    
+%    \problem Your solution to $Ax=(1,3,6)$ from the previous problem
+%    differs from mine, which was $(5,-4,3,-2,1)$.  So the two
+%    solutions differ by an element of the nullspace.  Show that
+%    this element of the nullspace really was in the nullspace you 
+%    identified way back in Problem 1.  The easiest way to do this will be
+%    to work with the ``special'' elements of the nullspace you will have
+%    identified back in Problem 1 associated with the free variables 
+%    $x_2$ and $x_4$.
+    
+    \problem Suppose $A$ is an $m\times n$ matrix and 
+    that $W$ is an invertible $m\times m$ matrix.
+    	\begin{subproblems}
+	\item Show that the null space of $A$ and the null space of $WA$
+    are the same as each other.  (One strategy is to pick a vector in $N(A)$ and show it must be in $N(WA).$ Then reverse that process.)
+    	\item What can you conclude
+    about the null space of $WA$ 
+    if you don't know that $W$ is invertible?
+    	\end{subproblems}
+
+\end{problems}
+
+\end{document}
