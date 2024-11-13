@@ -51,9 +51,13 @@
   due: "15 Nov "
 
 - title: "HW 11"
-  assignment: "These [problems](HW11b.pdf)"
-  due: " "
+  assignment: "These [problems](assets/homework/HW12-null-spaces.pdf)"
+  due: "20 Nov"
 
 - title: "HW 12"
-  assignment: "These [problems](HW12b.pdf)"
-  due: " "
+  assignment: "These [problems](assets/homework/HW12-determinants.pdf)"
+  due: "25 Nov"
+
+- title: "HW 13"
+  assignment: "These [problems](assets/homework/HW13-eigens.pdf)"
+  due: "6 Dec"
