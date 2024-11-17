@@ -21,5 +21,7 @@ The topics at the end of the semester (null spaces, determinants, eigenvalues an
 * [Null Spaces](assets/worksheets/NullSpace.pdf)
 
 * Determinants
+  * [The 2-by-2 case](assets/worksheets/Det-2by2.pdf)
+  * [The general case](assets/worksheets/Det-Bynum.pdf)
 
 * Eigenvalues and Eigenvectors
