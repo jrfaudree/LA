@@ -29,4 +29,6 @@ quizexam:
   solutions: M314f24_q7-s.pdf
 - name: Midterm 2 Study Sheet
   blank: MT2Study.pdf
-  
+- name: Midterm 2 
+  blank: M314_F24_M2.pdf
+  solutions: M314_F24_M2-s.pdf  
