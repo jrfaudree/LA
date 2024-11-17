@@ -109,6 +109,11 @@ worksheets:
   solutions: M314_Intro_and_Null_Space-s.pdf
   notes: NullSpace.pdf
 - date: F 14 Nov
+  name: Finish Wednesday's sheet
+- date: M 18 Nov
+  name: Determinant (Day 1)
+  notes: Det-2by2.pdf
+- date: At some point...
   name: Null Space and Geometry
   blank: M314_Null_Space_and_Geometry.pdf
   solutions: M314_Null_Space_and_Geometry.pdf
