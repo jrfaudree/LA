@@ -1,0 +1,173 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{M2}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+{\emph{\fontsize{26}{28}\selectfont Fall 2024 \hfill
+%{\fontsize{32}{36}\selectfont Calculus 1: Midterm 1}
+\hfill Math F314X}}
+
+\begin{center}
+{\emph{%\fontsize{26}{28}\selectfont Spring 2024 
+%%\hfill
+{\fontsize{32}{36}\selectfont Linear Algebra: Midterm 2}
+%%\hfill Math F251X}
+}}
+\end{center}
+
+\vfill
+
+\quad \hfill {\Large{Name: \underline{\hspace{2in}}}}
+
+\vfill
+
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Show your work.
+
+\item You may have a single handwritten sheet of paper with writing on one side.
+
+\item You may use a calculator 
+
+\end{itemize}
+
+
+\vfill
+
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&20&&\emptybox&\cr\tline
+&2&&20&&\emptybox&\cr\tline
+&3&&20&&\emptybox&\cr\tline
+&4&&20&&\emptybox&\cr\tline
+&5&&20&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\vfill
+
+\newpage
+
+\quad
+
+\newpage
+\begin{enumerate}
+
+%convolution
+\item (20 points) Let $a=(1,-1)$ and $x=(x_1,x_2, \cdots, x_{20}).$ Let $b=a*x,$ the convolution of the 2-vector $a$ and the 20-vector $x$.
+	\begin{enumerate}
+	\item What are the dimensions of $b$?
+	\vspace{1in}
+	\item Find the entries of $b$. (Note that $b$ is too long to list all of the entries. It might be useful to let $b=(b_1,b_2, \cdots, b_n)$ and describe $b_i$ for appropriate $i$-values.)
+	\vfill
+	\item We know there is a matrix $A$ such that $Ax=a*x.$
+		\begin{enumerate}
+		\item What are the dimensions of the matrix $A$.
+		\vspace{1in}
+		\item Describe the first three columns of $A.$
+		\vfill
+		\end{enumerate}
+	\end{enumerate}
+\newpage
+%matrix product and LR inverses
+\item (20 points) The 3-vector $c$ represents the coefficients of the quadratic polynomial $p(x)=c_1+c_2x+c_3x^2.$ 
+	\begin{enumerate}
+	\item Find a matrix $B$ such that $Bc=\int_0^2 p(x) \: dx.$
+	\vfill
+	\item Express the conditions $p(0)=0,$ $p'(0)=1$, $p(2)=-3$, and $p'(2)=0$ as a set of linear equations of the form $Ac=b.$
+	\vfill
+	\item Does $A$ have a left inverse? Justify your answer. (Note: You are not asked to find a left inverse, only determine whether or not one exists.)
+	\vspace{1in}
+	\item Does $A$ have a right inverse? Justify your answer. 
+	\vspace{1in}
+	\end{enumerate}
+\newpage
+%QR factorization
+\item (20 points) Suppose $A=\begin{bmatrix}
+1&1&0\\0&1&2\\0&-1&1 \end{bmatrix}.$ 
+	\begin{enumerate}
+	\item Suppose someone, say Jill, gives you a matrix $Q$ and a matrix $R$ and asserts they are a QR-factorization of $A$. What do you need to check to confirm Jill is correct? Be specific and be efficient.
+	\vfill
+	\item In fact, $A$ does have QR-factorization where $Q=\begin{bmatrix} 1&0&0\\ \star& \sqrt{2}/2&\sqrt{2}/2\\ \star& -\sqrt{2}/2&\sqrt{2}/2\end{bmatrix}$ and $R=\begin{bmatrix} 1&1&\star \\ 0& \sqrt{2}&\star \\ 0& \star&\star \end{bmatrix}.$\\
+	
+	Fill in the blank spaces in the entries of $Q$ and $R$ below. You can show your work and/or explain your reasoning in the remaining space.
+	
+	
+	Answer: \\
+	
+	$Q=\begin{bmatrix} 1&0&0\\ \framebox(30,30){}& \sqrt{2}/2&\sqrt{2}/2\\ \framebox(30,30){}& -\sqrt{2}/2&\sqrt{2}/2\end{bmatrix}$ and $R=\begin{bmatrix} 1&1&\framebox(30,30){} \\ 0& \sqrt{2}&\framebox(30,30){} \\ 0& \framebox(30,30){}&\framebox(30,30){} \end{bmatrix}.$\\
+	
+	%\item Use the $Q$ and $R$ from part (b) to solve the system $Ax=\vecthree{1}{0}{2\sqrt{2}}.$
+	\vspace{3in}
+	\end{enumerate}
+\newpage
+\item (20 points) Let $A=\begin{bmatrix} 2&2&-1\\0&-2&1\\0&0&1\end{bmatrix}.$
+	\begin{enumerate}
+	\item Find a left inverse of $A.$ (You can do this by inspection.)
+	\vfill
+	\item Does $A$ have a right inverse? Justify your answer. (You are not asked to find one, just to determine whether or not one exists.)
+	\vspace{1in}
+	\item Let $b=(4,-6,3).$
+		\begin{enumerate} 
+		\item Use your answer in part (a) to solve the system of equations $Ax=b.$
+		\vfill
+		\item Since $A$ happens to be upper triangular, describe an alternative method for solving $Ax=b.$ (You don't have to perform the method, though you could use it to check your answer.)
+		\vspace{1in}
+		\end{enumerate}
+		
+	\end{enumerate}
+\newpage
+\item (20 points) 
+	\begin{enumerate}
+	\item Give an example of a 3 by 3 matrix $A$ such that all entries are non-zero, all entries of $A$ are distinct (no repeats) and such that $A$ is \textbf{NOT} invertible. Explain why your example is not invertible.
+	\vfill
+	\item Assume $A$ is square, has linearly independent columns, and has a $QR$ factorization. Write its inverse $A^{-1}$ in terms of $Q^T$ and $R^{-1}$. 	\vfill
+	\item Suppose $B$ is an orthogonal matrix.
+		\begin{enumerate}
+		\item State the \textbf{definition} of an orthogonal matrix.
+		\vspace{1in}
+		\item Are the rows of $B$ linearly independent? Justify your answer.
+		\vfill
+		\end{enumerate}
+	\item Suppose $A$ is an $m \times n$ matrix. Suppose $D$ is an $m \times m$ diagonal matrix such that $D_{ii}=2^i.$ Describe the result of matrix multiplication $DA.$
+	\vfill
+	\end{enumerate} 
+\end{enumerate}
+\end{document}
+
+%%%%ENDDOCUMENT
+
+
