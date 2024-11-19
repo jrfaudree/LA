@@ -113,6 +113,9 @@ worksheets:
 - date: M 18 Nov
   name: Determinant (Day 1)
   notes: Det-2by2.pdf
+- date: W 20 Nov
+  name: Determinant (Day 2)
+  notes: Det-n-by-n-case.pdf
 - date: At some point...
   name: Null Space and Geometry
   blank: M314_Null_Space_and_Geometry.pdf
