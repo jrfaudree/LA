@@ -26,3 +26,4 @@ The topics at the end of the semester (null spaces, determinants, eigenvalues an
 
 * Eigenvalues and Eigenvectors
   * [Intro](assets/worksheets/E-values-day1.pdf)
+  * [3-dimensional Example](assets/worksheets/E-values-vectors-3-diml-example.pdf)
