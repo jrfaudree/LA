@@ -1,0 +1,64 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 13: Eigenvalues and Eigenvectors}
+% \usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\begin{document}
+\begin{problems}
+\problem For each matrix below, (i) determine its eigenvalues, (ii) determine $N(A-\lambda I_n)$ for every \textbf{real} eigenvalue $\lambda$, and (iii) pick a particular eigenvector associated with every real eigenvalue.
+	\begin{subproblems}
+	\item $A=\bbm 3&-5\\1&-3\ebm$
+	\item $B=\bbm 0&1\\ -1&0\ebm$
+	\item $E=\bbm 1&1\\0&1 \ebm$
+	\item $C=\bbm 1&2&-1\\1&0&1\\4&-4&5\ebm$
+	\item $D$ an $n \times n$ diagonal matrix	
+	\end{subproblems}
+\problem For matrix $A$ in problem 1 part a, confirm that \textbf{trace}$(A)$ is the sum of the eigenvalues and $\text{det}(A)$ is the product of the eigenvalues.
+\problem Suppose $F$ is an upper triangular matrix. Can you easily determine its eigenvalues? Its associated eigenvectors?
+\problem This problem refers to matrix $C$ in problem 1 part (d). Note that you should have obtained 3 distinct eigenvalues and picked three distinct associated eigenvectors in part (iii).
+	\begin{subproblems}
+	\item Explain why you know (without doing any additional computation) that the three eigenvectors you obtained are linearly independent.
+	\item Let $P$ be the $3 \times 3$ matrix with the eigenvectors as columns. Explain how you know that $P$ is invertible.
+	\item Use a computational tool to find $P^{-1}$.
+	\item Use a computational tool to compute $P^{-1}AP.$ What do you observe?
+	 
+	\end{subproblems}
+\problem This problem revisits problem 1 from Homework 11, which is restated below.
+
+\begin{quote}
+Below is a system of first-order, linear, differential equations. Rewrite this system in the form $Au=\frac{du}{dt}, \: u=u(0)$ for $t=0.$ (That is, you need to define $u$, $A$, and $u(0).$ You are \emph{not} being asked to solve the system.)
+
+\begin{tabular}{lll}
+$\frac{dv}{dt}=4v-5w$&\quad& $v=8$ when $t=0$\\
+&&\\
+$\frac{dw}{dt}=2v-3w$&\quad& $w=5$ when $t=0$\\
+\end{tabular}
+\end{quote}
+	\begin{subproblems}
+	\item Find the eigenvalues of the matrix $A.$
+	\item Find an associated eigenvector for each eigenvalue from part (a).
+	\item Find the two pure exponential solutions to the differential equation $Au=\frac{du}{dt}$ and verify that they are solutions.
+	\item Solve the system $Au=\frac{du}{dt}, \: u=u(0)$ for $t=0.$
+	\item Determine $u(5).$
+	\item Describe the long-term behavior of $u(t).$
+	\end{subproblems}
+
+\end{problems}
+
+\end{document}
