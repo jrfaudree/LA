@@ -116,9 +116,11 @@ worksheets:
 - date: W 20 Nov
   name: Determinant (Day 2)
   notes: Det-n-by-n-case.pdf
-- date: Null Spaces, Geometry, and Determinants
+- date: F 22 Nov
   name: Null Space and Geometry
   blank: M314_Null_Space_and_Geometry.pdf
   solutions: M314_Null_Space_and_Geometry-s.pdf
   notes: Summary-Null-Geo-worksheet.pdf
-  
+- date: F 22 Nov
+  name: Eigenvalues and Eigenvectors (day 1)
+  notes: E-values-day1.pdf  
