@@ -1,0 +1,195 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{FE study}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+
+\begin{document}
+\begin{center}{\Large{Final Exam Review}}\end{center}
+
+
+\noindent\textbf{The Basics}\\
+
+The Final Exam will cover Chapters 1-3,5-8,10-12, null spaces, determinants, eigenvalues and eigenvectors. It will be weighted toward topics at the end of the semester. You will have 2 hours to take the exam. You can bring in 1 page of notes with writing on one side. You can bring a calculator. You cannot use your cell phone or a computer. You will need to show your work.\\
+
+\noindent\textbf{Chapter-by-Chapter Review of Topics}\\
+
+\begin{itemize}
+	\item Ch 1 
+		\begin{itemize} 
+		\item Know the language and notation of vectors and how to perform basic vector operations including rules of vector algebra.
+		\item Know the terminology of \emph{linear combinations of vectors}, \emph{inner product of vectors}, and \emph{unit vectors}.
+		\item Recall familiar applications.
+		\end{itemize}
+	\item Ch 2 
+		\begin{itemize}
+		\item Know the definition of a linear function and the basic strategies for determining if a function is or is not linear. Specifically, be able to show that a function is linear by exhibiting it in the form of
+ab inner product: $f(x) = a^T x$ and be able to show that a function is not linear by finding a counter-example.
+		\item Know the definition of an affine function and the basic strategy for determining if a function is or is not affine.
+		\item Review familiar applications and interpretations of linear/affine functions.
+		\end{itemize}
+	\item Ch 3
+		\begin{itemize}
+		\item Know how to compute the norm of a vector, the distance between two vectors, and the angle between two vectors.
+		\item Know how to tell if two vectors are orthogonal (perpendicular) or at an acute (or obtuse) angle.
+		\item Know the triangle inequality and the Cauchy-Schwartz inequality.
+		\item Be able to do algebraic manipulations involving norms and inner products
+		\end{itemize}
+	\item Ch 5
+		\begin{itemize}
+		\item Know the definition of linear independence and linear dependence and how to use them to \emph{show} that a set of vectors is or is not linearly independent (dependent).
+		\item Know the \textbf{independence-dimension inequality} or \textbf{Fact A}.
+		\item Know the definition of a basis and an orthonormal basis. Understand how to determine if a set of vectors is a basis and how to write one vector as a linear combination of others. What are the advantages of an orthonormal set of vectors?
+		\item Know the Gram-Schmidt algorithm.  Be able to implement it in a simple case
+(turn $a_1$, $a_2$, $a_3$ into $q_1$, $q_2$, $q_3$ with intermediate vectors
+$\tilde q_k$.)  What properties do the $q$'s have? How are those properties related to the $a$'s?
+		\item If $q_1$, $q_2$ and $q_3$ are orthonormal in $\Reals^3$, explain how you know they form a basis.  Since they do, given
+$x\in\Reals^3$ we can write $x = \alpha_1 q_1+\alpha_2 q_2+ \alpha_3 q_3$
+for some numbers $\alpha_1$, $\alpha_2$ and $\alpha_3$.  What are the numbers
+$\alpha_k$?  Hint: they can be expressed using inner products: equation (5.5) in the text.
+		\end{itemize}
+	\item Ch 6
+		\begin{itemize}
+		\item Know how to reference matrices and to do basic calculations including matrix-vector multiplication.
+		\end{itemize}
+\end{itemize}
+\noindent\textbf{Ch 7} Matrix Examples\\
+
+This chapter introduced a variety of applications of matrices and of the matrix-vector product. These include transformations of the plane or 3-space (like rotation by $\theta$ or reflection about a line), selector matrices, incidence matrix of a graph, and convolution. Recall that it also included a strategy: build the matrix of a linear transformation/operation by finding the image of the $e_i$'s under the transformation.\\
+
+\begin{itemize}
+	\item Can you interpret the matrix-vector product in context?
+	\item Can you find the matrix $A$ such that $Ax$  is the transformation of the plane that rotates $x$ by 60 degrees and then reflects it about the $y$ axis?
+	\item We've seen a lot of connections between linear algebra and calculus questions.
+For example, how do you represent derivatives of cubic polynomials in terms 
+of matrix multiplication?  How do you represent
+antiderivatives of cubic polynomials in terms of matrix multiplication?
+	\item Given a vector $a$ and a vector $b$, how do you compute the convolution $a*b$?
+What is the matrix $T$ such that $a*b = Tb$?
+\end{itemize}
+
+\noindent\textbf{Ch 8} Linear Equations\\
+
+This chapter introduces the notion of functions from $\mathbb{R}^n$ to $\mathbb{R}^m$ with a focus on linear and affine functions. \\
+
+\begin{itemize}
+\item Know how to represent a linear function in terms of a matrix.\\  
+For example, suppose $f$ is the function that takes $(x_1, x_2, x_3)$ to $(x_2,-x_3, x_1)$.
+What is its representation in terms of a matrix?  
+\item Similarly, suppose 
+$f$ is a linear map from $R^2$ to $R^4$ and $f(e_1) = (-1, 3, 4, 3)$ and $f(e_2) = (2 , 3, 4, 9)$.
+What is the representation of $f$ in terms of a matrix?
+\item How can you show that a function is linear? affine? Not affine?
+\item If asked for the coefficients of a quadratic polynomial $p$ with $p(x_i)=y_i$ for $i=1,\ldots, 5$,
+can you set up a system of linear equations to solve for the coefficients?
+\item How do you solve $Ax=b$ if $A$ is lower triangular?  What if $A$ is upper triangular?
+\end{itemize}
+
+\noindent\textbf{Ch 10} Matrix Multiplication\\
+
+This chapter introduced matrix-matrix multiplication and finished with QR factorization. It included the algebra of matrix-matrix multiplication (see page 179) and orthogonal matrices.
+
+	\begin{itemize}
+	\item How do you check that a matrix $A$ is orthogonal? Restate your answer to the question using the language of Chapter 11.
+	\item What is the column perspective of matrix-matrix multiplication?  What is the row perspective?
+	\item Express the following task as a matrix algebra task: "Find a linear combination of vectors $a_1$, $a_2$ and $a_3$
+that equals $b$".  This gets at the column interpretation of matrix-vector multiplication (page 119).
+	\item What is the transpose of a matrix product?
+	\item If you multiply a $3\times 3$ matrix $A$ on the left by $\mathrm{diag}(1,2,3)$ what
+is the result?  How about if you multiply $A$ on the right 
+by $\mathrm{diag}(1,2,3)$?
+	\item Find a $4\times 5$ matrix $L$ such that when you multiply any $5\times k$ matrix
+$A$ on the left by $L$, the result is the matrix $A$ with its bottom row removed.
+	\item Given a matrix $A$ with linearly independent columns,
+how do you compute its QR factorization?  This is related to the Gram-Schmidt algorithm,
+and you should review how you convert the steps of the Gram-Schmidt algorithm into
+the entries of the matrices of the QR factorization. \textbf{You will be asked to show 
+that you know how to do this.}  See also homework 8,
+additional problem 2.
+	\item Now, given the QR factorization of a square matrix $A$, how do you solve $Ax=b$?
+This is a two step procedure.  If I give you $Q$ and $R$, can you carry out the steps?
+	\end{itemize}
+
+\noindent\textbf{Ch 11} Matrix Inverses\\
+
+This chapter introduces the idea of left/right/both-sided inverses and encourages a multifaceted view - including row-focused and column-focused views. We discussed invertibility conditions, applications of inverses to solutions to systems of equations, and how multiplicative inverses interact with other matrix operations such as multiplication and transposes.
+
+
+	\begin{itemize}
+	\item Suppose $A$ has a left inverse.  Show that the columns of $A$ have to be linearly independent.
+	\item Once you know that a square matrix has linearly independent columns you know a whole bunch 
+of other things are true.  Name as many as you can.  How many solutions of $Ax=0$ are there?  Why?
+	\item Similarly, once you know that a square matrix in \textbf{not} invertible (or is singular), you know a whole bunch of things. Name as many as you can. How many solutions to $Ax=0$ are there?
+	\item What is the inverse of a matrix product of invertible matrices? What is the inverse of the transpose of an invertible matrix?	
+	\item Suppose $A$ is an $3\times 3$ matrix.  What matrix equation do you solve to determine
+the first column of $A^{-1}$? What equation to you solve to find the third column of $A^{-1}$?
+If you have a QR factorization of $A$, can you determine these columns?
+	\end{itemize}
+
+\noindent\textbf{Ch 12} Least Squares Solutions\\
+
+	\begin{itemize}
+	\item Here is where we first learned about and used the \textbf{pseudoinverse} of a matrix $A$ (which is technically in Chapter 11). Recall that the pseudoinverse of $A$ is denoted $A^{\dagger}.$
+	\item You should understand what is meant by \emph{the least squares approximate solution} of $Ax=b$ and the meaning of $\hat{x}.$
+	\item You should know what the \emph{normal equations} are for a system $Ax=b.$
+	\item You should know how the pseudoinverse, $QR$-factorization, and solving least squares problems are related.
+	\item Suppose $A$ is tall and $A=QR,$ where $Q$ has orthonormal columns and $R$ is upper-triangular, How do your compute the pseudo inverse $A^\dagger$? How do you find the least squares approximate solution to $Ax=b$?
+	\item Translate a problem -- such as approximating a given set of points with a polynomial -- to a least squares approximation problem. Set up a matrix system to solve this problem and solve it. (See HW 10 \#3.)
+	\item Suppose $\hat{x}$ is the least squares approximate solution to $Ax=b$ and suppose $y$ is any other $n$-vector. What can you conclude about $\hat{x}$ and $y$?
+	\end{itemize}
+
+\noindent\textbf{Last Topics} Null Spaces, Determinants, Eigenvalues and Eigenvectors\\
+
+	\begin{itemize}
+	\item You should know what the null space of a matrix $A$ is, how to find it, and how it relates to linear functions and matrix invertibility.
+	\item Suppose you have two vectors $w_1=(1,2,3,4)$ and $w_2=(2,3,4,5),$. Set up a matrix $A$ such that the null space of $A$ is the set of all vectors perpendicular to both $w_1$ and $w_2.$ Then determine the set of vectors in this null space.
+	\item Suppose $A$ is a wide matrix and $w$ is a solution to $Ax=b,$ how do you find \emph{all} solutions to $Ax=b$?
+	\item You should know how to find the determinant of a matrix, including very large but sparse ones. 
+	\item You should know basic "determinant algebra" including
+		\begin{itemize}
+		\item how elementary row operations and matrix operation ($+$, $*$, inverses) affect the determinant
+		\item how the determinant relates to the null space and, thus, invertibility
+		\end{itemize}
+	\item You should know what eigenvalues and eigenvectors of a matrix $A$ are, how to find them, how to confirm them, and what they indicate about $A$ as a linear function.
+	\item What are the eigenvalues of an upper triangular matrix? 
+	\item Given a square matrix $A$ and vector $v$, how would you check if $v$ was an eigenvector of $A$? 
+	\item If $x$ is an eigenvector of $A$ with eigenvalue $\lambda$, what can you say about $A^kx$ for a positive integer $k$?
+	\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
