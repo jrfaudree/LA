@@ -1,0 +1,57 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,systeme}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Faux Quiz 8}
+\rhead{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+%\vspace*{-0.7in}
+This quiz is worth 10 points. \hfill {\Large{Name: \underline{\hspace{2in}}}}
+\begin{enumerate}
+\item (4 points) Let $A=\bbm 1&2&0&-1\\
+6&12&3&-12\\
+2&4&-1&0\\
+-1&-2&1&-1 \ebm$ \\
+	\begin{enumerate}
+	\item Find the null space of $A$. (Hint $\text{rref}(A)=\bbm 1&2&0&-1\\
+	0&0&1&-2\\
+	0&0&0&0\\
+	0&0&0&0 \ebm.$)
+	\vfill
+	\item Find one particular \textbf{nonzero} vector in the null space of $A.$
+	\vfill
+	\end{enumerate}
+\newpage
+\item (6 points) For each matrix below, find its determinant.\\
+	\begin{enumerate}
+	\item $B=\bbm 2&3&0\\ 1&1&-2\\-3&5&2\ebm$
+	\vfill
+	\item $C=\bbm 0&0&5&-3\\4&1&-1&4\\0&10&8&2\\0&0&0&2 \ebm$ (Hint: This should be quick.)
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
