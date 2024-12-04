@@ -32,5 +32,8 @@ quizexam:
 - name: Midterm 2 
   blank: M314_F24_M2.pdf
   solutions: M314_F24_M2-s.pdf  
+- name: Quiz 8
+  blank: M314f24_q8.pdf
+  solutions: M314f24_q8-s.pdf
 - name: Final Exam Study Sheet
   blank: FE_study.pdf
