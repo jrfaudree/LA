@@ -37,3 +37,5 @@ quizexam:
   solutions: M314f24_q8-s.pdf
 - name: Final Exam Study Sheet
   blank: FE_study.pdf
+- name: List of Questions
+  blank: FE_study-questions.pdf
