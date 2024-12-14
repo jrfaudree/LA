@@ -39,3 +39,8 @@ quizexam:
   blank: FE_study.pdf
 - name: List of Questions
   blank: FE_study-questions.pdf
+- name: Final Exam
+  blank: M314_F24_FE.pdf
+  solutions: M314_F24_FE-s.tex
+
+  
