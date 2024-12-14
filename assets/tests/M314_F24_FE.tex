@@ -1,0 +1,208 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,tabularx,systeme} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\newcommand{\Reals}{\mathbb{R}}
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+%\pagestyle{fancy} 
+\lfoot{Linear}
+\rfoot{FE}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+{\emph{\fontsize{26}{28}\selectfont Fall 2024 \hfill
+%{\fontsize{32}{36}\selectfont Calculus 1: Midterm 1}
+\hfill Math F314X}}
+
+\begin{center}
+{\emph{%\fontsize{26}{28}\selectfont Spring 2024 
+%%\hfill
+{\fontsize{32}{36}\selectfont Linear Algebra: Final Exam}
+%%\hfill Math F251X}
+}}
+\end{center}
+
+\vfill
+
+\quad \hfill {\Large{Name: \underline{\hspace{2in}}}}
+
+\vfill
+
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+\begin{itemize}
+\item Show your work.
+
+\item You may have a single handwritten sheet of paper with writing on one side.
+
+\item You may use a calculator 
+
+\end{itemize}
+
+
+\vfill
+
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&16&&\emptybox&\cr\tline
+&2&&20&&\emptybox&\cr\tline
+&3&&20&&\emptybox&\cr\tline
+&4&&15&&\emptybox&\cr\tline
+&5&&11&&\emptybox&\cr\tline
+&6&&10&&\emptybox&\cr\tline
+&7&&8&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\vfill
+
+\newpage
+
+\quad
+
+\newpage
+\begin{enumerate}
+
+% linear dependence/independence
+\item (16 points) 
+	\begin{enumerate}
+	\item \textbf{Demonstrate} that the vectors $a_1=\vecthree{2}{0}{0}, a_2=\vecthree{0}{1}{2}, a_3=\vecthree{0}{-1}{1}$ are linearly independent. This should involve both calculations and an explanation of why that calculation allows one to conclude the vectors are linearly independent. 	
+	\vfill
+	
+	\item \textbf{Demonstrate} the vectors $v_1=\vecfour{2}{4}{0}{0}, v_2=\vecfour{0}{1}{-1}{0}, v_3=\vecfour{0}{1}{1}{1}, v_4=\vecfour{1}{4}{-2}{0}$ are linearly dependent by writing one vector as a linear combination of the others. 
+	\vfill
+
+	\end{enumerate}
+\newpage
+% least squares approx solution
+\item (20 points) Let $\mathcal{S}$ be the system of equations: \quad \fbox{\begin{tabular}{ccccc}
+$x_1$&&&$=$&1\\
+&&$x_2$&$=$&1\\
+$x_1$&$+$&$x_2$&$=$&1
+\end{tabular}}. Observe that this system has no exact solution.
+	\begin{enumerate}
+	\item Write this system in the matrix form $Ax=b.$
+	\vfill
+	\item Find $A^TA.$
+	\vfill
+	\item Find $(A^TA)^{-1}$
+	\vfill
+	\item Find $A^{\dagger},$ the pseudoinverse of $A.$
+	\vfill
+	
+	\quad \hfill \textbf{Continued on the next page ..... $\longrightarrow$}
+	\newpage
+	For reference,  $\mathcal{S}$ is: \quad \fbox{\begin{tabular}{ccccc}
+$x_1$&&&$=$&1\\
+&&$x_2$&$=$&1\\
+$x_1$&$+$&$x_2$&$=$&1
+\end{tabular}}.
+	\item Find $\hat{x},$ the least squares approximate solution to the system $S.$
+	\vfill
+	\item Suppose someone chooses their approximate solution to $S$ to be $z=\vectwo{1}{1}.$
+		\begin{enumerate}
+		\item Explain (in words and/or correct mathematical notation) why $\hat{x}$ is a \emph{better} approximate solution than $z.$
+		\vfill
+		\item Complete the calculation that demonstrates your description above is correct.
+		\vfill
+		\end{enumerate}
+	\vfill
+	\end{enumerate}
+\newpage
+% QR factorization
+\item (20 points) Let $a_1=\vecthree{1}{0}{1}, a_2=\vecthree{1}{0}{0}, a_3=\vecthree{2}{1}{0}.$ The first parts of this problem will ask you to go through part of the Gram-Schmidt algorithm.  
+	\begin{enumerate}
+	\item Find $q_1,$ the first vector obtained via Gram-Schmidt.
+	\vspace{1in}
+	\item It is a fact that\:  {\Large{$\overline{q_2}= \frac{1}{2}\vecthree{1}{0}{-1}=\vecthree{1/2}{0}{-1/2}$}} and {\Large{$q_2=\vecthree{1/\sqrt{2}}{0}{-1/\sqrt{2}}.$}} Find $q_3.$
+	\vfill
+	\quad \hfill \textbf{Continued on the next page ..... $\longrightarrow$}
+	\newpage
+	\item Let $A=[a_1 \: a_2 \: a_3]=\begin{bmatrix} 1&1&2\\0&0&1\\1&0&0 \end{bmatrix}.$ (Note that the $a_i's$ on this page are the same as on the provious page. 
+		\begin{enumerate}	
+		\item Determine the $Q$, in the $QR$-factorization of $A.$
+		\vfill
+		\item Find the \emph{second row} of $R$ in the $QR$-factorization of $A$. That is, you should find $R_{21}, R_{22}$, and $R_{23}$.
+		\vfill
+		\item Is $A$ invertible? Justify your conclusion.
+		\vspace{1in}
+		\end{enumerate}
+	\end{enumerate}
+\newpage
+
+% eigenvalues/vectors
+\item (15 points) Let $C=\begin{bmatrix}6&0&0\\1&2&4\\-1&2&0 \end{bmatrix}.$ You must show your work to earn full points.
+	\begin{enumerate}
+	\item Find all eigenvalues of the matrix $C.$
+	\vfill
+	\item For the largest eigenvalue of $C,$ find an associated eigenvector.
+	\vfill
+	\item Suppose that $v$ is the eigenvector you found in part (b) above. Determine $C^{10}v.$
+	\vspace{1in}
+	\end{enumerate}
+\newpage
+% linear combinations/bases
+\item (11 points)
+	\begin{enumerate}
+	\item Suppose $M$ is an \textbf{orthogonal} $n\times n$ matrix.
+		\begin{enumerate}
+		\item Can we draw any conclusions about the \emph{null space of $M$}? Explain and justify.
+		\vfill
+		\item Can we draw any conclusion about whether the \emph{rows} of $M$ are linearly independent? Explain and justify.
+		\vfill
+		\end{enumerate}
+	\item The matrix $M=\frac{1}{3}\begin{bmatrix} 2&-2&1\\ 1&2&2\\2&1&-2\end{bmatrix}=\begin{bmatrix} 2/3&-2/3&1/3\\ 1/3&2/3&2/3\\2/3&1/3&-2/3\end{bmatrix}$ is orthogonal. Write the vector $v=(1,2,0)$ as a linear combination of the columns of $M.$
+	\end{enumerate}
+
+\vfill
+\newpage
+% inverses
+\item (10 points) Let $A=\bbm 2&0\\0&5\\4&2 \ebm$
+	\begin{enumerate}
+	\item Explain why $A$ cannot have a right inverse.
+	\vfill
+	\item Find a left inverse of $A.$ 
+	\vfill
+	\item Is your answer in part (b) unique? Justify your conclusion.
+	\end{enumerate}
+\vfill
+\newpage
+% linear functions
+\item (8 points) Determine whether each function below is a linear function $f: \mathbb{R}^2 \to \mathbb{R}^3.$ If $f$ is linear, show this by writing $f(x)=Ax$ for an appropriate matrix $A$. If $f$ is not linear, find particular vectors and scalars for which $f$ fails to be linear.
+	\begin{enumerate}
+	\item $f(x_1,x_2)=(\frac{2x_1-x_2}{2}, \frac{-x_1+2x_2}{2}, \frac{x_1+x_2}{2})$
+	\vfill
+	\item $f(x_1,x_2)=(1+x_1,2+x_2,0)$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+%%%%ENDDOCUMENT
+
+
