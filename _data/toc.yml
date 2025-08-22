@@ -5,13 +5,13 @@ sidenavtitle: 'Math 314'
 docs:
 
 - title: Syllabus
-  url: assets/general/M314f2024_syl.pdf 
+  url: assets/general/M314f2025_syl.pdf 
 
 - title: Schedule
-  exturl: https://docs.google.com/spreadsheets/d/1qqB14JeoykBQjJZun5sqWzKMh30r3YieghTlAxpul3E/pubhtml?gid=0&single=true
+  exturl: https://NEWdocs.google.com/spreadsheets/d/1qqB14JeoykBQjJZun5sqWzKMh30r3YieghTlAxpul3E/pubhtml?gid=0&single=true
   
 - title: Homework
-  url: homework.html
+  url: NEWhomework.html
 
 - title: Quizzes,Exams
   url: quizexam.html
@@ -20,10 +20,10 @@ docs:
   url: resources.html
   
 - title: Textbook
-  exturl: https://web.stanford.edu/~boyd/vmls/vmls.pdf
+  exturl: NEWhttps://web.stanford.edu/~boyd/vmls/vmls.pdf
 
-- title: Julia
-  url: julia.html
+#- title: Julia
+ # url: julia.html
 
 - title: Worksheets
-  url: worksheets.html
+  url: NEWworksheets.html
