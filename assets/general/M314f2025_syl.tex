@@ -1,0 +1,304 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=.75in, bottom=0.75in, left=.75in, right=.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+%\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\renewcommand{\familydefault}{\sfdefault}
+%Syl adendum
+\usepackage[colorlinks = true,linkcolor = blue, urlcolor  = blue]{hyperref}
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,multicol}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+%to make tikz pics work
+\usepackage{tikz,pgfplots}
+
+\usepackage[colorlinks=true]{hyperref}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 314 }}
+\rhead{\large\sf\textbf{Fall 2025}}
+\chead{\large\sf\textbf{Linear Algebra}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\begin{document}
+
+\textbf{\large{Essential Information}}
+
+\begin{tabular}{p{0.2\textwidth} p{0.7\textwidth}}
+{time \& place}:&MWF 9:15am-10:15am Chapman Hall Room 104\\
+{instructor:} &Jill Faudree\\
+{contact details:} &Chapman 306B, jrfaudree@alaska.edu, 474-7385\\
+{office hours:} & MWF 10:30am-11:30am  Chap 306\\
+& Th 1:00-2:00 (if available) \\
+&Th 2:00-3:00 SSC\\
+&and by appointment or just drop by.\\
+&Current schedule available \href{https://docs.google.com/spreadsheets/d/e/2PACX-1vTh65fkl5DpmD3PzPa8Kua2tzvb4Our1Nhk8DoVGuP0t3LApdM4Lne4BR9tTcgcxuE5Y5TOwwSSEtKq/pubhtml?gid=0&single=true}{\texttt{online}}\\
+{textbook:}& \textbf{Introduction to Linear Algebra}, Gilbert Strang, any edition\\
+{software:}& MATLAB or Octave (Both are available for free.)\\
+{webpage:}& \url{https://jrfaudree.github.io/LA/}\\
+canvas:&\url{https://canvas.alaska.edu/courses/27088}\\
+{prerequisites:} & MATH 252 Calculus 2 or permission of instructor.
+\end{tabular}
+
+
+
+\textbf{\large{Course Description}}
+
+The course description in the catalog reads as follows:
+\begin{quote} Linear equations, finite dimensional vector spaces, matrices, determinants, linear transformations and characteristic values. Inner product spaces. \end{quote}
+
+Linear algebra is the branch of mathematics which covers vectors, matrices, and linear equations.  It is central to all areas of applied and pure mathematics, science and engineering, because vectors are the precise way to describe complicated things by using many numbers.  Linear algebra is used when modeling natural phenomena and computing efficiently using models.  Even nonlinear systems are approximated at first-order, using derivatives, by linear algebra objects.
+
+Real-world linear algebra problems are solved using computers.  In this course will introduce and use Matlab for this purpose.  Matlab was designed for teaching linear algebra, and has become a standard tool for engineering and science; you may be expected to use it in your other courses.  On the other hand, understanding linear algebra will require doing by-hand calculations with simple numbers and in low dimensions.
+
+By the end of the course you will have a solid understanding of the fundamental concepts and algorithms of linear algebra, including well-known theorems and matrix factorizations.  You will have seen important applications in diverse fields. You will be well-equipped to use linear algebra in more-advanced mathematics, and to use vectors and matrices in science and/or engineering.
+
+
+\textbf{\large{Student Learning Outcomes}} A successful student in this course will:
+\begin{itemize}
+\item become fluent in linear combinations, bases, and matrix algebra
+\item apply linear algebra tools to applied problems such as dynamical systems and least squares fitting
+\item understand how QR factorization is used to solve matrix equations, including non-square systems
+\item use software to solve practical problems using skills from linear algebra
+\end{itemize}
+ 
+ 
+ \newpage
+{\textbf{\large{Course Mechanics}}}
+
+Class meetings will be a combination of lecture/demonstrations, whole class discussion, individual work, and small group work. Always bring paper/tablet and associated pen/pencil. 
+
+ \noindent\textbf{Class attendance} is expected and I
+take roll daily, though it is not a part of your grade. If you miss a class, you should get notes from another student. 
+
+ \noindent\textbf{Reading the textbook} is also essential. The author writes informally, but his presentation is full of
+conceptual insights that will aid your understanding.  You should think of this textbook as giving you another lecture, to
+solidify what you already heard in class. (Strang's MIT lectures for this course are also free to watch online through the MITOpenCourseWare website.)
+
+
+{\textbf{\large{Homework}}}
+
+There will be a homework assignment due roughly every week, usually on Thursdays. Each week’s assignment and due date will be announced in class and will be posted on the public webpage. Answers to homework problems will be posted in advance, and homework will be graded solely on completion. Nevertheless, your submission should be your own work. Copying and/or cut-and-paste work from other sources would be considered a violation of academic integrity.
+
+Homework is submitted as a PDF in Gradescope. There is always a 3-day grace period except for the first two assignments.
+
+%{\textbf{\large{Julia}}}
+%
+%Real-world problems in linear algebra are solved using computer software. We will use the software program Julie (a kind of modern Mathlab) on assignments. No previous programming experience is required. I will provide materials and background sufficient to guide you through all Julia assignments.
+
+{\textbf{\large{Quizzes}}}
+
+Every Friday there will be a 15 minute quiz based on the homework due Thursday.
+
+%{\textbf{\large{Labs}}}
+%
+%In addition to the more routine homework, there will be about four labs (i.e short projects) covering more in-depth material. More details on the labs will be announced along with your first lab.
+
+{\textbf{\large{Midterms}}}
+
+There are two Midterm Exams this semester, to be held on the dates shown in the schedule.  Midterms are given during the class time.  Make-up Midterms will be given only for documented extenuating circumstances, at my discretion.
+
+{\textbf{\large{Final Exam}}}
+
+There will be a comprehensive Final Exam 8:00am-10:00am on Thursday December 11.
+
+{\textbf{\large{Rubric}}}
+
+\begin{multicols}{2}
+\textbf{Grades} will be calculated according to the following rubric:
+
+
+\begin{tabular}{|l|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  homework & 15\% \\
+  quizzes & 15\%\\
+  midterm 1 & 20\%\\
+  midterm 2 & 20\%\\
+  final exam & 30\% \\
+  \hline
+\end{tabular}
+\end{multicols}
+
+\begin{multicols}{2}
+Letter grades will be assigned according to the following scale. This scale is a guarantee; I reserve the right to lower the thresholds.
+
+\begin{tabular}{| llllllll |}
+\hline
+A+&97-100\%& \hspace{.1in}&C+&77-79\%& \hspace{.1in}&F&$\leq$ 59\\
+A&93-96\%&&C&70-76\%&&&\\
+A-&90-92\%&&&&&&\\
+B+&87-89\%& \hspace{.1in}&D+&67-69\%&&&\\
+B&83-86\%&&D&63-66\%&&&\\
+B-&80-82\%&&D-&60-62\%&&&\\
+\hline
+\end{tabular} 
+
+\end{multicols}
+
+\heading{Office Hours and Communication}
+My Weekly Schedule including office hours are available and updated \href{https://docs.google.com/spreadsheets/d/e/2PACX-1vTh65fkl5DpmD3PzPa8Kua2tzvb4Our1Nhk8DoVGuP0t3LApdM4Lne4BR9tTcgcxuE5Y5TOwwSSEtKq/pubhtml}{\texttt{online}}.  Students can also schedule meetings with me outside of regular office hours, or email me at \href{mailto:jrfaudree@alaska.edu}{\texttt{jrfaudree\@@alaska.edu}}.
+
+I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas.  Please set the email address in Canvas to one that you check regularly!
+
+
+%\begin{table}\caption{(tentative) Schedule of Topics}
+
+\begin{center}
+\textbf{(tentative) Schedule of Topics}\\
+
+\begin{tabular}{c | c | c || c | c | c}
+week & dates &topics& week & dates &topic\\
+\hline \hline
+1& 8/25 - 8/29 &Ch 1 &9& 10/20 - 10/24 &Ch 5,6 \\ \hline
+2& 9/1 - 9/5&(Labor Day), Ch 2 & 10& 10/27 - 10/30& Ch 6\\ \hline
+3& 9/8 - 9/12 & Ch 2 & 11& 11/2 - 11/7& Ch 6, \\ \hline
+4& 9/15 - 9/19 & Ch 2 & 12& 11/11 - 11/15& Ch 7,\\ 
+&&&&&Midterm 2\\ \hline
+5& 9/22 - 9/26& Ch 3 & 13& 11/18 - 11/22&Ch 7 \\ \hline
+6& 9/29 - 10/3& Ch 3, &14& 11/25 - 11/29&Ch 8, \\
+&&Midterm 1 &&&Thanksgiving\\ \hline
+7& 10/6 - 10/10& Ch 4 & 15& 12/2 - 12/5&Ch 8\\ \hline
+8& 10/13 - 10/17& Ch 4,5& 16& 12/11& Final Exam, \\
+&&&&&Thursday, 8:00am-10:00am\\ \hline
+\end{tabular}
+\end{center}
+
+\heading{Rules and Policies}
+\vskip -20pt
+
+\subheading{AI usage}
+Feel free to use a calculator or online tools on Homework.  It is also reasonable to explore new AI tools like ChatGPT, but merely doing cut-and-paste without understanding will have no benefit to your learning. 
+
+Moreover, during proctored and on-paper Quizzes and Exams, electronic tools of any type are not allowed.  Since Quizzes and Exams represent more than 75\% of your grade, copying without understanding is not a good long-term strategy.
+
+\subheading{Incomplete Grade} 
+Incomplete (I) will only be given in
+  DMS courses in cases where
+  the student has completed the majority (normally all but the last
+  three weeks) of a course with a grade of C or better, but for
+  personal reasons beyond his/her control has been unable to complete
+  the course during the regular term. Negligence or indifference are
+  not acceptable reasons for the granting of an incomplete. 
+
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline from a DMS course will
+  normally be granted only in cases where the student is performing
+  satisfactorily (i.e., C or better) in a course, but has exceptional
+  reasons, beyond his/her control, for being unable to complete the
+  course. These exceptional reasons should be detailed in writing to
+  the instructor, department head and dean.
+
+\subheading{No Early Final Examinations}
+Final examinations for DMS
+  courses shall not be held earlier than the date and time published
+  in the official term schedule. Normally, a student will not be
+  allowed to take a final exam early. Exceptions can be made by
+  individual instructors, but should only be allowed in exceptional
+  circumstances and in a manner which doesn't endanger the security of
+  the exam.
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+
+\subheading{Student protections and services statement}
+Every qualified student is welcome in my classroom.  As needed, I am happy to work with you, Disability Services, Veterans' Services, Rural Student Services, etc.~to find reasonable accommodations.  Students at this University are protected against sexual harassment and discrimination (Title IX), and minors have additional protections.  As required, if I notice or am informed of certain types of misconduct, then I am required to report it to the appropriate authorities.  For more information on your rights as a student and the resources available to you to resolve problems, please go the following site: \href{https://www.uaf.edu/orca/index.php}{\texttt{https://www.uaf.edu/orca/index.php}}.
+
+%\clearpage\newpage
+
+\strut
+\begin{center}
+\textbf{\large{Official UAF Syllabus Addendum}}
+\end{center}
+
+
+\noindent{\bf Student protections statement:} The university respects and upholds the principles of due process and a fair and equitable process as specified in the Board of Regents' Policy 09.02 Student Rights and Responsibilities. For more information regarding the rights and responsibilities of students, refer to the Office of Rights, Compliance and Accountability website. You are encouraged to read the Board of Regents' policy carefully to fully understand your responsibilities to our community.
+
+We strive to create a safe and respectful environment for all members of our community. If you have questions about expectations of you as a student or believe your rights are being violated, we encourage you to reach out to the  Office of Rights, Compliance and Accountability for help. UAF reserves the right to suspend, expel or take other necessary and appropriate action in cases where a student is unable or unwilling to uphold community standards and campus safety.
+
+For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site:\\ \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf ASUAF advocacy statement:} The Associated Students of the University of Alaska Fairbanks, the student government of UAF, offers advocacy services to students who feel they are facing issues with staff, faculty, and/or other students specifically if these issues are hindering the ability of the student to succeed in their academics or go about their lives at the university. Students who wish to utilize these services can contact the Student Advocacy Director by visiting the ASUAF office or emailing asuaf.office@alaska.edu. 
+
+
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Communication Center (907-474-7007, \mailto{uaf-commcenter@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+        \item Writing Center (907-474-5314, \mailto{uaf-writing-center@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+\item UAF Math Services (907-474-7332, \mailto{uaf-traccloud@alaska.edu})
+
+
+\begin{itemize}
+\item Drop-in tutoring, Student Success Center, 6th Floor Room 672 Rasmuson Library
+
+\item 1:1 tutoring (by appointment only), 6th Floor Room 677 Rasmuson Library
+
+\item Online tutoring (by appointment only) available
+
+https://www.uaf.edu/dms/mathlab/, available at the Student Success Center
+\end{itemize}
+
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ \url{https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/students/index.php})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, \mailto{uaf-disability-services@alaska.edu}, 110 Eielson Building)
+\item Student Health \& Counseling [free counseling sessions available] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker Building, Room 206, Health, Safety \& Security Bldg --- same building as Fire and Police)
+\item Office of Rights, Compliance and Accountability (907-474-7300, \mailto{uaf-orca@alaska.edu}, 3rd Floor, Constitution Hall)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, \mailto{asuaf.office@alaska.edu}{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+Nondiscrimination statement: The University of Alaska is an equal opportunity/equal access employer, educational institution and provider. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at \url{www.alaska.edu/nondiscrimination}.
+
+\begin{tabular}{l}
+UAF Office of Rights, Compliance and Accountability\\
+1692 Tok Lane\\
+3rd floor, Constitution Hall, Fairbanks, AK 99775\\
+907-474-7300\\
+\url{uaf-orca@alaska.edu}
+\end{tabular}
+
+\hfill  \scriptsize [syllabus version 1.03: \today] \normalsize\end{document}
