@@ -9,7 +9,7 @@ Welcome to the homepage of **Math 314 Linear Algebra**, Fall 2024, in the [Dept.
 
 #### Instructor:  [Jill Faudree](http://jrfaudree.github.io/)
 
-Email me at [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu).  I hold [office hours](https://docs.google.com/spreadsheets/d/1o710N0-GCNc8ICkVuf-IIC80N04p9w9wGnPADjhTMv0/edit?usp=sharing) in Chapman 306B.
+Email me at [jrfaudree@alaska.edu](mailto:jrfaudree@alaska.edu).  I hold [office hours](https://docs.google.com/spreadsheets/d/e/2PACX-1vTh65fkl5DpmD3PzPa8Kua2tzvb4Our1Nhk8DoVGuP0t3LApdM4Lne4BR9tTcgcxuE5Y5TOwwSSEtKq/pubhtml?gid=0&single=true) in Chapman 306B or the Student Success Center (SSC).
 
 ### Canvas course page
 
