@@ -10,8 +10,8 @@ docs:
 - title: Schedule
   exturl: https://docs.google.com/spreadsheets/d/e/2PACX-1vTSHZPkhZhGbOSzUTMeTiWcAKaDQ_bUgi73nG-ikfTB3dHsxFOSlRkjqHkz_NPjZcHrqMp7GoUqpSg3/pubhtml?gid=0&single=true
   
-- title: Homework
-  url: NEWhomework.html
+#- title: Homework
+ # url: NEWhomework.html
 
 - title: Quizzes,Exams
   url: quizexam.html
@@ -20,7 +20,7 @@ docs:
   url: resources.html
   
 - title: Textbook
-  exturl: NEWhttps://web.stanford.edu/~boyd/vmls/vmls.pdf
+  exturl: https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html
 
 #- title: Julia
  # url: julia.html
