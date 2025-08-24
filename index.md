@@ -17,19 +17,22 @@ Log in to [Canvas at UAF](https://canvas.alaska.edu/courses/21607) for:
 
   * announcements
   * grades
-  * solutions to Homework
+  * homework materials (assignments, solutions)
 
 ### Getting Started
 
 * Attend class: MWF 9:15am-10:15am in Chapman 104 
 
-* Read the [Syllabus](assets/general/M314f2024_syl.pdf).
+* Read the [Syllabus](assets/general/M314f2025_syl.pdf).
 
-* See the [Schedule](https://docs.google.com/spreadsheets/d/1qqB14JeoykBQjJZun5sqWzKMh30r3YieghTlAxpul3E/pubhtml?gid=0&single=true).  Check it often to find out what happens next.
+* See the [Schedule](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSHZPkhZhGbOSzUTMeTiWcAKaDQ_bUgi73nG-ikfTB3dHsxFOSlRkjqHkz_NPjZcHrqMp7GoUqpSg3/pubhtml?gid=0&single=true)  Check it often to find out what happens next.
 
-* The textbook is **Introduction to Applied Linear Algebra - Vectors, Matrices, and Least Squares** by Stephen Boyd and Lieven Vandenberghe.
+* The textbook is **Introduction to Linear Algebra** by Gilbert Strang, any edition.
 
-* A webpage for the text can be found [here](https://web.stanford.edu/~boyd/vmls/)
+* A webpage for the 5th edition can be found [here](https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html)
+
+  The webpage contains a complete solutions manual for all homework problems.
+
 
 ---
 _Site design derived from the [coordinated Calc I website](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
