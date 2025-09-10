@@ -1,0 +1,12 @@
+semester: Fall 20256
+home: assets/quizexam
+quizexam:
+- name: Quiz 1
+  blank: M252F25_quiz1.pdf
+  solutions: M252F25_quiz1-s.pdf
+- name: Quiz 2
+  blank: M252F25_quiz2.pdf
+  solutions: M252F25_quiz2-s.pdf
+- name: Quiz 3
+  blank: M314f24_q3.pdf
+  solutions: M314f24_q-s.pdf
