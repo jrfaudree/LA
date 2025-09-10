@@ -4,6 +4,6 @@ title: Quiz and Exam Info
 ---
 
 ## Quizzes and Exams
-### Fall 2024
+### Fall 2025
 
-{% include quizexam_table.md  data=site.data.quizexam %}
+{% include quizexam_table.md  data=site.data.quizexamf25 %}
