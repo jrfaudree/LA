@@ -1,0 +1,58 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 3 }
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+%\vspace*{-0.7in}
+This quiz has two problems worth 10 points.
+\begin{enumerate}
+\item (5 points) The question below concerns the system of equations $x+y=3$ and $-x+y=1.$ 
+	\begin{enumerate}
+	\item (1 point) Write this system as a matrix$\cdot$vector equation of the form $A \textbf{x} = \textbf{b}.$
+	\vspace{1in}
+	\item (4 points) This system of equations has solution $x=1$, $y=2.$ \textbf{Draw} the row and column pictures in this case. Label which one is which. Your pictures don't need to be perfect but they should be roughly correct and labelled.
+	\vfill
+	
+	\vfill
+	\end{enumerate}
+	
+\newpage
+\thispagestyle{plain}
+
+\item (5 points) Reduce the system below to upper triangular form using two row operations. List the pivots and the multipliers. Solve by back substitution.\\
+
+$
+%\begin{equation}
+\begin{aligned}
+x \quad&&&+& z &= 0 \\
+2x \quad &+&3y \quad&-&z &= 3\\
+&&4y \quad&+&z&=2
+\end{aligned}
+%\end{equation}
+$
+\end{enumerate}
+\end{document}
