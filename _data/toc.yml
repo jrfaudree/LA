@@ -22,8 +22,8 @@ docs:
 - title: Textbook
   exturl: https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html
 
-#- title: Matlab
- # url: matlab.html
+- title: Matlab
+  url: matlab.html
 
 - title: Worksheets
   url: NEWworksheets.html
