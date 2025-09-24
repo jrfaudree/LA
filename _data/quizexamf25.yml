@@ -10,3 +10,8 @@ quizexam:
 - name: Quiz 3
   blank: M314F25q3.pdf
   solutions: M314F25q3-s.pdf
+- name: Quiz 4
+  blank: M314F25q4.pdf
+  solutions: M314F25q4-s.pdf
+
+  
