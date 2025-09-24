@@ -1,0 +1,67 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 4 }
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+%\vspace*{-0.7in}
+This quiz has three problems worth 10 points.
+\begin{enumerate}
+\item (4 points) For each augmented matrix below, state \textit{in words} what the next elimination step would be and write out the elimination matrix for that step. ( Your words can be something like, "Add row 1 to row 2." You do not have to perform the elimination step.)
+	\begin{enumerate}
+	\item $\bbm 1 &2& 3& 0\\ 0 &5 &-1& 7 \\ 0& -2& 0 &1\\ \ebm$
+	\vfill
+	\item $\bbm 1& 2 &3 &0\\ 0& 0 &-1& 7 \\ 0& 8& 4& 1\\ \ebm$
+	\vfill
+	\end{enumerate}
+\item (2 points) The matrices $C$ and $D$ are written below. Of the two possible products, namely $CD$ or $DC$, only one is defined. \textbf{State} which one is defined and calculate the product.
+ $$ C=\bbm 2 & \pi \\ -1 & 0 \ebm \hspace{.2in}D= \bbm 1&1\\-1&0\\1&2\\0&-1 \ebm$$
+ \vfill
+ 
+ \vfill
+\newpage
+\thispagestyle{plain}
+
+\item (4 points) Suppose $A$ is a $30 \times 50$ matrix and $B$ is a $50 \times 40$ matrices. 
+	\begin{enumerate}
+	\item What is the dimension of the matrix $AB$?
+	\vfill
+	\item What rows or columns or matrices to you multiply to find
+		\begin{enumerate}
+		\item  column 10 of $AB$?
+		\vfill
+		\item  row 15 of $AB$?
+		\vfill
+		\item the entry in row 4 and column 5 of $AB$?
+		\vfill
+		\end{enumerate}
+	\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
