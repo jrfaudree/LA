@@ -13,5 +13,7 @@ quizexam:
 - name: Quiz 4
   blank: M314F25q4.pdf
   solutions: M314F25q4-s.pdf
-
+- name: Quiz 5
+  blank: M314F25q5.pdf
+  solutions: M314F25q5-s.pdf
   
