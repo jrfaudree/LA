@@ -1,0 +1,198 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Some Practice Problems }
+%\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+%\vspace*{-0.7in}
+
+\begin{enumerate}
+\item
+Consider the vectors
+
+$$\mathbf a=(1,-1,3),\ \ \mathbf b=(2,1,1)$$
+\begin{enumerate}
+
+\item Are $\mathbf a$ and $\mathbf b$ orthogonal? 
+\vskip .7in
+
+\item Give a third vector $\mathbf c$ that is orthogonal to $\mathbf a$ and one unit long. 
+\vskip 1.in
+
+\item How many correct answers are there to part (b)?
+\vskip .7in
+
+\end{enumerate}
+
+\item  Consider the equation
+ $$\begin{bmatrix} 1 &-2\\ 3& 2\end{bmatrix}\begin{bmatrix} x\\y\end{bmatrix}=\begin{bmatrix} 3\\-4\end{bmatrix}.$$
+\begin{enumerate}
+\item Sketch (approximately) the column picture for this equation. 
+\vskip 1.5in
+\item In a sentence or two, explain how this picture indicates this equation is solvable.
+
+\vskip .8in
+\item Change only one entry in the matrix so that the equation cannot be solved.
+\vskip 1in
+\end{enumerate}
+ 
+ \item Solve the following, using elimination on the augmented matrix, and back substitution:
+$$\begin{pmatrix} 1&1&1\\-1&1&-2\\0&-6&1\end{pmatrix}\mathbf x=\begin{pmatrix}2\\1\\-7\end{pmatrix}.$$
+
+\vskip 2.5in
+
+\item 
+\begin{enumerate}
+\item Give the two $3\times3$ elimination matrices that put the above system in upper-triangular form.
+\vskip 1.in
+
+\item Give \emph{one} matrix that does both these elimination steps at once. (Make sure you think about the correct order of the steps.)
+\end{enumerate}
+
+\vskip 3.in
+
+
+\item What should $z$ be to make the the  (2,3)-entry of  following  matrix product be $0$?
+$$\begin{pmatrix} 1&2&z\\2&z&3\\z&3&4\end{pmatrix}
+\begin{pmatrix} 1&1&0\\0&2&1\\-1&1&-1\end{pmatrix}
+$$
+ 
+
+\vskip 1.2in
+
+
+\item Find $A^{-1}$, or show it doesn't exist, for
+$$
+A=\begin{pmatrix} 1&0&1\\2&0&1\\-1&2&-1\end{pmatrix}.
+$$
+ 
+
+\vskip 3.in
+
+
+\item   Give an $LU$ factorization of 
+$$A=\begin{pmatrix}2&1&-2\\-4&-3&5\\0&-1&4\end{pmatrix}.$$
+
+
+
+\vskip 2.5in
+
+
+\item Suppose the $LU$ factorization of a matrix $A$ is 
+$$A=\begin{pmatrix}1 &0&0\\-2 &1&0\\5&-1&1\end{pmatrix}\begin{pmatrix}1& 0 &-1\\0 &-2&1\\0&0&3\end{pmatrix}.$$
+Use this to solve $A\mathbf x =\mathbf b$ for $\mathbf b=(-1,6,-3)$ by solving two triangular systems. Do NOT compute $A$ to do this problem!
+
+\vskip 1.in
+
+
+%%%%%%%%%%%%%
+%%% END RHODES
+%%% BEGIN BUELER
+%%%%%%%%%%%%%
+
+\item  Here are three equations in two unknowns:
+\begin{align*}
+2 x + 2 y &= 6 \\
+x - 3 y &= -1 \\
+4 x + y &= 0
+\end{align*}
+We can also write this as $A \bx = \bb$ where $A$ is a $3\times 2$ matrix and $\bx = \begin{bmatrix} x \\ y \end{bmatrix}$, $\bb = \begin{bmatrix} 6 \\ -1 \\ 0 \end{bmatrix}$ are vectors.
+
+	\begin{enumerate}
+	\item Sketch the ``row picture'': sketch each equation as a line in the $(x,y)$ plane.  Do they intersect?
+
+	\vfill
+	\item Sketch the ``column picture'': sketch each column of $A$, and also $\bb$, in three-dimensional space.  Will you be able to find a linear combination of the columns of $A$ which gives $\bb$?
+
+\vfill
+
+
+	\item  Change one entry of the right side so that the linear system does have a solution, and find that solution.
+
+\vspace{2.5in}
+	\end{enumerate}
+\item
+	\begin{enumerate}
+	 \item  Consider the new linear system $A\bx=\bb$ where
+    $$A = \begin{bmatrix} 1 & 0 & -1 \\ 2 & 2 & 0 \\ 3 & 2 & 1 \end{bmatrix}, \quad \bx = \begin{bmatrix} 0 \\ 4 \\ 6 \end{bmatrix},$$
+and $\bx = (x_1,x_2,x_3)$ is unknown (\emph{for now}).  Sketch the row picture, that is, sketch each of the three equations as a plane.  Note it is easier to sketch each plane on separate axes; show three sketches.
+\vfill
+
+	\item  What is the solution of the system in part \textbf{(i)}?
+\vspace{1.0in}
+	\end{enumerate}
+
+
+\item  Consider the following linear system $A\bx = \bb$:
+\begin{align*}
+2 x_1 + x_2 - 9 x_3 &= -6 \\
+4 x_1 - 3 x_2 -21 x_3 &= -20 \\
+-6 x_1 - 13 x_2 + 24 x_3 &= 5
+\end{align*}
+
+Solve the linear system by \emph{elimination} and then \emph{back-substitution}.  Use the standard algorithm.  Show your work, and in particular show, as an intermediate stage, the triangular system which you get after elimination.
+\vfill
+
+
+\vspace{3in}
+\item  From problem above, 
+	\begin{enumerate} 
+	\item what elimination matrices $E_{21},E_{31}E_{32}$ did the row operations?
+	\vfill
+
+	\item  What are the inverses $L_{21}=E_{21}^{-1}$, $L_{31}=E_{31}^{-1}$, $L_{32}=E_{32}^{-1}$?
+	\vfill
+
+	\item  What numbers were the pivots?  What is the determinant of A?
+	\vfill
+
+	\item  The computation can regarded as factoring $A=LU$.  What lower triangular matrix $L$ and upper triangular matrix $U$ were computed?
+\vfill
+
+	\item   Multiply $LU$ and confirm you get the original matrix $A$.
+\vspace{0.5in}
+	\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
