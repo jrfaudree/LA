@@ -1,0 +1,116 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Some Practice Problems }
+%\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+Midterm 1 Review\\
+
+The exam will be Wednesday October 1, 9:15-10:15. No books, notes, calculator, electronics, or internet access.\\
+
+It will cover Chapters 1 and 2.\\
+
+Chapter 1: Introduction to Vectors\\
+Section 1.1: Vectors and Linear Combinations\\
+terminology/definitions: vector, linear combinations of vectors, vector addition, scalar multiplication, a vector equation.\\
+skills: how to draw vector addition, subtraction, scalar multiplication, and linear combinations\\
+
+\vskip .1in
+
+Section 1.2: Lengths and Dot Products\\
+terminology/definitions: the dot product of two vectors, the length of a vector, a unit vector, the angle between two vectors\\
+skills: how to use the dot product to determine the angle between two vectors (or whether they are orthogonal, acute, obtuse); how to find a unit vector in the same direction as a given vector, how to find the length of a vector.\\
+
+\vskip .1in
+
+Section 1.3: Matrices\\
+terminology/definitions: matrices, matrix - vector product (both a row-view and a column-view), matrix-vector equations (both a row-view and a column-view), a first look at the idea of a matrix inverse, a first look at the idea of a set of vectors being linearly independent or dependent.\\
+skills: how to determine if one vector is a linear combination of others, how to solve systems of equations (in an ad hoc manner, perhaps), to recognize when a system of equations has one solution or multiple solutions or no solution.\\
+
+\vskip .1in
+
+Chapter 2: Solving Linear Equations\\
+Section 2.1: Vectors and Linear Equations\\
+terminology/definitions: The column and row pictures of $A \bx =\bb$ both algebraically and geometrically, in 2- and 3-dimensions, the identity matrix, a first look at matrix multiplication.\\
+skills: Understand the geometric and numerical consequences when solving $A \bx =\bb$ and $\bb = 0,$  understand the geometric and numerical interpretations of solutions to $A \bx =\bb$\\
+
+\vskip .1in
+
+Section 2.2: The Idea of Elimination\\
+terminology/definitions: elimination, multiplier (ex: $\ell_{31}$), elimination matrix, pivot,\\
+skills: Know how to use elimination, including elimination matrices, to transform the matrix $A$ or the system of equations $A \bx = \bb$ into upper triangular form, recognize when the process of elimination breaks down.\\
+
+\vskip .1in
+
+Section 2.3: Elimination Using Matrices\\
+terminology/definitions: the formal (rigid) algorithm for elimination, augmented matrix, row exchanges and corresponding matrices, formal matrix multiplication and its algebra\\
+skills: Perform elimination in this formal sense. Be able to find the corresponding elimination matrices and the single matrix that performs all steps simultaneously.\\
+
+\vskip .1in
+
+Section 2.4: Rules for Matrix Operation\\
+terminology/definitions/rules: there are several rules about how matrix multiplication does and does not behave (ex: it's associative and it distributes through addition, but it's not necessarily commutative), block multiplication\\
+skills: This was a deep dive into matrix multiplication. You should be able to multiply matrices using any of the four approaches. \\
+
+\vskip .1in
+
+Section 2.5: Inverse Matrices\\
+terminology/definitions/rules: the inverse of a matrix, algebra of inverses (ex $(AB)^{-1} = ??$)\\
+skills: Gauss-Jordan Elimination to find the inverse of a matrix A. How the inverse relates to solutions to systems of equations.
+
+\vskip .1in
+
+Section 2.6: Elimination $=$ Factorization: $A=LU$\\
+terminology/definitions: $LU$-factorization\\
+skills: How to find an $LU$-factorization for a matrix $A$ or recognize that no such factorization exists, How this factorization relates to elimination. How the $L$ and $U$ matrices can be used to solve $A \bx = \bb.$\\
+
+\vskip .1in
+
+Section 2.7: Transposes and Permutations\\
+terminology/definitions: the transpose of a matrix, transpose algebra, symmetric matrices, permutation matrices
+
+
+\vskip .1in
+
+
+\end{document}
