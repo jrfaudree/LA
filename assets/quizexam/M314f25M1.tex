@@ -1,0 +1,163 @@
+\documentclass[11pt]{amsart}
+
+\setlength{\topmargin}{-0.5in} % usually -0.25in
+\addtolength{\textheight}{1.2in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.95in}
+\addtolength{\evensidemargin}{-0.95in}
+\addtolength{\textwidth}{1.9in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+
+\usepackage[scaled=0.86]{helvet}
+
+\title{MATH 341 Linear Algebra\\ Fall 2025\\ Midterm 1}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Name:} \underline{\hspace{3in}} \hfill \textbf{Time: 60 minutes}
+
+\vspace{0.2in}
+
+\noindent\textbf{Instructions:} Show all work for full credit. Partial credit will be awarded for correct methods even if the final answer is incorrect. No book, notes, electronics, calculator, or internet access is permitted.
+\vfill
+
+\begin{center}
+{\Large{
+\begin{tabular}{ccc}
+problem&points&score\\
+\hline
+1&20&\\ \hline
+2&10&\\ \hline
+3&20&\\ \hline
+4&20&\\ \hline
+5&30&\\ \hline
+\hline 
+total&100&\\
+\end{tabular}
+}}
+\end{center}
+\vfill
+\vfill
+\newpage
+
+\begin{enumerate}
+%%%% ONE
+%%%% elimination back sub
+\item (20 points) Consider the following system $A\bx = \bb$:  
+\begin{align*}
+x + 2y - z &= 3\\
+2x + 5y + 2z &= 4\\
+x + 4y + 4z &= -1
+\end{align*}
+
+	\begin{enumerate}
+	\item Solve the linear system by \emph{elimination} and then \emph{back-substitution} on the \emph{augmented matrix}.  Use the standard algorithm.  
+	\vfill
+	\item List the pivots.
+	\vspace{0.5in}
+	\item Using your work in part(a), determine the $LU$-factorization of the matrix $A.$
+	\vspace{1in}
+	\item Suppose the vector $\bb=(3,4,-1)$ was replaced with the vector $\bc=(3,3,3)$, would the system $A \bx =\bc$ have a solution? (You should answer this question without doing any additional work.)
+	\vspace{1in}
+	\end{enumerate}
+\newpage
+%%%% TWO
+%%%% column and row view of solutions
+\item (10 points) The system of equations $A\bx = \bb$ below has solution $(x,y)=(4,2).$
+\begin{align*}
+x - 2y  &= 0\\
+x + y  &= 6\\
+\end{align*}
+	\begin{enumerate}
+	\item Draw the \emph{column view} of this solution.
+	\vfill
+	\item Draw the \emph{row view} of this solution.
+	\vfill
+	\end{enumerate}
+	
+\newpage
+
+%%%% THREE
+%%%% GAUSS JORDAN
+\item (20 points) 
+	\begin{enumerate}
+	\item \emph{Use Gauss-Jordan elimination} to find the inverse of the matrix $A=\begin{bmatrix} 2&-3\\-4& 8 \end{bmatrix}$. 
+	\vfill
+	\item Show that your answer is correct.
+	\vspace{1.5in}
+	\item Use your answer in part (a) to solve the system:
+	
+	\begin{align*}
+	2x -3y  &= 1\\
+	-4x + 8y  &= -1\\
+	\end{align*}
+	\vspace{1.5in}
+	\end{enumerate}
+
+	\newpage
+\item (20 points) Consider the vectors $\mathbf{v} = \begin{bmatrix} 0 \\ -1 \\ 3 \end{bmatrix}$ and $\mathbf{w} = \begin{bmatrix} 1 \\ 4 \\ -1 \end{bmatrix}$.
+
+	\begin{enumerate}   
+	\item (5 points) Is the angle between $\bv$ and $\bw$ acute, obtuse, or right? Justify your conclusion.   \vfill 
+	\item (5 points) Find a unit vector, $\bu$, in the same direction as vector $\bv.$ \vfill
+   	\item (5 points) Find a nonzero vector, $\bx,$ orthogonal to both $\mathbf{v}$ and $\mathbf{w}$. \vfill
+    	
+	\item (5 points) Is $\mathbf{\bc} = \begin{bmatrix} 2 \\ 7 \\ 1 \end{bmatrix}$ a linear combination of $\bv$ and $\bw$? Justify your conclusion.
+	\vfill
+	\end{enumerate}
+	\newpage
+\item Short Answer (5 points each for 30 points)
+	\begin{enumerate}
+	\item In the system of equations \begin{align*}
+	x -3y  &= 5\\
+	4x + 12y  &= b,\\
+	\end{align*} determine a value for $b$ for which the system has\\
+	
+		\begin{enumerate}
+		\item no solution.\\
+		
+		\item an infinite number of solutions.\\
+		
+		\end{enumerate}
+	\item Give the 4 by 4 elimination matrix, $E_{42}$, that would subtract 5 times row 2 from row 4.
+	\vfill
+	\item Give an example of a nonzero 2 by 2 matrix $A$ such that $A^2$ is the zero matrix.
+	\vfill 
+	\newpage
+	
+	\item Determine the second column of the matrix product, $AB$, below:\\ 
+	$AB=\begin{bmatrix}1&2&3&4&5\\1&2&4&4&4\\1&0&-1&-1&-1\\0&3&4&3&2\end{bmatrix} \begin{bmatrix} 0&1&3\\ 2&-1&4\\1&0&1\\3&0&4\\-2&0&0 \end{bmatrix}$.
+	\vfill
+	\item Is the matrix below invertible? Justify your conclusion.\\
+	
+	$\begin{bmatrix} -2&1 &8 \\ 4&-2&-16\\1&1&1 \end{bmatrix}$
+	
+	\vfill
+	\item Suppose that matrices $A$ and $B$ are symmetric and have the same dimensions. Show that $ABA$ must also be symmetric. 
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+
+\end{document}
