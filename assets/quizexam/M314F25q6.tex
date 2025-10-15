@@ -1,0 +1,84 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,nicematrix}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 6 }
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+%\vspace*{-0.7in}
+This quiz has six problems worth 10 points.
+
+%\item (2 points) Let $S= \left\{ \vecthree{b_1}{b_2}{b_3} \: : \: b_1=1\right\}$ (Thus, in words, $S$ is the set of all vectors in $\mathbb{R}^3$ such that the $y$ coordinate is 1.) Is $S$ a \emph{subspace} of $\mathbb{R}^3$? Give a brief justification for your conclusion.
+%\vfill
+Below is the matrix $A$ and its reduced row echelon form, $R$. Use these to answer the following questions.
+
+\begin{center}
+$A=\bbm 2& -2& 4&3 \\
+4 & -8& 10& 7\\
+6& 14&2&4 \ebm$
+\hspace{.3in}
+$R= \bbm 1&0&3/2&5/4\\
+0&1&-1/2&-1/4\\
+0&0&0&0 \ebm$
+\end{center}
+	\begin{enumerate}
+	\item (1 pt) What is the rank of $A$?\\
+	\item (1 pt) What are the \emph{free variables} in this case? (Assume $\mathbf{x} = (x_1,x_2,x_3,x_4).$)\\
+	\item (2 pts) For each free variable, find a \emph{special solution}.
+	\vfill
+	\item (2 pts) Efficiently and precisely describe $N(A)$, the null space of $A$.
+	\vfill
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+$A=\bbm 2& -2& 4&3 \\
+4 & -8& 10& 7\\
+6& 14&2&4 \ebm$
+\hspace{.3in}
+$R= \bbm 1&0&3/2&5/4\\
+0&1&-1/2&-1/4\\
+0&0&0&0 \ebm$
+\end{center}
+	\item (2 pts) Efficiently and precisely describe $C(A)$, the column space of $A$. (Note that $A$ and $R$ are copied above.)
+	\vfill
+	\item (2 pts) Below is the augmented matrix $[A \: \mathbf{b}]$ for the system of equations $A\mathbf{x}=\mathbf{b}$ and its reduced row echelon form, $R$. Find the complete solution to the system $A\mathbf{x}=\mathbf{b}$.
+	\begin{center}
+$A=\begin{bNiceArray}{cccc : c}
+ 2& -2& 4&3&6 \\
+4 & -8& 10& 7&8\\
+6& 14&2&4&38 \end{bNiceArray}$
+\hspace{.3in}
+$R= \begin{bNiceArray}{cccc : c}
+1&0&3/2&5/4&4\\
+0&1&-1/2&-1/4&1\\
+0&0&0&0&0 
+\end{bNiceArray}$
+\end{center}
+	
+	\end{enumerate}
+\vfill
+\end{document}
