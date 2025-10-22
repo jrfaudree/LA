@@ -1,0 +1,55 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,nicematrix}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Quiz 7 }
+\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+%\vspace*{-0.7in}
+This quiz has six problems worth 10 points.
+\begin{enumerate}
+\item (4 points) Give examples of matrices for which the number of solutions to $A \mathbf{x} = \mathbf{b}$ is
+	\begin{enumerate}
+	\item 0 or 1, depending on $\mathbf{b}.$ Explain your reasoning.
+	\vfill
+	\item 0 or $\infty$,  depending on $\mathbf{b}.$ Explain your reasoning.
+	\vfill
+	\end{enumerate}
+\item (4 points) Find a basis for each subspace below.
+	\begin{enumerate}
+	\item The subspace of $2 \times 2$ matrices consisting of all upper triangular matrices.
+	\vfill
+	\item The subspace of $\mathbb{R}^4$ consisting of all vectors orthogonal to $(1,1,0,0)$ and $(1,0,1,0).$	
+	\vfill
+	\end{enumerate}
+\item (2 points) [Fill in the blank.] Suppose $A$ is an $m \times n.$
+	\begin{enumerate}
+	\item The vector $\textbf{d}$ is in the row space of $A$ when \underline{\hspace{1in}} has a solution. \\
+	\item The row space of $A$ is a subspace of $\mathbb{R}^{\boxed{\phantom{n}}}.$
+	\end{enumerate}
+\end{enumerate}
+\end{document}
