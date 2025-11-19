@@ -3,7 +3,7 @@ layout: course-page
 title: Faudree's Math 314 Linear Algebra
 ---
 
-# **THIS PAGE IS UNDER CONSTRUCTION FOR FALL 2025**
+
 
 Welcome to the homepage of **Math 314 Linear Algebra**, Fall 2024, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
