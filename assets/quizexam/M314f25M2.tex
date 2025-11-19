@@ -1,0 +1,179 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[top=1in, bottom=1in, left=.5in, right=.5in]{geometry}
+%%\setlength{\topmargin}{-0.25in} % usually -0.25in
+%\addtolength{\textheight}{1.22in} % usually 1.25in
+%\addtolength{\oddsidemargin}{-0.95in}
+%\addtolength{\evensidemargin}{-0.95in}
+%\addtolength{\textwidth}{2.5in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bm}{\mathbf{m}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bU}{\mathbf{U}}
+
+
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+%\geometry{margin=1in}
+\usepackage{enumitem}
+
+\usepackage[scaled=0.86]{helvet}
+
+\title{MATH 314 Linear Algebra\\ Fall 2025\\ Midterm 2}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Name:} \underline{\hspace{3in}} \hfill \textbf{Time: 60 minutes}
+
+\vspace{0.2in}
+
+\noindent\textbf{Instructions:} Show all work for full credit. Partial credit will be awarded for correct methods even if the final answer is incorrect. No book, notes, electronics, calculator, or internet access is permitted.
+\vfill
+
+\begin{center}
+{\Large{
+\begin{tabular}{ccc}
+problem&points&score\\
+\hline
+1&16&\\ \hline
+2&15&\\ \hline
+3&15&\\ \hline
+4&15&\\ \hline
+5&16 & \\ \hline
+&+ 3 EC&\\ \hline
+6&23&\\ \hline
+
+\hline 
+total&100&\\
+\end{tabular}
+}}
+\end{center}
+\vfill
+\vfill
+\newpage
+
+\begin{enumerate}
+%%% Four subspaces
+\item (16 pts) Below is the matrix $\bA$ and its reduced row echelon form, $\bU.$
+
+ $$A = \begin{bmatrix} 2 & -6 & 0 & 4 & 0 \\ -1 & -3 & 2 & -4 & 0 \\ 2 & -6 & 2 & 2 & 0 \\ 1& -3& 4& -2 & 2 \end{bmatrix}
+      \qquad \longrightarrow \qquad
+      R = \begin{bmatrix} 1 & -3 & 0 & 2 & 0 \\ 0 & 0 & 1 & -1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0& 0& 0& 0& 0 \end{bmatrix}$$
+      \begin{enumerate}
+      \item (4 pts) Find a \textbf{basis} for the row space of $\bA$, $C(\bA^T)$, and state its \textbf{dimension}.
+      \vfill
+      \vfill
+      \item (4 pts) Find a \textbf{basis} for the column space of $\bA$, $C(\bA)$, and state its \textbf{dimension}.
+      \vfill
+      \vfill
+      \item (6 pts) Find a \textbf{basis} for the null space of $\bA$, $N(\bA)$, and state its \textbf{dimension}.
+      \vfill
+      \vfill
+      \item (1 pt) State the \textbf{dimension} of the left null space of $\bA$, $N(\bA^T).$
+      \vfill
+      \item (2 pts) Does the left null space contain \emph{any} nonzero vector? If so, find one. If not, explain why.
+      \vfill
+      \end{enumerate}
+ \newpage
+ %Complete Solutions
+ \item (15 pts) Consider the linear system $\bA \bx = \bb:$
+ 
+ \begin{align*}
+2x_1 + 3 x_2 +3x_3 \qquad &= 9 \\
+2 x_1 +6 x_2 +  x_3 -x_4 &= 27 \\
+-4 x_1 - 3 x_2 -7  x_3 -x_4 &= -3
+\end{align*}
+
+Here is the row-reduced echelon form of the augmented matrix:
+    $$[A\,\,\,\bb] \qquad \longrightarrow \qquad
+    [R\,\,\,\bd] = \begin{bmatrix} 1 & 0 & 0 & 1/2 & 3 \\ 
+    0 & 1 & 0 & 1/3 & 4\\
+    0&0&1&0&-3 \end{bmatrix}$$
+What is the general solution of the system?  Show your work.
+\vfill
+\newpage
+\item (15 pts) Let $S$ be a 1-dimensional subspace of $\mathbb{R}^2$ spanned by the vector $\ba=(3,1).$  	\begin{enumerate}
+	\item (6 pts) Find the projection, $\bp,$ of $\bb=(-1,1)$ onto $S$ and the error, $\be.$
+	\vfill
+	\item  (4 pts) On the same set of axes, draw and label $\bs$, $\bb,$ $\bp$, and $\be.$
+	\vfill
+	\item (5 pts) Compute $P$, the matrix of the projection. 
+	\vfill
+	\end{enumerate}
+\newpage
+\item (15 pts) Find an orthonormal basis for the subspace of $\mathbb{R}^4$ spanned by:
+$$\ba_1=(1,1,0,0),\: \ba_2=(0,2,1,0),\: \ba_3=(1,1,3,1)$$
+\vfill
+\newpage
+\item (16 pts) An experiment produced the following data points in the $(x,y)$ plane:
+$$(1,6),\: (3, 3), \: (4,1)$$
+We would like to find the line, $y=mx+b,$ of best fit.
+	\begin{enumerate}
+	\item (3 pts) Write down the system of equations we would \emph{like} to solve in order to find $m$ and $b$. That is, this system would have a solution if all points were on a common line.
+	\vfill
+	\item (2 pts) Rewrite the system of equations in part (a) in vector form. (We typically write this as $\bA \bx = \bb$) So,  state the coefficient matrix $\bA$, the variable vector $\bx$ and the constant vector $\bb.$
+	\vfill
+	\item (2 pts) Is your vector $\bb$ in the column space of your matrix $\bA$? Give a very brief explanation.
+	\vskip 0.5in 
+	\item (6 pts) Write down the system of equations we will actually solve in order to find the line of best fit. These are also called the \emph{normal} equations. 
+	\vfill
+	\vfill
+	\quad \hfill problem 5 continued on the next page ... $\longrightarrow$
+	\newpage
+	\item (3 pts) A solution to the normal equations produces the slope and $y$-intercept of the line of best fit. In what sense is it \emph{best}? That is, what quantity is minimized? You should be able to give a mathematical formula here.
+	\vfill
+	\item (3 pts extra credit) We typically write the least squares solution as $\widehat{\bx},$ which in this case is $(7.7,-1.6).$ Translate this least squares solution into a ``projection" problem. That is, somehow $\widehat{\bx}$ should tell you how to find the projection, $\bp,$ of some vector $\bb$ onto some subspace $S.$ What are $\bp,$ $\bb$ and $S$?
+	\vfill
+	\end{enumerate}
+%%% MISC
+\item (40 pts) Short Answer
+	\begin{enumerate}
+	%what is a vector space
+	\item (3 pts) Do the vectors in $\mathbb{R}^3$ whose entries add up to 1 form a subspace of $\mathbb{R}^3$? Justify your conclusion.
+	\vfill
+	% linear independence
+	\item (3 pts) What does it mean for the vectors $\ba_1, \; \ba_2, \; \ba_3,$ and $\ba_4$ to be \emph{linearly independent}? (Give a precise mathematical explanation.) 
+	\vfill
+	\newpage
+	\item (4 pts) Suppose that $\bP$ is a projection matrix. What is $\bP^2$ and why?
+	\vfill
+	\item (3 pts) Briefly explain why the row space and the null space of the matrix $\bA$ are orthogonal.
+	\vfill
+	
+	\item (3 pts) Determine if the following statement is true or false. Justify your conclusion.\\
+	\begin{quote} If $B$ is not invertible, then $AB$ is not invertible. \end{quote}
+	\vfill
+	\item (3 pts) Suppose $E_{ij}$ is an elimination matrix. Is it possible to determine $\det(E_{ij})$? Explain your answer briefly.
+	\vfill
+	\item (4 pts) Suppose $\bA$ is a $3 \times 4$ matrix and the vector $\ba$ forms a \emph{basis} for the null space of $\bA$. 
+		\begin{enumerate}
+		\item What is the rank of $\bA$?
+		\vskip .5in
+		\item What, if anything, can you determine about solutions to the system of equations $\bA \bx = \bb$?	Explain your answer.
+		\vfill
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\end{document}
