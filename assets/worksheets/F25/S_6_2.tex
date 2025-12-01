@@ -1,0 +1,113 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-1.1in} 
+\addtolength{\evensidemargin}{-1.1in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\textheight}{1.75in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{bm,enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bL}{\mathbf{\Lambda}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+\newcommand{\bzero}{\bm{0}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbf{R}}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
+\newcommand{\exer}[2]{\prob{Exercise #2 on page #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\ds}{\displaystyle}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra \hfill Section 6.2 Diagonalizing a Matrix 
+\normalsize\medskip
+
+
+\thispagestyle{empty}
+\begin{enumerate}
+\item Find the eigenvalues $\lambda_1 \leq \lambda_2 \leq \lambda_3$ and associated eigenvectors, $\bx_1,\bx_2,\bx_3$ for the matrix $\bA$ below.  \\
+
+$\bA =  \begin{bmatrix} 2&1&0\\ 0&3&0\\0&1&1 \end{bmatrix} $
+\vfill
+\newpage
+\item Define the two matrices $\bX = [ \bx_1\: \bx_2\: \bx_3]$ and $\bL$ to be a 3 by 3 \emph{diagonal} matrix with $\lambda_1,\lambda_2,\lambda_3$ down the main diagonal \emph{in that order} and write them below.\\
+\vfill
+	\begin{enumerate}
+	\item Is $\bX$ invertible or not? Why?
+	\vfill
+	\item Compute $\bA \bX.$
+	\vfill
+	\item Compute $\bX \bL.$
+	\vfill
+	\item Explain, without computation, that $\bA=\bX \bL \bX^{-1}$
+	\vfill
+	\item Use your answer from part (d), to find another way to compute $\bA^5.$ Are there advantages to the alternative approach?
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+

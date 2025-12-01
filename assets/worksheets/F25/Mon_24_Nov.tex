@@ -1,0 +1,323 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-1.1in} 
+\addtolength{\evensidemargin}{-1.1in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\textheight}{1.75in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim} % for "comment" environment
+
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{bm,enumitem,xspace,fancyvrb}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\DefineVerbatimEnvironment{mVerb}{Verbatim}{numbersep=2mm,frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bL}{\mathbf{\Lambda}}
+
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+
+\newcommand{\bzero}{\bm{0}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\Null}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+
+\newcommand{\RR}{\mathbf{R}}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.}\quad }
+\newcommand{\exer}[2]{\prob{Exercise #2 on page #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\bigskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\ds}{\displaystyle}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+
+\begin{document}
+\scriptsize \noindent Math 314 Linear Algebra \hfill Section 6.2 and 8.1
+\normalsize\medskip
+
+
+\thispagestyle{empty}
+\begin{enumerate}
+\item The ABC Bike Company has two locations, Downtown and Beach, where people can rent a bike for a day. The bikes can be returned at either location. The table below shows where people tend to return the bikes given where they are rented.\\
+\begin{tabular}{|c||cc|}
+\hline
+rented downtown& 80\% returned downtown & 20\% returned at the beach\\
+\hline
+rented at the beach& 30\% returned downtown & 70\% returned at the beach\\
+\hline
+\end{tabular}
+	\begin{enumerate}
+	\item Suppose they start the beginning of the week (say Monday) with half of their bikes downtown and at the beach. Calculate the distribution of the bikes between the locations at the end of Monday. Give a detailed calculation.
+	\vfill
+	\item Use your answer above to determine the distribution of bikes at the end of the day on Tuesday assuming they do not redistribute the bikes Monday night.
+	\vfill
+	\item Find a matrix $\bA$ such that if $\bx = (x_d,x_b)$ is a vector with the distribution of bikes between downtown ($x_d$) and the beach ($x_b$) at the beginning of the day, $\bA \bx$ will give the distribution at the end of the day. Show your answer is correct. 
+	\vfill
+	\item Use a computational tool to determine the distribution of bikes at the end of month assuming the company does not redistribute any bikes. Show the computation below. What do you think happens to the distribution of bikes long term?
+\vfill
+	\item Recall that we determined earlier that the matrix $A$ has two eigenvalues $\lambda_1 =1$ and $\lambda_2= 1/2,$ with associated eigenvectors $\bx_1=(.6,.4)$ and $\bx_2 = (1,-1).$ Show that the starting distrubution $\bx_0=(0.5,0.5)$ can be written as $\bx_1-(0.1)\bx_2.$
+	\vfill
+	\item Use part (e) to confirm your conclusion in part (d).
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\newpage
+%\title{Introduction to Linear Transformations\\Worksheet}
+%\author{}
+%\date{}
+%
+%\begin{document}
+%
+%\maketitle
+%
+%\section*{Goals}
+%\begin{itemize}
+%    \item Understand matrix multiplication as a function from domain to range
+%    \item Visualize how linear transformations preserve the linear relationship: $T(c\mathbf{v} + d\mathbf{w}) = cT(\mathbf{v}) + dT(\mathbf{w})$
+%\end{itemize}
+
+\section*{Matrix as a Transformation}
+
+Consider the linear transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ defined by $T(\bx)=\bA\bx$ where $\bA$ is the matrix
+$A = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}.$
+
+\subsection*{Problem 1}
+Plot the following points $p_1(0,0),\: p_2(1,0),\: p_4(0,1),\:p_4(1,1),\:p_5(1,2)$ in the domain and their images under $T$ in the range.\\
+
+\begin{tabular}{lr}
+\noindent\textbf{Domain:} & \noindent\textbf{Range:}\quad \hspace{1in} \quad\\
+%\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-4,0) -- (4,0) node[right] {$x$};
+    \draw[->] (0,-4) -- (0,4) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-4,-4) grid (4,4);
+    \foreach \x in {-3,-2,-1,1,2,3}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-3,-2,-1,1,2,3}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+&
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-5) grid (5,5);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-2,-1,1,2}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+%\end{center}
+\end{tabular}
+
+Make some conjecture(s) about what you \emph{think} the transformation $T$ is doing to the plane?
+\vfill
+\newpage
+\subsection*{Problem 2}
+Let $c = -3,$ $d = 2$, $\mathbf{v}=(1,1)$ and $\mathbf{w}=(-1,2).$ \\
+\begin{enumerate}
+\item Calculate, plot and label in the domain the points/vectors $\mathbf{v}=(1,1),$ $\mathbf{w}=(-1,2)$ and
+  $c\bv$\\ 
+  $d\bw$\\ 
+  $c\bv+d\bw$  
+
+\item Calculate, plot and label in the range the points/vectors: \\ 
+$T(\bv)$\\  
+$T(\bw)$ \\ 
+$cT(\bv)$\\ 
+$dT(\bw)$\\
+$cT(\bv)+dT(\bw)$\\ 
+$T(c\bv+d\bw)$  
+\vfill
+\end{enumerate}
+\noindent\textbf{Domain:} \\
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-4) -- (0,4) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-4) grid (5,4);
+    \foreach \x in {-3,-2,-1,1,2,3}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-3,-2,-1,1,2,3}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+\noindent\textbf{Range:} \\
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-10,0) -- (10,0) node[right] {$x$};
+    \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-10,-5) grid (10,5);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-2,-1,1,2}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+\end{document}
+\newpage
+\vspace{0.3cm}
+\noindent $c\mathbf{v} + d\mathbf{w} = $ \underline{\hspace{3cm}}
+
+\noindent\textbf{Domain:}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,5) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-3) grid (5,5);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-2,-1,1,2,3,4}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Problem 3}
+Now compute $T(c\mathbf{v} + d\mathbf{w})$ directly and plot it in the range below.
+
+\vspace{0.3cm}
+\noindent $T(c\mathbf{v} + d\mathbf{w}) = $ \underline{\hspace{3cm}}
+
+\noindent\textbf{Range:}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (9,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,9) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-3) grid (9,9);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4,5,6,7,8}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-2,-1,1,2,3,4,5,6,7,8}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+
+\newpage
+
+\subsection*{Problem 4}
+Compute $cT(\mathbf{v}) + dT(\mathbf{w})$ using your answers from Problem 1 and plot it in the range below.
+
+\vspace{0.3cm}
+\noindent $cT(\mathbf{v}) + dT(\mathbf{w}) = $ \underline{\hspace{3cm}}
+
+\noindent\textbf{Range:}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (9,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,9) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-3) grid (9,9);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4,5,6,7,8}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-2,-1,1,2,3,4,5,6,7,8}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Problem 5}
+Compare your answers from Problems 3 and 4. What do you notice?
+
+\vspace{2cm}
+
+\subsection*{Problem 6 (Reflection)}
+In your own words, explain what the property $T(c\mathbf{v} + d\mathbf{w}) = cT(\mathbf{v}) + dT(\mathbf{w})$ means geometrically. Why is this called a \emph{linear} transformation?
+
+\vspace{3cm}
+
+\section*{Part 3: Try Another Transformation}
+
+Consider the transformation $S: \mathbb{R}^2 \to \mathbb{R}^2$ defined by
+\[
+B = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+\]
+
+Choose your own vectors $\mathbf{u}$ and $\mathbf{z}$ and scalars $a$ and $b$, then verify that $S(a\mathbf{u} + b\mathbf{z}) = aS(\mathbf{u}) + bS(\mathbf{z})$ using the grid on the next page.
+
+\newpage
+
+\noindent\textbf{Your vectors:} $\mathbf{u} = $ \underline{\hspace{2cm}} $\mathbf{z} = $ \underline{\hspace{2cm}}
+
+\noindent\textbf{Your scalars:} $a = $ \underline{\hspace{2cm}} $b = $ \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Domain:}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-5) grid (5,5);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+
+\noindent\textbf{Range:}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+    \draw[step=1cm,gray,very thin] (-5,-5) grid (5,5);
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\tiny$\x$};
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\tiny$\y$};
+\end{tikzpicture}
+\end{center}
+
+\noindent\textbf{Show your work:}
+
+\end{document}
+\end{enumerate}
+\end{document}
+
