@@ -1,0 +1,327 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=1in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lhead{Linear Algebra}
+\chead{Final Exam Review}
+%\rhead{\Large{Name: \underline{\hspace{2in}}}}
+
+\newcommand{\vtr}[1]{\textbf{#1}}
+
+\def\vectwo#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\def\vecthree#1#2#3{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+\def\vecfour#1#2#3#4{\begin{bmatrix}#1\\#2\\#3\\#4\end{bmatrix}}
+\def\bbm{\begin{bmatrix}}
+\def\ebm{\end{bmatrix}}
+
+% macros
+\usepackage{amssymb}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bP}{\mathbf{P}}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+The final exam will be Thursday December 11, 8:00am-10:00am in Chapman 106 (our usual classroom).\\
+
+You may bring in one 8" $\times$ 11" page of handwritten notes. You must turn it in with your final. \\
+
+It will cover Chapters 1-4, 5.1-5.2, 6.1-6.2, 8.1-8.2\\
+
+\hrulefill \\
+
+\begin{center} List of Topics \end{center}
+
+Chapter 1: Introduction to Vectors\\
+
+Section 1.1: Vectors and Linear Combinations\\
+terminology/definitions: vector, linear combinations of vectors, vector addition, scalar multiplication, a vector equation.\\
+skills: how to draw vector addition, subtraction, scalar multiplication, and linear combinations\\
+
+\vskip .1in
+
+Section 1.2: Lengths and Dot Products\\
+terminology/definitions: the dot product of two vectors, the length of a vector, a unit vector, the angle between two vectors\\
+skills: how to use the dot product to determine the angle between two vectors (or whether they are orthogonal, acute, obtuse); how to find a unit vector in the same direction as a given vector, how to find the length of a vector.\\
+
+\vskip .1in
+
+Section 1.3: Matrices\\
+terminology/definitions: matrices, matrix - vector product (both a row-view and a column-view), matrix-vector equations (both a row-view and a column-view), a first look at the idea of a matrix inverse, a first look at the idea of a set of vectors being linearly independent or dependent.\\
+skills: how to determine if one vector is a linear combination of others, how to solve systems of equations (in an ad hoc manner, perhaps), to recognize when a system of equations has one solution or multiple solutions or no solution.\\
+
+\vskip .1in
+
+Chapter 2: Solving Linear Equations\\
+
+Section 2.1: Vectors and Linear Equations\\
+terminology/definitions: The column and row pictures of $A \bx =\bb$ both algebraically and geometrically, in 2- and 3-dimensions, the identity matrix, a first look at matrix multiplication.\\
+skills: Understand the geometric and numerical consequences when solving $A \bx =\bb$ and $\bb = 0,$  understand the geometric and numerical interpretations of solutions to $A \bx =\bb$\\
+
+\vskip .1in
+
+Section 2.2: The Idea of Elimination\\
+terminology/definitions: elimination, multiplier (ex: $\ell_{31}$), elimination matrix, pivot,\\
+skills: Know how to use elimination, including elimination matrices, to transform the matrix $A$ or the system of equations $A \bx = \bb$ into upper triangular form, recognize when the process of elimination breaks down.\\
+
+\vskip .1in
+
+Section 2.3: Elimination Using Matrices\\
+terminology/definitions: the formal (rigid) algorithm for elimination, augmented matrix, row exchanges and corresponding matrices, formal matrix multiplication and its algebra\\
+skills: Perform elimination in this formal sense. Be able to find the corresponding elimination matrices and the single matrix that performs all steps simultaneously.\\
+
+\vskip .1in
+
+Section 2.4: Rules for Matrix Operation\\
+terminology/definitions/rules: there are several rules about how matrix multiplication does and does not behave (ex: it's associative and it distributes through addition, but it's not necessarily commutative), block multiplication\\
+skills: This was a deep dive into matrix multiplication. You should be able to multiply matrices using any of the four approaches. \\
+
+\vskip .1in
+
+Section 2.5: Inverse Matrices\\
+terminology/definitions/rules: the inverse of a matrix, algebra of inverses (ex $(AB)^{-1} = ??$)\\
+skills: Gauss-Jordan Elimination to find the inverse of a matrix A. How the inverse relates to solutions to systems of equations.
+
+\vskip .1in
+
+Section 2.6: Elimination $=$ Factorization: $A=LU$\\
+terminology/definitions: $LU$-factorization\\
+skills: How to find an $LU$-factorization for a matrix $A$ or recognize that no such factorization exists, How this factorization relates to elimination. How the $L$ and $U$ matrices can be used to solve $A \bx = \bb.$\\
+
+\vskip .1in
+
+Section 2.7: Transposes and Permutations\\
+terminology/definitions: the transpose of a matrix, transpose algebra, symmetric matrices, permutation matrices
+
+
+\vskip .1in
+
+\noindent Chapter 3: Vector Spaces and Subspaces\\
+Section 3.1: Spaces of Vectors\\
+
+terminology/definitions: \\
+a \emph{vector space} and a \emph{subspace} of a vector space, \\
+$\mathbb{R}^n$ as a vector space\\
+the vector spaces $\mathbf{M, F, Z}$ (real 2 by 2 matrices, real functions $f(x)$ and the zero vector), \\
+defining a subspace as the set of all linear combinations of a set of vectors\\
+\emph{column space} of a matrix, $C(A)$\\
+a subspace \emph{spanned} by a set of vectors, \\
+
+skills/principles: \\
+identify sets that are or are not subspaces of standard vector spaces, \\
+the geometric properties of subspaces (when compared to sets that are not subspaces), \\
+the equivalence of the statements $Ax=b$ is solvable and $b$ is in the column space of $A.$\\
+
+\vskip 0.1in
+
+\noindent Section 3.2: The Nullspace of $A$: Solving $Ax=0$ and $Rx=0$\\
+
+terminology/definitions: \\
+the \emph{null space of a matrix $A$}, $N(A)$\\
+\emph{reduced row echelon form} of a matrix, typically $R$ (and this is different from $U$, notation for the upper triangular form)\\
+\emph{pivot} and \emph{free} columns\\
+\emph{special solution} associated with a free column\\
+\emph{rank} of a matrix and what it indicates about a matrix, solutions to $Ax=b$, and free columns\\
+
+skills/principles: \\
+know how to find a reduced row echelon form of a matrix\\
+know how to efficiently find the null space of a matrix\\
+know that row operations do not change the null space\\
+
+\noindent Section 3.3: The Complete Solutions to $Ax=b$ \\
+
+terminology/definitions: \\
+a \emph{complete} solution to $Ax=b$ and how to find it efficiently,\\
+\emph{full column rank} or \emph{full row rank} and what these indicate about $N(A)$ or $C(A)$
+
+skills/principles: \\
+At the end of this section, we are supposed to understand in great detail what the reduced row echelon form of $A$ should indicate about the nature of solutions to $Ax=b,$ $C(A)$, and $N(A).$
+
+\vskip 0.1 in
+
+\noindent Section 3.4: Independence, Basis, and Dimension \\
+
+terminology/definitions: \\
+\emph{linearly independent} sets of vectors and \emph{linearly dependent} sets of vectors\\
+\emph{a spanning set of vectors}\\
+\emph{basis}\\
+\emph{row space of matrix $A$}, $C(A^T)$\\
+\emph{dimension} of a vector space\\
+
+skills/principles: \\
+how to show (rigorously) that at set of vectors is linearly independent or linearly dependent\\
+how to show (rigorously) that a set of vectors spans a vector space (or subspace)\\
+how to find bases for subspaces, like $C(A)$ or $C(A^T)$ or $N(A)$\\
+how to determine the dimension of subspaces\\
+
+\vskip 0.1 in
+
+\noindent Section 3.5: Dimensions of the Four Subspaces\\
+
+terminology/definitions: \\
+the \emph{four subspaces} in words: \emph{column space, row space, null space} and \emph{left null space} and in symbols: $C(A), C(A^T), N(A), N(A^T)$\\
+
+
+skills/principles: \\
+know how to find each of the four subspaces, find bases for each of them, determine their dimension, and understand their geometry (what space to they live in? orthogonality?)\\
+how elimination does (or does not) change the four subspaces\\
+know the basic principles on page 184 of your text. (You don't need to be able to state the text's "Fundamental Theorem of Linear Algebra", but you should definitely know it!)\\
+
+\vskip 0.1 in
+
+\noindent Chapter 4: Orthogonality\\
+\noindent Section 4.1: Orthogonality of the Four Subspaces \\
+
+terminology/definitions: \\
+\emph{orthogonal vectors} and the algebraic consequences\\
+\emph{orthogonal vector spaces}, and examples\\
+\emph{orthogonal complements} \\
+
+skills/principles: \\
+If one knows a vector space, $V$, has dimension $d$ and one has a set $S$ of $d$ vectors in $V$, one can know that $S$ is a basis of $V$ by checking \emph{one} of the two properties of a basis (ie check $S$ is linearly independent  OR check $S$ spans $V.$) One does not have to check both.
+
+
+\vskip 0.1 in
+
+\noindent Section 4.2: Projections \\
+
+
+terminology/definitions: \\
+the \emph{projection}, $\bp$, of a vector $\bb$ onto a vector $\ba$\\
+the \emph{projection}, $\bp$, of a vector $\bb$ onto a subspace\\
+the \emph{error} $\be=\bb-\bp$\\
+$\mathbf{P}$, the projection matrix\\
+$\widehat{x}$, the coefficient vector used to construct the projection $\bp$
+
+
+skills/principles: \\
+know how to compute the projection of one vector onto another and how to draw the projection, and the same for the error\\
+know how to compute the projection of one vector onto a subspace and how to draw the projection, and the same for the error\\
+know that the projection minimizes the error as measured by the sum of the squares of the differences in components\\
+know how to compute $\mathbf{P}$, its properties, and how to use it\\
+geometrically, we think of $\bp$ as the vector in $S$ closest to the vector $\bb$\\
+
+\vskip 0.1 in
+
+\noindent Section 4.3: Least Squares Approximations \\
+
+
+terminology/definitions: \\
+the \emph{normal equations}: $\bA^T\bA\bx=\bA^T\bb$, whose solution is $\widehat\bx$\\
+
+skills/principles: \\
+the projection $\bp$ (from 4.2) and the methods to find it can be reinterpreted to finding best solutions to over-determined systems of equations or to finding curves of best fit to a given data set.\\
+when $\bA\bx=\bb$ has no solution, $\widehat\bx$, is the ``best" solution, or the ``least squares" solution because it minimizes the error $\lvert \bA\bx-\bb \rvert^2$\\
+the least squares solutions can be used to find the line (or parabola or cubic...) of best fit to a set of points (data)\\
+
+\vskip 0.1 in
+
+\noindent Section 4.4: Orthonormal Bases and Gram-Schmidt\\
+
+
+terminology/definitions: \\
+\emph{orthogonal basis}\\
+\emph{orthonormal basis}\\
+\emph{Gram-Schmidt Process}
+
+skills/principles: \\
+how to find the projection of a vector $\bb$ onto a subspace $S$ given an orthonormal basis $\bq_1, \cdots \bq_n$\\
+how to use the Gram-Schmidt Process to find an orthogonal or orthonormal basis from a given basis\\
+If $\bQ$ has orthonormal columns, then know the many efficiencies that result. (ex: $\bQ^T\bQ=$?, finding $\widehat{\bx}$, finding $\bP$)
+
+\vskip 0.1 in
+
+\noindent Chapter 5 \\
+
+\noindent Section 1: The Properties of Determinants\\
+
+terminology/definitions: \\
+\emph{determinant} of a 2 by 2 matrix
+
+skills/principles: \\
+There are 10 principles to know about the determinant (listed in the text)\\
+Know how to apply these to an $n$ by $n$ matrix
+
+\noindent Section 2: Permutations and Cofactors\\
+
+terminology/definitions:\\
+We learned of three equivalent definitions of the determinant of an $n \times n$ matrix which in the textbook's terminology include \emph{pivots}, \emph{the big formula}, and \emph{cofactors}.  You should understand all of these definitions.\\
+
+skills/principles: \\
+For each definition of the determinant, you should have a sense of its value and use.\\
+
+\noindent Chapter 6: Eigenvalues and Eigenvectors\\
+
+\noindent Section 1: Introduction to Eigenvalues\\
+
+terminology/definitions: \\
+eigenvectors, eigenvalues, characteristic polynomial, trace\\
+
+skills/principles: \\
+Know how to find (or identify) eigenvalues and associated eigenvalues for a given matrix, if they exist\\
+
+\noindent Section 2: Diagonalizing a Matrix\\
+
+terminology/definitions: \\
+diagonalizable, similar
+
+skills/principles: 
+\begin{itemize}
+\item how to recognize that a matrix is diagonalizable
+\item how to diagonalize a matrix, if possible
+\item the value of diagonalizing a matrix
+\item the relationship between being diagonalizable and invertible\\
+\end{itemize}
+
+\noindent Chapter 8: Linear Transformations\\
+
+\noindent Section 1: The Ideal of a Linear Transformation\\
+
+
+terminology/definitions: \\
+the definition of a linear transformation\\
+
+skills/principles: 
+\begin{itemize}
+\item how to determine (or recognize) whether or not a function is a linear transformation
+\item what conclusions one can draw if a function is a linear transformation
+\item as functions, matrix multiplication, differentiation, and integration are linear transformations 
+\end{itemize}
+
+\noindent Section 2: The Matrix of a Linear Transformation\\
+terminology/definitions: the matrix of a linear transformation, kernel of a linear transformation, range of a linear transformation\\
+
+skills/principles: 
+\begin{itemize}
+\item how to find the matrix of a linear transformation
+\item know how to use a basis to find the matrix of a linear transformation and/or to determine the image of any vector in the domain.
+\item how to find the kernel and the range of a linear transformation
+\end{itemize}
+\end{document}
